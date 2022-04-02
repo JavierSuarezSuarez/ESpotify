@@ -12,9 +12,19 @@
 
     <body>
         <!-- Header Section -->
-        <header class="headers">
+        <header class="admin_headers">
             <img class="logo" src="images/logo.jpg">
+
+            <div class="admin_headers_nav_div">
+                <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
+                <a class="header_links" href="#"> Canciones</a>
+                <a class="header_links" href="#"> Playlists</a>
+                <a class="header_links" href="#"> Perfil</a>
+                <a class="header_links" href="#"> Cerrar Sesión</a>
+                <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="images/profile.png"></a>
+            </div>
         </header>
+
 
         <hr class="hr">
 
@@ -39,7 +49,6 @@
 
 
         <!-- Users Section -->
-
         <section class="users_section">
 
             <div class="user_div">
@@ -116,7 +125,6 @@
                     </button>
                 </div>
             </div>
-
 
         </section>
 

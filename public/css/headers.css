@@ -1,10 +1,39 @@
 /*--------------------------------------------------- Header ---------------------------------------------------------*/
-.headers {
+.admin_headers {
     background: #282828;
 }
 
 .logo {
-    width: 8%;
+    width: 7%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.admin_headers_nav_div {
+    float: right;
+    margin-top: 5%;
+    width: 49%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 5%;
+    text-align: center;
+    margin-right: 3%;
+}
+
+.header_links {
+    color: white;
+    text-decoration: none;
+}
+
+.header_lupa {
+    width: 50%;
+    margin-top: -7%;
+}
+
+.header_profile_img {
+    width: 77%;
+    margin-top: -24%;
 }
 
 .hr {
