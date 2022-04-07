@@ -18,6 +18,31 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 
+
+
 Route::get('/', function () {
+    return view('index');
+});
+
+/*-------------------------------------------Admin routes: This will change to /admin/id/x----------------------------*/
+Route::get('/users', function () {
     return view('admin_users_panel');
+});
+
+Route::get('/playlists', function () {
+    return view('admin_playlists_panel');
+});
+
+Route::get('/songs', function () {
+    return view('admin_songs_panel');
+});
+
+
+/*------------------------------------------User routes: This will change to /user/id/x-------------------------------*/
+Route::get('/myplaylists', function () {
+    return view('playlists_panel');
+});
+
+Route::get('/usersongs', function () {
+    return view('songs_panel');
 });
