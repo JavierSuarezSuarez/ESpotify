@@ -1,7 +1,3 @@
-header{
-    background-color: #282828;
-}
-
 /* Media Query para Móvil */
 @media only screen and (max-width: 767px){
 
@@ -10,6 +6,63 @@ header{
 /* Media Query para PC */
 @media only screen and (min-width: 768px){
 
+    .profile_section{
+        width: 100%;
+        background-color: #282828;
+        padding-top: 3%;
+        padding-bottom: 8%;
+    }
 
+    .user_img_div{
+        width: 50%;
+        margin-left:5%;
+        text-align: center;
+    }
+
+    .user_img{
+        width: 40%;
+    }
+
+
+    .full-width {
+        background-color: #3500D3;
+        width: 30%;
+        color: #ffffff;
+        border: 1px solid white;
+        font-weight:bold;
+        font-family: monospace;
+    }
+
+    .btn {
+        border-radius: 0.2rem;
+    }
+
+    .user_full_name{
+        color: white;
+        margin-bottom: 3%;
+        margin-top: 2%;
+    }
+
+    .playlist_text{
+        float: left;
+        color: white;
+        width: 55%;
+        margin-top: 0.4%;
+        text-align: right;
+    }
+
+    .user_playlists{
+        color: white;
+        font-size: 23px;
+        font-weight: bold;
+        font-family: monospace;
+        float: left;
+        width: 6%;
+    }
+
+    .button_div{
+        width: 100%;
+        clear: both;
+    }
 
 }
