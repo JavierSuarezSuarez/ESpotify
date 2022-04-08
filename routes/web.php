@@ -39,7 +39,7 @@ Route::get('/songs', function () {
 
 
 /*------------------------------------------User routes: This will change to /user/id/x-------------------------------*/
-Route::get('/myplaylists', function () {
+Route::get('/userplaylists', function () {
     return view('playlists_panel');
 });
 
