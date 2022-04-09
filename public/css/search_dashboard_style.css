@@ -6,131 +6,248 @@ html {
     background-color: #282828;
 }
 
-/*--------------------------------------------------- Content --------------------------------------------------------*/
+/*Media Query para PC */
+@media only screen and (min-width:768px) {
+    /*--------------------------------------------------- Content ----------------------------------------------------*/
 
-/*-----------------------------------  Browser Section -------------------*/
-.subheaders_section {
-    background-color: #282828;
-    float: left;
-    display: grid;
-    width: 24%;
-    grid-template-columns: auto;
-    margin-top: 3%;
-    margin-left: 13%;
-    grid-column-gap: 14%;
+    /*-----------------------------------  Browser Section -------------------*/
+    .subheaders_section {
+        background-color: #282828;
+        float: left;
+        display: grid;
+        width: 35%;
+        grid-template-columns: auto;
+        margin-top: 3%;
+        margin-left: 13%;
+        grid-column-gap: 14%;
+    }
+
+
+    .subheaders_browser_div {
+        float: left;
+    }
+
+    .browser_input {
+        border-radius: 22px;
+        text-align: center;
+        background: url(../images/lupa_buscador.png) no-repeat 220px -1px;
+        background-size: contain;
+        background-color: white;
+    }
+
+
+    /*----------------------------------- Browser Results Section -------------------------------------------------*/
+    .results_section {
+        float: left;
+        background-color: #282828;
+        display: grid;
+        grid-template-columns: auto;
+        margin-left: 12%;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    /*----------------------------------- Song Results-------------------------------------------------*/
+    .song_div {
+        margin-bottom: 2%;
+    }
+
+
+    .song_img {
+        width: 16%;
+        margin-top: 2%;
+        padding: 1%;
+        float: left;
+    }
+
+    .song_text_div {
+        float: left;
+        margin-top: 4%;
+        margin-left: 7%;
+        width: 24%;
+    }
+
+    .song_name_text {
+        color: white;
+        font-size: larger;
+        margin-top: 5%;
+    }
+
+    .song_artist_text {
+        color: white;
+        font-size: small;
+        margin-top: 5%;
+    }
+
+    /*----------------------------------- Playlists Results -------------------------------------------------*/
+
+    .playlist_div {
+        margin-bottom: 2%;
+    }
+
+    .playlist_img {
+        width: 16%;
+        padding: 1%;
+        float: left;
+    }
+
+    .playlist_text_div {
+        width: 24%;
+        float: left;
+        margin-left: 7%;
+        margin-top: 1%;
+    }
+
+    .playlist_name_text {
+        color: white;
+        font-size: medium;
+        margin-top: 3%;
+        width: 82%;
+    }
+
+    .createdby_text {
+        color: white;
+        font-size: small;
+        margin-bottom: 4%;
+        width: 85%;
+    }
+
+    .datesongnumber_text {
+        color: white;
+        font-size: x-small;
+        margin-bottom: 4%;
+        width: 78%;
+    }
+
+    .followers_text {
+        color: white;
+        font-size: xx-small;
+        margin-bottom: 0%;
+        width: 58%;
+    }
+
+
 }
-
-
-.subheaders_browser_div {
-    float: left;
-}
-
-.browser_input {
-    border-radius: 22px;
-    text-align: center;
-    background: url(../images/lupa_buscador.png) no-repeat 220px -1px;
-    background-size: contain;
-    background-color: white;
-}
-
-
-/*----------------------------------- Browser Results Section -------------------------------------------------*/
-.results_section {
-    float: left;
-    background-color: #282828;
-    display: grid;
-    grid-template-columns: auto;
-    margin-left: 12%;
-    margin-top: 5%;
-    width: 100%;
-}
-
-/*----------------------------------- Song Results-------------------------------------------------*/
-.song_div {
-}
-
-
-.song_img {
-    width: 16%;
-    margin-top: 2%;
-    padding: 1%;
-    float: left;
-}
-
-.song_text_div {
-    float: left;
-    margin-top: 4%;
-    margin-left: 7%;
-    width: 24%;
-}
-
-.song_name_text {
-    color: white;
-    font-size: larger;
-    margin-top: 5%;
-}
-
-.song_artist_text {
-    color: white;
-    font-size: small;
-    margin-top: 5%;
-}
-
-/*----------------------------------- Playlists Results -------------------------------------------------*/
-
-.playlist_div {
-
-}
-
-.playlist_img {
-    width: 16%;
-    padding: 1%;
-    float: left;
-}
-
-.playlist_text_div {
-    width: 24%;
-    float: left;
-    margin-left: 7%;
-    margin-top: 1%;
-}
-
-.playlist_name_text {
-    color: white;
-    font-size: medium;
-    margin-top: 3%;
-    width: 58%;
-}
-
-.createdby_text {
-    color: white;
-    font-size: small;
-    margin-bottom: 4%;
-    width: 56%;
-}
-
-.datesongnumber_text {
-    color: white;
-    font-size: x-small;
-    margin-bottom: 4%;
-    width: 53%;
-}
-
-.followers_text {
-    color: white;
-    font-size: xx-small;
-    margin-bottom: 0%;
-    width: 36%;
-}
-
 
 /*Media Query para Movil */
-/*@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
+    /*--------------------------------------------------- Content ----------------------------------------------------*/
 
-}*/
+    /*-----------------------------------  Browser Section -------------------*/
+    .subheaders_section {
+        background-color: #282828;
+        float: left;
+        display: grid;
+        width: 54%;
+        grid-template-columns: auto;
+        margin-top: 3%;
+        margin-left: 27%;
+        grid-column-gap: 14%;
+    }
 
-/*Media Query para PC */
-/*@media only screen and (min-width:768px) {
+
+    .subheaders_browser_div {
+        float: left;
+    }
+
+    .browser_input {
+        border-radius: 22px;
+        text-align: center;
+        background: url(../images/lupa_buscador.png) no-repeat 92% -1px;
+        background-size: contain;
+        background-color: white;
+        width: 100%;
+    }
 
 
-}*/
+    /*----------------------------------- Browser Results Section -------------------------------------------------*/
+    .results_section {
+        float: left;
+        background-color: #282828;
+        display: grid;
+        grid-template-columns: auto;
+        margin-left: 27%;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    /*----------------------------------- Song Results-------------------------------------------------*/
+    .song_div {
+        margin-bottom: 2%;
+    }
+
+
+    .song_img {
+        width: 16%;
+        margin-top: 2%;
+        padding: 1%;
+        float: left;
+    }
+
+    .song_text_div {
+        float: left;
+        margin-top: 4%;
+        margin-left: 7%;
+        width: 24%;
+    }
+
+    .song_name_text {
+        color: white;
+        font-size: larger;
+        margin-top: 5%;
+    }
+
+    .song_artist_text {
+        color: white;
+        font-size: small;
+        margin-top: 5%;
+    }
+
+    /*----------------------------------- Playlists Results -------------------------------------------------*/
+
+    .playlist_div {
+        margin-bottom: 2%;
+    }
+
+    .playlist_img {
+        width: 16%;
+        padding: 1%;
+        float: left;
+    }
+
+    .playlist_text_div {
+        width: 29%;
+        float: left;
+        margin-left: 7%;
+        margin-top: 1%;
+    }
+
+    .playlist_name_text {
+        color: white;
+        font-size: medium;
+        margin-top: 3%;
+        width: 82%;
+    }
+
+    .createdby_text {
+        color: white;
+        font-size: small;
+        margin-bottom: 4%;
+        width: 85%;
+    }
+
+    .datesongnumber_text {
+        color: white;
+        font-size: x-small;
+        margin-bottom: 4%;
+        width: 78%;
+    }
+
+    .followers_text {
+        color: white;
+        font-size: xx-small;
+        margin-bottom: 0%;
+        width: 58%;
+    }
+
+}

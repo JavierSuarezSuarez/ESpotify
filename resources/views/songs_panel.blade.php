@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link href="{{ asset('css/admin_songs_panel_style.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/songs_panel_style.css') }}" rel="stylesheet">
         <link href="{{ asset('css/headers.css') }}" rel="stylesheet">
         <!--<script src="../js/jquery-3.6.0.min.js"></script>-->
         <title>Panel de Canciones</title>
@@ -13,14 +13,22 @@
     <body>
         <!-- Header Section -->
         <header class="admin_headers">
+            <img class="burguer_logo" src="images/burguermenu.jpg"> <!-- Movil -->
+
             <img class="logo" src="images/logo.jpg">
 
+            <!-- PC -->
             <div class="admin_headers_nav_div">
                 <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
                 <a class="header_links" href="#"> Canciones</a>
                 <a class="header_links" href="#"> Playlists</a>
                 <a class="header_links" href="#"> Perfil</a>
                 <a class="header_links" href="#"> Cerrar Sesión</a>
+                <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="images/profile.png"></a>
+            </div>
+
+            <!-- Movil -->
+            <div class="mobile_admin_headers_nav_div">
                 <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="images/profile.png"></a>
             </div>
         </header>

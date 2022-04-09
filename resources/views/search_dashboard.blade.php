@@ -13,8 +13,11 @@
     <body>
         <!-- Header Section -->
         <header class="admin_headers">
+            <img class="burguer_logo" src="images/burguermenu.jpg"> <!-- Movil -->
+
             <img class="logo" src="images/logo.jpg">
 
+            <!-- PC -->
             <div class="admin_headers_nav_div">
                 <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
                 <a class="header_links" href="#"> Canciones</a>
@@ -23,9 +26,15 @@
                 <a class="header_links" href="#"> Cerrar Sesión</a>
                 <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="images/profile.png"></a>
             </div>
+
+            <!-- Movil -->
+            <div class="mobile_admin_headers_nav_div">
+                <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="images/profile.png"></a>
+            </div>
         </header>
 
-        <hr class="hr">
+
+    <hr class="hr">
 
         <!-- Browser -->
         <section class="subheaders_section">

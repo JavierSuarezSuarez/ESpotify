@@ -2,7 +2,6 @@
 
 @section('mainContent')
 
-
     <!-- Users - Browser - Add User Subheader Section -->
     <section class="subheaders_section">
 
@@ -20,8 +19,6 @@
         </div>
 
     </section>
-
-
 
     <!-- Users Section -->
     <section class="users_section">
@@ -102,5 +99,4 @@
         </div>
 
     </section>
-
 @endsection

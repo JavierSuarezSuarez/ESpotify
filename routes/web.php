@@ -50,3 +50,11 @@ Route::get('/usersongs', function () {
 Route::get('/search', function () {
     return view('search_dashboard');
 });
+
+Route::get('/header', function () {
+    return view('layouts/header-layout');
+});
+
+Route::get('/prueba', function () {
+    return view('layouts/header-layout');
+});
