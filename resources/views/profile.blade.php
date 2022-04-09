@@ -45,10 +45,14 @@
         <section class="profile_section">
 
             <div class="user_img_div">
-                <img src="{{ asset('images/profile.png') }}" class="user_img"  alt="user_image" /> <br>
-                <h3 class="user_full_name">Pepe Moreno Pérez</h3>
-                <h4 class="playlist_text">Playlists: </h4>
-                <p class="user_playlists">6</p> <br>
+                <div class="user_img_mobile_div">
+                    <img src="{{ asset('images/profile.png') }}" class="user_img"  alt="user_image" /> <br>
+                </div>
+                <div class="user_data_mobile_div">
+                    <h3 class="user_full_name">Pepe Moreno Pérez</h3>
+                    <h4 class="playlist_text">Playlists: </h4>
+                    <p class="user_playlists">6</p> <br>
+                </div>
                 <div class="button_div">
                     <button class="btn btn-default full-width">Editar Perfil</button>
                 </div>

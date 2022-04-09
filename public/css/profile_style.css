@@ -1,6 +1,84 @@
 /* Media Query para Móvil */
 @media only screen and (max-width: 767px){
+    .profile_section{
+        width: 100%;
+        background-color: #282828;
+        padding-top: 3%;
+        padding-bottom: 20%;
+    }
 
+    .user_img_div{
+        width: 100%;
+        margin-left:5%;
+        padding-bottom: 22%;
+    }
+
+    .user_data_div{
+        margin-left: 19%;
+        width: 90%;
+        margin-top: 5%;
+    }
+
+    .user_img_mobile_div{
+        float: left;
+        width: 40%;
+        text-align: right;
+    }
+
+    .user_data_mobile_div{
+        float: right;
+        width: 50%;
+        margin-right: 10%;
+    }
+
+    .user_img{
+        width: 50%;
+        margin-right: 20%;
+    }
+
+
+    .btn {
+        border-radius: 0.2rem;
+    }
+
+    .user_full_name{
+        color: white;
+        margin-bottom: 3%;
+        margin-top: 2%;
+    }
+
+    .playlist_text{
+        float: left;
+        color: white;
+        width: 28%;
+        margin-top: 0.9%;
+    }
+
+    .user_playlists{
+        color: white;
+        font-size: 23px;
+        font-family: monospace;
+        margin-left: 52%;
+    }
+
+    .button_div{
+        display: none;
+    }
+
+    .header_name, .header_surname, .header_email, .header_password{
+        color: #9B9B9B;
+        font-family: monospace;
+    }
+
+    .user_name, .user_surname, .user_email, .user_password{
+        color: white;
+        font-family: monospace;
+        font-size: 20px;
+    }
+
+    .user_password{
+        font-size: 30px;
+    }
 }
 
 /* Media Query para PC */
@@ -85,7 +163,4 @@
     .user_password{
         font-size: 30px;
     }
-
-
-
 }
