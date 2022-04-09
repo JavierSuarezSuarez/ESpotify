@@ -72,19 +72,17 @@ html {
     background-color: #282828;
     display: grid;
     grid-template-columns: auto;
-    margin-left: 1%;
+    margin-left: 5%;
     margin-top: 5%;
-    width: 44%;
+    width: 100%;
 }
 
 .song_div {
-    margin-left: 8%;
-    margin-bottom: 5%;
 }
 
 
 .song_img {
-    width: 37%;
+    width: 16%;
     margin-top: 2%;
     padding: 1%;
     float: left;
@@ -93,8 +91,8 @@ html {
 .song_text_div {
     float: left;
     margin-top: 4%;
-    margin-left: 10%;
-    width: 38%;
+    margin-left: 7%;
+    width: 24%;
 }
 
 .song_name_text {
@@ -111,7 +109,10 @@ html {
 
 .edit_delete_btns {
     text-align: center;
-    margin-bottom: 15%;
+    margin-bottom: 12%;
+    float: right;
+    margin-top: 5%;
+    width: 44%;
 }
 
 .edit_btn {

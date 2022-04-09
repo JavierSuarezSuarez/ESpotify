@@ -7,7 +7,7 @@ html {
 
 /*--------------------------------------------------- Content --------------------------------------------------------*/
 
-/*----------------------------------- Songs - Browser - Add Song Subheader Section -------------------*/
+/*----------------------------------- Songs - Browser -----------------------------*/
 .subheaders_section {
     background-color: #282828;
     float: left;
@@ -47,24 +47,6 @@ html {
     background-color: white;
 }
 
-.subheaders_btn_div {
-    float: right;
-    margin-top: 5.5%;
-    margin-right: 10%;
-    width: 70%;
-    margin-left: 7%;
-}
-.subheaders_btn_image {
-    width: 17%;
-    margin-bottom: 2%;
-}
-
-.subheaders_link {
-    font-family: none;
-    text-decoration: none;
-    color: white;
-    font-size: x-large;
-}
 
 /*----------------------------------- Songs Section -------------------------------------------------*/
 .songs_section {
@@ -107,39 +89,4 @@ html {
     color: white;
     font-size: small;
     margin-top: 5%;
-}
-
-.edit_delete_btns {
-    text-align: center;
-    margin-bottom: 15%;
-}
-
-.edit_btn {
-    padding: 2%;
-    text-align: center;
-    outline: none;
-    color: #fff;
-    background-color: #066397;
-    border: none;
-    border-radius: 50%;
-    padding-right: 4%;
-    padding-left: 4%;
-}
-
-.edit_btn_img {
-}
-
-.delete_btn {
-    padding: 2%;
-    text-align: center;
-    outline: none;
-    color: #fff;
-    background-color: red;
-    border: none;
-    border-radius: 50%;
-    padding-left: 4%;
-    padding-right: 4%;
-}
-
-.delete_btn_img {
 }

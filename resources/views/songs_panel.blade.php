@@ -27,9 +27,8 @@
 
         <hr class="hr">
 
-        <!-- Songs - Browser - Add Song Subheader Section -->
+        <!--------- Songs - Browser ----------------->
         <section class="subheaders_section">
-
             <header class="subheaders">
                 <h2 class="subheaders_titles"> Canciones </h2>
             </header>
@@ -37,12 +36,6 @@
             <div class="subheaders_browser_div">
                 <input class="browser_input" type="text" placeholder="Search...">
             </div>
-
-            <div class="subheaders_btn_div">
-                <img class="subheaders_btn_image" src="images/addbtn.jpg" title="Add Button Image" alt="Add Button Image">
-                <a class="subheaders_link" href="#">A&ntilde;adir Canci&oacute;n </a>
-            </div>
-
         </section>
 
         <!-- Songs Section -->
@@ -68,4 +61,3 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
-

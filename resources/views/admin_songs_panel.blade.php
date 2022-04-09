@@ -29,7 +29,6 @@
 
         <!-- Songs - Browser - Add Song Subheader Section -->
         <section class="subheaders_section">
-
             <header class="subheaders">
                 <h2 class="subheaders_titles"> Canciones </h2>
             </header>
@@ -42,12 +41,47 @@
                 <img class="subheaders_btn_image" src="images/addbtn.jpg" title="Add Button Image" alt="Add Button Image">
                 <a class="subheaders_link" href="#">A&ntilde;adir Canci&oacute;n </a>
             </div>
-
         </section>
 
 
         <!-- Songs Section -->
         <section class="songs_section">
+
+            <div class="song_div">
+                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
+                <div class="song_text_div">
+                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_artist_text">ARTISTAS</p>
+                </div>
+
+                <div class="edit_delete_btns">
+                    <button class="edit_btn">
+                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+                    </button>
+
+                    <button class="delete_btn" type="button">
+                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+                    </button>
+                </div>
+            </div>
+
+            <div class="song_div">
+                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
+                <div class="song_text_div">
+                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_artist_text">ARTISTAS</p>
+                </div>
+
+                <div class="edit_delete_btns">
+                    <button class="edit_btn">
+                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+                    </button>
+
+                    <button class="delete_btn" type="button">
+                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+                    </button>
+                </div>
+            </div>
 
             <div class="song_div">
                 <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">

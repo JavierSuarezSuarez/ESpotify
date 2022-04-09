@@ -46,3 +46,7 @@ Route::get('/userplaylists', function () {
 Route::get('/usersongs', function () {
     return view('songs_panel');
 });
+
+Route::get('/search', function () {
+    return view('search_dashboard');
+});
