@@ -55,8 +55,14 @@
             </div>
 
             <div class="user_data_div">
-
-
+                <h6 class="header_name">NOMBRE</h6>
+                <p class="user_name">Pepe</p>
+                <h6 class="header_surname">APELLIDOS</h6>
+                <p class="user_surname">Moreno Pérez</p>
+                <h6 class="header_email">EMAIL</h6>
+                <p class="user_email">pepe2301@gmail.com</p>
+                <h6 class="header_password">CONTRASEÑA</h6>
+                <p class="user_password">...........</p>
             </div>
 
         </section>

@@ -10,13 +10,19 @@
         width: 100%;
         background-color: #282828;
         padding-top: 3%;
-        padding-bottom: 8%;
+        padding-bottom: 40%;
     }
 
     .user_img_div{
         width: 50%;
         margin-left:5%;
         text-align: center;
+        float: left;
+    }
+
+    .user_data_div{
+        width: 41%;
+        float: right;
     }
 
     .user_img{
@@ -64,5 +70,22 @@
         width: 100%;
         clear: both;
     }
+
+    .header_name, .header_surname, .header_email, .header_password{
+        color: #9B9B9B;
+        font-family: monospace;
+    }
+
+    .user_name, .user_surname, .user_email, .user_password{
+        color: white;
+        font-family: monospace;
+        font-size: 20px;
+    }
+
+    .user_password{
+        font-size: 30px;
+    }
+
+
 
 }
