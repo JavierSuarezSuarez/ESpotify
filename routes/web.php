@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,8 @@ Route::get('/', function () {
 
 /*-------------------------------------------Admin routes: This will change to /admin/id/x----------------------------*/
 Route::get('/users', function () {
-    return view('admin_users_panel');
+    $users = DB::table('users') -> get();
+    return view('admin_users_panel', ['users' => $users]);
 });
 
 Route::get('/playlists', function () {
@@ -57,4 +59,18 @@ Route::get('/header', function () {
 
 Route::get('/prueba', function () {
     return view('layouts/header-layout');
+});
+
+
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/signup', function () {
+    return view('signup');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
 });

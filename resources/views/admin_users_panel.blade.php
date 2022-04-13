@@ -25,7 +25,6 @@
             </div>
         </header>
 
-
         <hr class="hr">
 
         <!-- Users - Browser - Add User Subheader Section -->
@@ -46,89 +45,25 @@
 
         </section>
 
-
-
         <!-- Users Section -->
         <section class="users_section">
+            @foreach($users as $user)
+                <div class="user_div">
+                    <img class="user_img" title="User Image" alt="User Image" src="{{$user -> foto}}">
+                    <p class="user_name_text">{{$user -> nombre}} {{$user -> apellidos}}</p>
 
-            <div class="user_div">
-                <img class="user_img" title="User Image" alt="User Image" src="images/profile.png">
-                <p class="user_name_text">PEPE MORENO P&Eacute;REZ</p>
+                    <div class="edit_delete_btns">
+                        <button class="edit_btn">
+                            <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+                        </button>
 
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
+                        <button class="delete_btn" type="button">
+                            <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+                        </button>
+                    </div>
                 </div>
-            </div>
-
-            <div class="user_div">
-                <img class="user_img" title="User Image" alt="User Image" src="images/profile.png">
-                <p class="user_name_text">PEPE MORENO P&Eacute;REZ</p>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
-            <div class="user_div">
-                <img class="user_img" title="User Image" alt="User Image" src="images/profile.png">
-                <p class="user_name_text">PEPE MORENO P&Eacute;REZ</p>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
-            <div class="user_div">
-                <img class="user_img" title="User Image" alt="User Image" src="images/profile.png">
-                <p class="user_name_text">PEPE MORENO P&Eacute;REZ</p>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
-            <div class="user_div">
-                <img class="user_img" title="User Image" alt="User Image" src="images/profile.png">
-                <p class="user_name_text">PEPE MORENO P&Eacute;REZ</p>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
+            @endforeach
         </section>
-
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>

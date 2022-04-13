@@ -1,0 +1,28 @@
+[
+    {
+        "foto": "images/profile.png",
+        "nombre": "Pepe",
+        "apellidos": "Moreno Pérez",
+        "tipo": "1",
+        "email": "pepemorper@gmail.com",
+        "password": "c4ca4238a0b923820dcc509a6f75849b"
+    },
+
+    {
+        "foto": "images/profile2.png",
+        "nombre": "Laura",
+        "apellidos": "Jiménez González",
+        "tipo": "2",
+        "email": "laurajimgon@gmail.com",
+        "password": "c81e728d9d4c2f636f067f89cc14862c"
+    },
+
+    {
+        "foto": "images/profile3.png",
+        "nombre": "Rodrigo",
+        "apellidos": "Medina Santana",
+        "tipo": "2",
+        "email": "rodrigomedsant@gmail.com",
+        "password": "c81e728d9d4c2f636f067f89cc14862c"
+    }
+]
