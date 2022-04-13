@@ -46,64 +46,26 @@
 
         <!-- Songs Section -->
         <section class="songs_section">
+            @foreach($songs as $song)
+                <div class="song_div">
+                    <img class="song_img" title="Song Image" alt="Song Image" src="{{$song -> imagen}}">
+                    <div class="song_text_div">
+                        <p class="song_name_text">{{$song -> nombre}}</p>
+                        <p class="song_album_text">{{$song -> album}}</p>
+                        <p class="song_artist_text">{{$song -> artistas}}</p>
+                    </div>
 
-            <div class="song_div">
-                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
-                <div class="song_text_div">
-                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
-                    <p class="song_album_text">Album</p>
-                    <p class="song_artist_text">ARTISTAS</p>
+                    <div class="edit_delete_btns">
+                        <button class="edit_btn">
+                            <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+                        </button>
+
+                        <button class="delete_btn" type="button">
+                            <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+                        </button>
+                    </div>
                 </div>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
-            <div class="song_div">
-                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
-                <div class="song_text_div">
-                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
-                    <p class="song_album_text">Album</p>
-                    <p class="song_artist_text">ARTISTAS</p>
-                </div>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
-            <div class="song_div">
-                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
-                <div class="song_text_div">
-                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
-                    <p class="song_album_text">Album</p>
-                    <p class="song_artist_text">ARTISTAS</p>
-                </div>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
+            @endforeach
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
 use File;
 
 class UserSeeder extends Seeder
@@ -31,17 +30,5 @@ class UserSeeder extends Seeder
                 "password" => $value -> password,
             ]);
         }
-
-
-        /*foreach ($usersdata as $key => $value) {
-            UserSeeder::create([
-                "foto" => $value -> foto,
-                "nombre" => $value -> nombre,
-                "apellidos" => $value -> apellidos,
-                "tipo" => $value -> tipo,
-                "email" => $value -> email,
-                "password" => $value -> password,
-            ]);
-        }*/
     }
 }
