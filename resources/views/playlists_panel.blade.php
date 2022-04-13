@@ -42,6 +42,8 @@
 
             <header class="subheaders">
                 <h2 class="subheaders_titles"> Mis Playlists</h2>
+                <h2 class="mobile_subheaders_titles"> MIS PLAYLISTS </h2> <!--Movil-->
+                <hr class="mobile_subheaders_hr"> <!--Movil-->
             </header>
 
             <div class="subheaders_browser_div">
@@ -67,41 +69,13 @@
                 <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
                 <p class="followers_text"> FOLLOWERS: 200.000  </p>
 
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
+                <!--Movil-->
+                <div class="playlist_text_div">
+                    <p class="mobile_playlist_name_text">TITULO DE PLAYLIST</p>
+                    <p class="mobile_createdby_text">CREADA POR: USUARIO</p>
+                    <p class="mobile_datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
+                    <p class="mobile_followers_text"> FOLLOWERS: 200.000  </p>
                 </div>
-            </div>
-
-            <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
-                <p class="playlist_name_text">TITULO DE PLAYLIST</p>
-                <p class="createdby_text">CREADA POR: USUARIO</p>
-                <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
-                <p class="followers_text"> FOLLOWERS: 200.000  </p>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
-            <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
-                <p class="playlist_name_text">TITULO DE PLAYLIST</p>
-                <p class="createdby_text">CREADA POR: USUARIO</p>
-                <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
-                <p class="followers_text"> FOLLOWERS: 200.000  </p>
 
                 <div class="edit_delete_btns">
                     <button class="edit_btn">
@@ -121,6 +95,14 @@
                 <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
                 <p class="followers_text"> FOLLOWERS: 200.000  </p>
 
+                <!--Movil-->
+                <div class="playlist_text_div">
+                    <p class="mobile_playlist_name_text">TITULO DE PLAYLIST</p>
+                    <p class="mobile_createdby_text">CREADA POR: USUARIO</p>
+                    <p class="mobile_datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
+                    <p class="mobile_followers_text"> FOLLOWERS: 200.000  </p>
+                </div>
+
                 <div class="edit_delete_btns">
                     <button class="edit_btn">
                         <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
@@ -139,6 +121,14 @@
                 <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
                 <p class="followers_text"> FOLLOWERS: 200.000  </p>
 
+                <!--Movil-->
+                <div class="playlist_text_div">
+                    <p class="mobile_playlist_name_text">TITULO DE PLAYLIST</p>
+                    <p class="mobile_createdby_text">CREADA POR: USUARIO</p>
+                    <p class="mobile_datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
+                    <p class="mobile_followers_text"> FOLLOWERS: 200.000  </p>
+                </div>
+
                 <div class="edit_delete_btns">
                     <button class="edit_btn">
                         <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
@@ -150,6 +140,57 @@
                 </div>
             </div>
 
+            <div class="playlist_div">
+                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <p class="playlist_name_text">TITULO DE PLAYLIST</p>
+                <p class="createdby_text">CREADA POR: USUARIO</p>
+                <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
+                <p class="followers_text"> FOLLOWERS: 200.000  </p>
+
+                <!--Movil-->
+                <div class="playlist_text_div">
+                    <p class="mobile_playlist_name_text">TITULO DE PLAYLIST</p>
+                    <p class="mobile_createdby_text">CREADA POR: USUARIO</p>
+                    <p class="mobile_datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
+                    <p class="mobile_followers_text"> FOLLOWERS: 200.000  </p>
+                </div>
+
+                <div class="edit_delete_btns">
+                    <button class="edit_btn">
+                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+                    </button>
+
+                    <button class="delete_btn" type="button">
+                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+                    </button>
+                </div>
+            </div>
+
+            <div class="playlist_div">
+                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <p class="playlist_name_text">TITULO DE PLAYLIST</p>
+                <p class="createdby_text">CREADA POR: USUARIO</p>
+                <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
+                <p class="followers_text"> FOLLOWERS: 200.000  </p>
+
+                <!--Movil-->
+                <div class="playlist_text_div">
+                    <p class="mobile_playlist_name_text">TITULO DE PLAYLIST</p>
+                    <p class="mobile_createdby_text">CREADA POR: USUARIO</p>
+                    <p class="mobile_datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
+                    <p class="mobile_followers_text"> FOLLOWERS: 200.000  </p>
+                </div>
+
+                <div class="edit_delete_btns">
+                    <button class="edit_btn">
+                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+                    </button>
+
+                    <button class="delete_btn" type="button">
+                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+                    </button>
+                </div>
+            </div>
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

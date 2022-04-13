@@ -17,8 +17,8 @@
 
             <div class="admin_headers_nav_div">
                 <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
+                <a class="header_links" href="#"> Usuarios</a>
                 <a class="header_links" href="#"> Canciones</a>
-                <a class="header_links" href="#"> Playlists</a>
                 <a class="header_links" href="#"> Perfil</a>
                 <a class="header_links" href="#"> Cerrar Sesión</a>
                 <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="images/profile.png"></a>

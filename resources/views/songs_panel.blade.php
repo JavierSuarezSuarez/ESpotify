@@ -39,6 +39,8 @@
         <section class="subheaders_section">
             <header class="subheaders">
                 <h2 class="subheaders_titles"> Canciones </h2>
+                <h2 class="mobile_subheaders_titles"> QUIZ&Aacute;S TE GUSTEN... </h2> <!--Movil-->
+                <hr class="mobile_subheaders_hr"> <!--Movil-->
             </header>
 
             <div class="subheaders_browser_div">
@@ -53,7 +55,9 @@
                 <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
                 <div class="song_text_div">
                     <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
+                    <p class="song_duration_text">3:18</p>
                 </div>
             </div>
 
@@ -61,7 +65,9 @@
                 <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
                 <div class="song_text_div">
                     <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
+                    <p class="song_duration_text">3:18</p>
                 </div>
             </div>
         </section>

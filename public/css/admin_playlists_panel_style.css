@@ -68,7 +68,6 @@ html {
 }
 
 /*----------------------------------- Playlists Section -------------------------------------------------*/
-/*----------------------------------- Playlists Section -------------------------------------------------*/
 .playlists_section {
     float: left;
     background-color: #282828;
@@ -87,7 +86,6 @@ html {
 .playlist_img {
     width: 48%;
     margin-top: 2%;
-    /* padding: 1%; */
 }
 
 .playlist_name_text {

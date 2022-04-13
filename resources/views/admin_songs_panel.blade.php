@@ -17,7 +17,7 @@
 
             <div class="admin_headers_nav_div">
                 <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
-                <a class="header_links" href="#"> Canciones</a>
+                <a class="header_links" href="#"> Usuarios</a>
                 <a class="header_links" href="#"> Playlists</a>
                 <a class="header_links" href="#"> Perfil</a>
                 <a class="header_links" href="#"> Cerrar Sesión</a>
@@ -51,6 +51,7 @@
                 <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
                 <div class="song_text_div">
                     <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
                 </div>
 
@@ -69,6 +70,7 @@
                 <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
                 <div class="song_text_div">
                     <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
                 </div>
 
@@ -87,6 +89,7 @@
                 <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
                 <div class="song_text_div">
                     <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
                 </div>
 

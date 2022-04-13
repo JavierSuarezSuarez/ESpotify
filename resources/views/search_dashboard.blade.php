@@ -34,7 +34,7 @@
         </header>
 
 
-    <hr class="hr">
+        <hr class="hr">
 
         <!-- Browser -->
         <section class="subheaders_section">
@@ -62,7 +62,9 @@
                 <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
                 <div class="song_text_div">
                     <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
+                    <p class="song_duration_text">3:18</p>
                 </div>
             </div>
 
@@ -90,7 +92,9 @@
                 <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
                 <div class="song_text_div">
                     <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
+                    <p class="song_duration_text">3:18</p>
                 </div>
             </div>
 
@@ -98,7 +102,9 @@
                 <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
                 <div class="song_text_div">
                     <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
+                    <p class="song_duration_text">3:18</p>
                 </div>
             </div>
 
