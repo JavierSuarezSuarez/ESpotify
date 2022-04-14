@@ -1,3 +1,7 @@
+<?php
+    $user = Illuminate\Support\Facades\Auth::user();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -19,17 +23,17 @@
 
             <!-- PC -->
             <div class="admin_headers_nav_div">
-                <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
-                <a class="header_links" href="#"> Canciones</a>
-                <a class="header_links" href="#"> Playlists</a>
-                <a class="header_links" href="#"> Perfil</a>
-                <a class="header_links" href="#"> Cerrar Sesión</a>
-                <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="images/profile.png"></a>
+                <a class="header_links" href="/search"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
+                <a class="header_links" href="/usersongs"> Canciones</a>
+                <a class="header_links" href="/userplaylists"> Playlists</a>
+                <a class="header_links" href="/profile"> Perfil</a>
+                <a class="header_links" href="/logout"> Cerrar Sesión</a>
+                <a class="header_links" href="/profile"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user -> foto}}"></a>
             </div>
 
             <!-- Movil -->
             <div class="mobile_admin_headers_nav_div">
-                <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="images/profile.png"></a>
+                <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user -> foto}}"></a>
             </div>
         </header>
 

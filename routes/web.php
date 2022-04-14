@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,36 @@ use \Illuminate\Support\Facades\DB;
     return view('welcome');
 });*/
 
-
-
-
 Route::get('/', function () {
     return view('index');
 });
+
+/*------------------------------------------Login/Logout routes--------------------------------------------------------------*/
+//GET login view
+Route::get('/login', function () { return view('login'); });
+
+//POST login
+Route::post('/login', 'App\Http\Controllers\LoginController@authenticate');
+
+//GET logout
+Route::get('/logout', 'App\Http\Controllers\LoginController@destroy');
+
+/*------------------------------------------Sign Up routes------------------------------------------------------------*/
+//GET signup view
+Route::get('/signup', function () { return view('signup'); });
+
+//POST signup
+Route::post('/signup', 'App\Http\Controllers\SignUpController@register');
+
+/*------------------------------------------Profile route-------------------------------------------------------------*/
+//GET profile view with the logged user
+Route::get('/profile', function () {
+    $user = Auth::user();
+    return view('profile',['user' => $user]);
+});
+
+
+
 
 /*-------------------------------------------Admin routes: This will change to /admin/id/x----------------------------*/
 Route::get('/users', function () {
@@ -64,6 +89,11 @@ Route::get('/search', function () {
     return view('search_dashboard');
 });
 
+
+
+
+
+/*------------------------------------------Pruebas route-------------------------------------------------------------*/
 Route::get('/header', function () {
     return view('layouts/header-layout');
 });
@@ -71,26 +101,3 @@ Route::get('/header', function () {
 Route::get('/prueba', function () {
     return view('layouts/header-layout');
 });
-
-Route::get('/profile', function () {
-    return view('profile');
-});
-
-/*------------------------------------------Login routes--------------------------------------------------------------*/
-
-//GET login view
-Route::get('/login', function () {
-    return view('login');
-});
-
-//POST login credentials
-Route::post('/login', array(
-    'uses' => 'App\Http\Controllers\LoginController@authenticate'
-));
-
-/*------------------------------------------Sign Up routes--------------------------------------------------------------*/
-Route::get('/signup', function () {
-    return view('signup');
-});
-
-

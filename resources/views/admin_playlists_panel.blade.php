@@ -1,3 +1,7 @@
+<?php
+    $user = Illuminate\Support\Facades\Auth::user();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -16,12 +20,12 @@
             <img class="logo" src="images/logo.jpg">
 
             <div class="admin_headers_nav_div">
-                <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
-                <a class="header_links" href="#"> Usuarios</a>
-                <a class="header_links" href="#"> Canciones</a>
-                <a class="header_links" href="#"> Perfil</a>
-                <a class="header_links" href="#"> Cerrar Sesión</a>
-                <a class="header_links" href="#"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="images/profile.png"></a>
+                <a class="header_links" href="/search"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
+                <a class="header_links" href="/users"> Usuarios</a>
+                <a class="header_links" href="/songs"> Canciones</a>
+                <a class="header_links" href="/profile"> Perfil</a>
+                <a class="header_links" href="/logout"> Cerrar Sesi&oacute;n</a>
+                <a class="header_links" href="/profile"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user -> foto}}"></a>
             </div>
         </header>
 

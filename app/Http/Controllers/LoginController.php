@@ -7,39 +7,32 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    /*public function __invoke(Request $request)
-    {
-        //
-    }*/
 
-    /**
-     * Handle an authentication attempt.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    //Logins the user redirecting him to his profile
     public function authenticate(Request $request)
     {
-        //Validacion de email y password
+        //Email and password validation
         $credentials = $request->validate([
-            'email' => ['required', 'email'],
+            'email' => ['required'],
             'password' => ['required'],
         ]);
 
-        //Si tiene exito el intento de login se regenera sesion y se redirige a profile
+        //If login attempt is successful, session regenerates and user is redirected to profile
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('profile');
+            return redirect()->to('profile');
         }
-
+        //If login attempt is NOT successful, keeps the user in the form showing an error message
         return back()->withErrors([
-            'email' => 'Las credenciales son incorrectas',
-        ])->onlyInput('email');
+            'message' => 'Las credenciales son incorrectas',
+        ]);
+    }
+
+    //Logouts the user and redirects him to login
+    public function destroy()
+    {
+        auth()->logout();
+
+        return redirect()->to('/login');
     }
 }

@@ -5,7 +5,7 @@
         "apellidos": "Moreno Pérez",
         "tipo": "1",
         "email": "pepemorper@gmail.com",
-        "password": "c4ca4238a0b923820dcc509a6f75849b"
+        "password": "$2y$10$vCVm8qWKoaxCy6SYl/R6Ku1gdY6gJWDVxHLCgbsXJeIo4q2UMVWjG"
     },
 
     {
@@ -14,7 +14,7 @@
         "apellidos": "Jiménez González",
         "tipo": "2",
         "email": "laurajimgon@gmail.com",
-        "password": "c81e728d9d4c2f636f067f89cc14862c"
+        "password": "$2y$10$Zj1g/5B07zCGdQdSMAv7ZeQleCk7cydliKiqPe68AhtePxffm5phq"
     },
 
     {
@@ -22,7 +22,7 @@
         "nombre": "Rodrigo",
         "apellidos": "Medina Santana",
         "tipo": "2",
-        "email": "rodrigomedsant@gmail.com",
-        "password": "c81e728d9d4c2f636f067f89cc14862c"
+        "email": "rodrigomedsan@gmail.com",
+        "password": "$2y$10$Zj1g/5B07zCGdQdSMAv7ZeQleCk7cydliKiqPe68AhtePxffm5phq"
     }
 ]
