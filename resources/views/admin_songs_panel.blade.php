@@ -43,7 +43,7 @@
 
             <div class="subheaders_btn_div">
                 <img class="subheaders_btn_image" src="images/addbtn.jpg" title="Add Button Image" alt="Add Button Image">
-                <a class="subheaders_link" href="#">A&ntilde;adir Canci&oacute;n </a>
+                <a class="subheaders_link" href="{{ route('songs.create')}}">A&ntilde;adir Canci&oacute;n </a>
             </div>
         </section>
 
@@ -60,13 +60,20 @@
                     </div>
 
                     <div class="edit_delete_btns">
-                        <button class="edit_btn">
-                            <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                        </button>
+                        <form action="{{ route('songs.edit', $song -> id)}}" method="put">
+                            @csrf
+                            <button class="edit_btn" type="submit">
+                                <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+                            </button>
+                        </form>
 
-                        <button class="delete_btn" type="button">
-                            <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                        </button>
+                        <form action="{{ route('songs.destroy', $song -> id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="delete_btn" type="submit">
+                                <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+                            </button>
+                        </form>
                     </div>
                 </div>
             @endforeach
@@ -75,3 +82,13 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
+<!--
+<div class="edit_delete_btns">
+    <button class="edit_btn">
+        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+    </button>
+
+    <button class="delete_btn" type="button">
+        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+    </button>
+</div>-->

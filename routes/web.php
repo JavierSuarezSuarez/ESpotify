@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\SongController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use \Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -19,9 +22,18 @@ use Illuminate\Support\Facades\Auth;
     return view('welcome');
 });*/
 
+
+/*------------------------------------------Main route-----------------------------------------------------------*/
 Route::get('/', function () {
     return view('index');
 });
+
+/*------------------------------------------Resource routes-----------------------------------------------------------*/
+Route::resources([
+    'users' => UserController::class,
+    'songs' => SongController::class,
+    'playlists' => PlaylistController::class
+]);
 
 /*------------------------------------------Login/Logout routes--------------------------------------------------------------*/
 //GET login view
@@ -46,8 +58,6 @@ Route::get('/profile', function () {
     $user = Auth::user();
     return view('profile',['user' => $user]);
 });
-
-
 
 
 /*-------------------------------------------Admin routes: This will change to /admin/id/x----------------------------*/

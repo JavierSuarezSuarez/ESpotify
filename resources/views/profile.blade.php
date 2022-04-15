@@ -23,12 +23,21 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="/search"><i class="uil uil-search"></i></a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/usersongs">Canciones</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/userplaylists">Playlists</a>
-                                </li>
+                                @if($user -> tipo == 2)
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/usersongs">Canciones</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/userplaylists">Playlists</a>
+                                    </li>
+                                @else
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/songs">Canciones</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/playlists">Playlists</a>
+                                    </li>
+                                @endif
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="/profile">Perfil</a>
                                 </li>

@@ -76,11 +76,13 @@ class SongController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Song  $song
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function destroy(Song $song)
+    public function destroy($id)
     {
-        //
+        $songtoDelete = Song::find($id);
+        $songtoDelete -> delete();
+        return redirect('/songs');
     }
 }

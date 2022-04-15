@@ -24,8 +24,13 @@
             <!-- PC -->
             <div class="admin_headers_nav_div">
                 <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
-                <a class="header_links" href="/usersongs"> Canciones</a>
-                <a class="header_links" href="/userplaylists"> Playlists</a>
+                @if($user -> tipo == 2)
+                    <a class="header_links" href="/usersongs"> Canciones</a>
+                    <a class="header_links" href="/userplaylists"> Playlists</a>
+                @else
+                    <a class="header_links" href="/songs"> Canciones</a>
+                    <a class="header_links" href="/playlists"> Playlists</a>
+                @endif
                 <a class="header_links" href="/profile"> Perfil</a>
                 <a class="header_links" href="/logout"> Cerrar Sesión</a>
                 <a class="header_links" href="/profile"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user -> foto}}"></a>

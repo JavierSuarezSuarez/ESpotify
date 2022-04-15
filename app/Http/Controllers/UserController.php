@@ -45,7 +45,7 @@ class UserController extends Controller
      * @param  \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $song)
+    public function show(User $user)
     {
         //
     }
@@ -56,7 +56,7 @@ class UserController extends Controller
      * @param  \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $song)
+    public function edit(User $user)
     {
         //
     }
@@ -68,7 +68,7 @@ class UserController extends Controller
      * @param  \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, User $song)
+    public function update(UpdateUserRequest $request, User $user)
     {
         //
     }
@@ -76,11 +76,13 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $song
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function destroy(User $song)
+    public function destroy($id)
     {
-        //
+        $usertoDelete = User::find($id);
+        $usertoDelete -> delete();
+        return redirect('/users');
     }
 }
