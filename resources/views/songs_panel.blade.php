@@ -23,7 +23,7 @@
 
             <!-- PC -->
             <div class="admin_headers_nav_div">
-                <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
+                <a class="header_links" href="/search"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
                 <a class="header_links" href="/usersongs"> Canciones</a>
                 <a class="header_links" href="/userplaylists"> Playlists</a>
                 <a class="header_links" href="/profile"> Perfil</a>

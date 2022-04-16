@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class SignUpController extends Controller
 {
@@ -13,16 +14,15 @@ class SignUpController extends Controller
 
         // Retrieve all request data.
         $inputValidated = $request -> all();
-
         // Hash the password
         $inputValidated ['password'] = bcrypt($inputValidated['password']);
 
-        // Create the user
-        User::create($inputValidated);
+        // Create and log in the user
+        $user= User::create($inputValidated);
+        Auth::login($user);
 
         // Redirect to profile with the new users data
         return redirect()
-            ->to('/profile')
-            ->with('user', $inputValidated);
+            ->to('/profile');
     }
 }

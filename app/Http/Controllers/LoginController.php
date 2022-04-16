@@ -24,7 +24,7 @@ class LoginController extends Controller
         }
         //If login attempt is NOT successful, keeps the user in the form showing an error message
         return back()->withErrors([
-            'message' => 'Las credenciales son incorrectas',
+            'message' => 'Wrong credentials',
         ]);
     }
 

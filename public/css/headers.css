@@ -41,11 +41,13 @@
     .header_lupa {
         width: 50%;
         margin-top: -7%;
+        max-width: 66px;
     }
 
     .header_profile_img {
         width: 77%;
         margin-top: -24%;
+        max-width: 62px;
     }
 
     .hr {

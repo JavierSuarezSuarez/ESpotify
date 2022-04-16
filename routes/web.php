@@ -60,7 +60,7 @@ Route::get('/profile', function () {
 });
 
 
-/*-------------------------------------------Admin routes: This will change to /admin/id/x----------------------------*/
+/*-------------------------------------------Admin routes-------------------------------------------------------------*/
 Route::get('/users', function () {
     $users = DB::table('users') -> get();
     return view('admin_users_panel', ['users' => $users]);
@@ -86,7 +86,7 @@ Route::get('/playlists', function () {
 
 
 
-/*------------------------------------------User routes: This will change to /user/id/x-------------------------------*/
+/*------------------------------------------User routes---------------------------------------------------------------*/
 Route::get('/userplaylists', function () {
     return view('playlists_panel');
 });

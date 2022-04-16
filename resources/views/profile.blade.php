@@ -65,7 +65,10 @@
                     <p class="user_playlists">6</p> <br>
                 </div>
                 <div class="button_div">
-                    <button class="btn btn-default full-width">Editar Perfil</button>
+                    <form  class="user_edit_form" action="{{ route('users.edit', $user -> id)}}" method="PUT">
+                        @csrf
+                        <button class="btn btn-default full-width">Editar Perfil</button>
+                    </form>
                 </div>
             </div>
 

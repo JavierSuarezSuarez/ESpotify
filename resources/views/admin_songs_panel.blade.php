@@ -60,14 +60,14 @@
                     </div>
 
                     <div class="edit_delete_btns">
-                        <form action="{{ route('songs.edit', $song -> id)}}" method="put">
+                        <form class="song_edit_form" action="{{ route('songs.edit', $song -> id)}}" method="PUT">
                             @csrf
                             <button class="edit_btn" type="submit">
                                 <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
                             </button>
                         </form>
 
-                        <form action="{{ route('songs.destroy', $song -> id)}}" method="post">
+                        <form class="song_delete_form" action="{{ route('songs.destroy', $song -> id)}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="delete_btn" type="submit">
@@ -82,13 +82,3 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
-<!--
-<div class="edit_delete_btns">
-    <button class="edit_btn">
-        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-    </button>
-
-    <button class="delete_btn" type="button">
-        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-    </button>
-</div>-->
