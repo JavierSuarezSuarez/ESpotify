@@ -1,0 +1,346 @@
+
+html {
+    height: 100vh;
+    width: 100vw;
+    background-color: #282828;
+}
+
+/*Media Query para PC */
+@media only screen and (min-width:768px) {
+    /*--------------------------------------------------- Content --------------------------------------------------------*/
+
+    /*----------------------------------- Songs - Browser - Add Song Subheader Section -------------------*/
+    .subheaders_section {
+        background-color: #282828;
+        float: left;
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto auto auto;
+        margin-top: 3%;
+        margin-left: 3%;
+        grid-column-gap: 14%;
+    }
+
+    .subheaders {
+        float: left;
+        margin-top: 2%;
+        margin-left: 10%;
+    }
+
+    .subheaders_titles {
+        color: white;
+        font-family: none;
+        font-size: xxx-large;
+    }
+    .mobile_subheaders_titles {
+        display: none;
+    }
+
+    .mobile_subheaders_hr {
+        display: none;
+    }
+
+
+    .subheaders_browser_div {
+        float: left;
+        margin-top: 8%;
+        margin-left: 5%;
+        margin-right: 7%;
+    }
+
+    .browser_input {
+        border-radius: 22px;
+        text-align: center;
+        background: url(../images/lupa_buscador.png) no-repeat 220px -1px;
+        background-size: contain;
+        background-color: white;
+    }
+
+    .subheaders_btn_div {
+        float: right;
+        margin-top: 5.5%;
+        margin-right: 10%;
+        width: 70%;
+        margin-left: 7%;
+    }
+    .subheaders_btn_image {
+        width: 17%;
+        margin-bottom: 2%;
+    }
+
+    .subheaders_link {
+        font-family: none;
+        text-decoration: none;
+        color: white;
+        font-size: x-large;
+    }
+
+    /*----------------------------------- Songs Section -------------------------------------------------*/
+    .songs_section {
+        float: left;
+        background-color: #282828;
+        display: grid;
+        grid-template-columns: auto;
+        margin-left: 5%;
+        margin-top: 1%;
+        width: 100%;
+    }
+
+    .song_div {
+    }
+
+
+    .song_img {
+        width: 16%;
+        margin-top: 2%;
+        padding: 1%;
+        float: left;
+    }
+
+    .song_text_div {
+        float: left;
+        margin-top: 4%;
+        margin-left: 7%;
+        width: 24%;
+    }
+
+    .song_name_text {
+        color: white;
+        font-size: larger;
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+
+    .song_album_text {
+        color: white;
+        font-size: medium;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .song_artist_text {
+        color: white;
+        font-size: small;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .song_duration_text {
+        display: none;
+    }
+
+    .edit_delete_btns {
+        text-align: center;
+        margin-bottom: 12%;
+        float: right;
+        margin-top: 5%;
+        width: 44%;
+    }
+
+    .song_edit_form {
+        width: 9%;
+        float: left;
+        margin-left: 45%;
+    }
+
+    .song_delete_form {
+        width: 8%;
+        float: left;
+    }
+
+    .edit_btn {
+        padding: 10%;
+        text-align: center;
+        outline: none;
+        color: #fff;
+        background-color: #066397;
+        border: none;
+        border-radius: 50%;
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+
+    .edit_btn_img {
+    }
+
+    .delete_btn {
+        padding: 10%;
+        text-align: center;
+        outline: none;
+        color: #fff;
+        background-color: red;
+        border: none;
+        border-radius: 50%;
+        padding-left: 20%;
+        padding-right: 23%;
+    }
+
+    .delete_btn_img {
+    }
+}
+
+/*Media Query para Movil */
+@media only screen and (max-width: 767px) {
+
+    /*--------------------------------------------------- Content --------------------------------------------------------*/
+
+    /*----------------------------------- Songs - Browser - Add Song Subheader Section -------------------*/
+    .subheaders_section {
+        background-color: #282828;
+        float: left;
+        display: grid;
+        width: 47%;
+        grid-template-columns: auto;
+        margin-top: 3%;
+        margin-left: 16%;
+        grid-column-gap: 14%;
+    }
+
+    .subheaders {
+        float: left;
+        margin-top: 2%;
+        margin-left: 10%;
+    }
+
+    .subheaders_titles {
+        display: none;
+    }
+
+    .mobile_subheaders_titles {
+        color: white;
+        font-family: none;
+        font-size: medium;
+    }
+
+    .mobile_subheaders_hr {
+        color: white;
+        margin: 0;
+        width: 155%;
+    }
+
+
+    .subheaders_browser_div {
+        display: none;
+    }
+
+    .browser_input {
+        border-radius: 22px;
+        text-align: center;
+        background: url(../images/lupa_buscador.png) no-repeat 220px -1px;
+        background-size: contain;
+        background-color: white;
+    }
+
+    .subheaders_btn_div {
+        float: right;
+        margin-top: 5.5%;
+        margin-right: 10%;
+        width: 70%;
+        margin-left: 7%;
+    }
+    .subheaders_btn_image {
+        width: 17%;
+        margin-bottom: 2%;
+    }
+
+    .subheaders_link {
+        font-family: none;
+        text-decoration: none;
+        color: white;
+        font-size: x-large;
+    }
+
+    /*----------------------------------- Songs Section -------------------------------------------------*/
+    .songs_section {
+        float: left;
+        background-color: #282828;
+        display: grid;
+        grid-template-columns: auto;
+        margin-left: 20%;
+        margin-top: 1%;
+        width: 100%;
+    }
+
+    .song_div {
+    }
+
+
+    .song_img {
+        width: 16%;
+        margin-top: 2%;
+        padding: 1%;
+        float: left;
+    }
+
+    .song_text_div {
+        float: left;
+        margin-top: 4%;
+        margin-left: 7%;
+        width: 24%;
+    }
+
+    .song_name_text {
+        color: white;
+        font-size: larger;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .song_album_text {
+        color: white;
+        font-size: medium;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .song_artist_text {
+        color: white;
+        font-size: small;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .song_duration_text {
+        color: white;
+        font-size: small;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .edit_delete_btns {
+        text-align: center;
+        margin-bottom: 12%;
+        float: right;
+        margin-top: 5%;
+        width: 44%;
+    }
+
+    .edit_btn {
+        padding: 2%;
+        text-align: center;
+        outline: none;
+        color: #fff;
+        background-color: #066397;
+        border: none;
+        border-radius: 50%;
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .edit_btn_img {
+    }
+
+    .delete_btn {
+        padding: 2%;
+        text-align: center;
+        outline: none;
+        color: #fff;
+        background-color: red;
+        border: none;
+        border-radius: 50%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .delete_btn_img {
+    }
+}

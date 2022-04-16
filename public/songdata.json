@@ -1,0 +1,28 @@
+[
+    {
+        "user_id": "1",
+        "nombre": "Waves (Robin Schulz Remix Radio Edit)",
+        "imagen": "images/song.jpg",
+        "artistas": "Mr.Probz, Robin Schulz",
+        "album": "Against The Stream",
+        "url": "https://www.youtube.com/watch?v=pUjE9H8QlA4"
+    },
+
+    {
+        "user_id": "2",
+        "nombre": "no tears left to cry",
+        "imagen": "https://jenesaispop.com/wp-content/uploads/2018/04/ariana-1.jpg",
+        "artistas": "Ariana Grande",
+        "album": "Sweetener",
+        "url": "https://www.youtube.com/watch?v=ffxKSjUwKdU"
+    },
+
+    {
+        "user_id": "3",
+        "nombre": "Numb",
+        "imagen": "https://m.media-amazon.com/images/I/519E17AACRL._SX355_.jpg",
+        "artistas": "Linkin Park",
+        "album": "Meteora",
+        "url": "https://www.youtube.com/watch?v=kXYiU_JCYtU"
+    }
+]
