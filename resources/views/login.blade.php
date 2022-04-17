@@ -33,18 +33,9 @@
                     <input name ="password" id="password" type="password" placeholder="CONTRASEÑA">
                     <input type="submit" class="btn btn-default full-width" value="INICIAR SESIÓN">
                 </form>
-
-                <!--<div class="box">
-                    <input id="email_field" type="text" placeholder="EMAIL">
-                    <input id="password_field" type="password" placeholder="CONTRASEÑA">
-                    <button class="btn btn-default full-width" onclick="loginRequest()">INICIAR SESIÓN</button>
-                </div>-->
             </div>
         </div>
 
-        <footer>
-
-        </footer>
     </body>
 
 </html>

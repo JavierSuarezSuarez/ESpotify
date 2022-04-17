@@ -42,7 +42,6 @@
             </div>
         </header>
 
-
         <hr class="hr">
 
         <!-- Browser -->

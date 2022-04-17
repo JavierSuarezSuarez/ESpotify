@@ -14,6 +14,7 @@ body {
     margin: 4rem auto;
     background-color: #282828;
     padding: 2rem;
+    margin-top: 10.5%;
 }
 
 .container .glyphicon-list-alt {
@@ -55,6 +56,7 @@ h2 {
     border: 1px solid white;
     font-weight:bold;
     font-family: monospace;
+    margin-left: 0%;
 }
 
 .login_logo{
@@ -65,7 +67,7 @@ h2 {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin-bottom: 11rem;
+    margin-bottom: 24%;
     margin-left: 3rem;
     margin-right: 3rem;
     color: #3d3d3d;
