@@ -6,52 +6,40 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="../js/jquery-3.6.0.min.js"></script>
         <link rel="stylesheet" href="{{ asset('css/profile_style.css') }}">
-
+        <link href="{{ asset('css/headers.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
         <title>Perfil</title>
     </head>
     <body>
 
-        <header>
-            <div class="container-fluid p-0 w-100">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div class="container-fluid">
-                        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
-                            <img src="{{ asset('images/logo.jpg') }}" class="img-fluid float-start" width="80" alt="logoEspotify" />
-                            <ul class="navbar-nav d-flex">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/search"><i class="uil uil-search"></i></a>
-                                </li>
-                                @if($user -> tipo == 2)
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="/usersongs">Canciones</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="/userplaylists">Playlists</a>
-                                    </li>
-                                @else
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="/songs">Canciones</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="/playlists">Playlists</a>
-                                    </li>
-                                @endif
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/profile">Perfil</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/logout">Cerrar sesión</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
+    <!-- Header Section -->
+    <header class="admin_headers">
+        <img class="burguer_logo" src="images/burguermenu.jpg"> <!-- Movil -->
 
+        <img class="logo" src="images/logo.jpg">
 
+        <!-- PC -->
+        <div class="admin_headers_nav_div">
+            <a class="header_links" href="#"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
+            @if($user -> tipo == 2)
+                <a class="header_links" href="/usersongs"> Canciones</a>
+                <a class="header_links" href="/userplaylists"> Playlists</a>
+            @else
+                <a class="header_links" href="/songs"> Canciones</a>
+                <a class="header_links" href="/playlists"> Playlists</a>
+            @endif
+            <a class="header_links" href="/profile"> Perfil</a>
+            <a class="header_links" href="/logout"> Cerrar Sesión</a>
+            <a class="header_links" href="/profile"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user -> foto}}"></a>
+        </div>
+
+        <!-- Movil -->
+        <div class="mobile_admin_headers_nav_div">
+            <a class="header_links" href="/profile"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user -> foto}}"></a>
+        </div>
+    </header>
+
+    <hr class="hr">
 
         <section class="profile_section">
 
