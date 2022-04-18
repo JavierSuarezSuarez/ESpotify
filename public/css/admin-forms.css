@@ -1,0 +1,13 @@
+* {
+    font-family: 'Space Mono', monospace;
+}
+
+.save-btn {
+    background-color: #3500D3;
+    color: #fff;
+    width: 100%;
+}
+
+h1 {
+    color: #3500D3;
+}
