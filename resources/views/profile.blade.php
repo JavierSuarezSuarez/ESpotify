@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="{{ asset('css/profile_style.css') }}">
         <link href="{{ asset('css/headers.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
         <title>Perfil</title>
     </head>
     <body>

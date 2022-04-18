@@ -60,14 +60,17 @@ h2 {
 }
 
 .login_logo{
-    width: 68%;
+    width: 57%;
+    position: absolute;
+    margin-bottom: 22%;
+    margin-left:-29%;
 }
 
 .box {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin-bottom: 24%;
+    margin-bottom: -3%;
     margin-left: 3rem;
     margin-right: 3rem;
     color: #3d3d3d;
