@@ -58,9 +58,9 @@
         <section class="results_section">
 
             <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <div class="playlist_text_div">
-                    <p class="playlist_name_text">TITULO DE PLAYLIST</p>
+                    <a href="#" class="playlist_name_text">TITULO DE PLAYLIST</a>
                     <p class="createdby_text">CREADA POR: USUARIO</p>
                     <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
                     <p class="followers_text"> FOLLOWERS: 200.000  </p>
@@ -68,9 +68,9 @@
             </div>
 
             <div class="song_div">
-                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
+                <a href="#"><img class="song_img" title="User Image" alt="User Image" src="images/song.jpg"></a>
                 <div class="song_text_div">
-                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <a href="#" class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</a>
                     <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
                     <p class="song_duration_text">3:18</p>
@@ -78,9 +78,9 @@
             </div>
 
             <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <div class="playlist_text_div">
-                    <p class="playlist_name_text">TITULO DE PLAYLIST</p>
+                    <a href="#" class="playlist_name_text">TITULO DE PLAYLIST</a>
                     <p class="createdby_text">CREADA POR: USUARIO</p>
                     <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
                     <p class="followers_text"> FOLLOWERS: 200.000  </p>
@@ -88,9 +88,9 @@
             </div>
 
             <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <div class="playlist_text_div">
-                    <p class="playlist_name_text">TITULO DE PLAYLIST</p>
+                    <a href="#" class="playlist_name_text">TITULO DE PLAYLIST</a>
                     <p class="createdby_text">CREADA POR: USUARIO</p>
                     <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
                     <p class="followers_text"> FOLLOWERS: 200.000  </p>
@@ -98,9 +98,9 @@
             </div>
 
             <div class="song_div">
-                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
+                <a href="#"><img class="song_img" title="User Image" alt="User Image" src="images/song.jpg"></a>
                 <div class="song_text_div">
-                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <a href="#" class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</a>
                     <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
                     <p class="song_duration_text">3:18</p>
@@ -108,9 +108,9 @@
             </div>
 
             <div class="song_div">
-                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
+                <a href="#"><img class="song_img" title="User Image" alt="User Image" src="images/song.jpg"></a>
                 <div class="song_text_div">
-                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <a href="#" class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</a>
                     <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
                     <p class="song_duration_text">3:18</p>

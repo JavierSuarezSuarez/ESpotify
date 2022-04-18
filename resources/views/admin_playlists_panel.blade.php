@@ -56,7 +56,7 @@
         <section class="playlists_section">
 
             <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <p class="playlist_name_text">TITULO DE PLAYLIST</p>
                 <p class="createdby_text">CREADA POR: USUARIO</p>
                 <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
@@ -74,7 +74,7 @@
             </div>
 
             <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <p class="playlist_name_text">TITULO DE PLAYLIST</p>
                 <p class="createdby_text">CREADA POR: USUARIO</p>
                 <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
@@ -92,7 +92,7 @@
             </div>
 
             <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <p class="playlist_name_text">TITULO DE PLAYLIST</p>
                 <p class="createdby_text">CREADA POR: USUARIO</p>
                 <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
@@ -110,7 +110,7 @@
             </div>
 
             <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <p class="playlist_name_text">TITULO DE PLAYLIST</p>
                 <p class="createdby_text">CREADA POR: USUARIO</p>
                 <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
@@ -128,7 +128,7 @@
             </div>
 
             <div class="playlist_div">
-                <img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg">
+                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <p class="playlist_name_text">TITULO DE PLAYLIST</p>
                 <p class="createdby_text">CREADA POR: USUARIO</p>
                 <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>

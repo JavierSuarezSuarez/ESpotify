@@ -52,9 +52,9 @@
         <section class="songs_section">
             @foreach($songs as $song)
                 <div class="song_div">
-                    <img class="song_img" title="Song Image" alt="Song Image" src="{{$song -> imagen}}">
+                    <a href="#"><img class="song_img" title="Song Image" alt="Song Image" src="{{$song -> imagen}}"></a>
                     <div class="song_text_div">
-                        <p class="song_name_text">{{$song -> nombre}}</p>
+                        <a href="#" class="song_name_text">{{$song -> nombre}}</a>
                         <p class="song_album_text">{{$song -> album}}</p>
                         <p class="song_artist_text">{{$song -> artistas}}</p>
                     </div>

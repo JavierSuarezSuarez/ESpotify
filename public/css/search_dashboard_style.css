@@ -72,6 +72,7 @@ html {
         font-size: larger;
         margin-top: 3%;
         margin-bottom: 3%;
+        text-decoration: none;
     }
 
     .song_album_text {
@@ -115,6 +116,7 @@ html {
         font-size: medium;
         margin-top: 3%;
         width: 82%;
+        text-decoration: none;
     }
 
     .createdby_text {
@@ -208,6 +210,7 @@ html {
         font-size: larger;
         margin-top: 5%;
         margin-bottom: 3%;
+        text-decoration: none;
     }
 
     .song_album_text {
@@ -255,6 +258,7 @@ html {
         font-size: medium;
         margin-top: 3%;
         width: 82%;
+        text-decoration: none;
     }
 
     .createdby_text {

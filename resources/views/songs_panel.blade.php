@@ -56,9 +56,9 @@
         <section class="songs_section">
 
             <div class="song_div">
-                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
+                <a href="#"> <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg"></a>
                 <div class="song_text_div">
-                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <a href="#" class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</a>
                     <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
                     <p class="song_duration_text">3:18</p>
@@ -66,9 +66,9 @@
             </div>
 
             <div class="song_div">
-                <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg">
+                <a href="#"> <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg"></a>
                 <div class="song_text_div">
-                    <p class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</p>
+                    <a href="#" class="song_name_text">T&Iacute;TULO CANCI&Oacute;N</a>
                     <p class="song_album_text">Album</p>
                     <p class="song_artist_text">ARTISTAS</p>
                     <p class="song_duration_text">3:18</p>
