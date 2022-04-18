@@ -84,8 +84,6 @@ Route::get('/playlists', function () {
 });*/
 
 
-
-
 /*------------------------------------------User routes---------------------------------------------------------------*/
 Route::get('/userplaylists', function () {
     return view('playlists_panel');
@@ -100,7 +98,19 @@ Route::get('/search', function () {
 });
 
 
+/*-------------------------------------------Form routes-------------------------------------------------------------*/
 
+Route::get('/userform', function () {
+    return view('admin-user-form');
+});
+
+Route::get('/songform', function () {
+    return view('admin-song-form');
+});
+
+Route::get('/playlistform', function () {
+    return view('admin-playlist-form');
+});
 
 
 /*------------------------------------------Pruebas route-------------------------------------------------------------*/
