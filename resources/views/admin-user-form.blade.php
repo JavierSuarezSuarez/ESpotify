@@ -2,8 +2,8 @@
 
 @section('mainContent')
     <div class="d-flex justify-content-center">
-        <form class="login-form border rounded p-5 bg-light mt-4 mb-4">
-            <h1 class="text-center">Create/Modify Song</h1>
+        <form class="admin-form border rounded p-5 bg-light mt-4 mb-4">
+            <h1 class="text-center">Create/Modify User</h1>
             <label for="name" class="mt-2">Nombre</label>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="">

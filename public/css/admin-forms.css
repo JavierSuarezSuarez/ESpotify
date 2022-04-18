@@ -2,6 +2,10 @@
     font-family: 'Space Mono', monospace;
 }
 
+.admin-form {
+    border-radius: 20px !important;
+}
+
 .save-btn {
     background-color: #3500D3;
     color: #fff;
