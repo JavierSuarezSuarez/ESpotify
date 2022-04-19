@@ -24,3 +24,7 @@ Route::get('/homeunregistered', function () {
 Route::get('/home', function () {
     return view('/home/home');
 });
+
+Route::get('/song', function () {
+    return view('/song');
+});
