@@ -121,3 +121,11 @@ Route::get('/header', function () {
 Route::get('/prueba', function () {
     return view('layouts/header-layout');
 });
+
+Route::get('/homeunregistered', function () {
+    return view('/home/homeunregistered');
+});
+
+Route::get('/home', function () {
+    return view('/home/home');
+});
