@@ -14,8 +14,6 @@
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         <link rel="stylesheet" href="{{ asset('css/admin-forms.css') }}">
-
-
         <title>Document</title>
     </head>
     <body>

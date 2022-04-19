@@ -43,7 +43,7 @@
 
             <div class="subheaders_btn_div">
                 <img class="subheaders_btn_image" src="images/addbtn.jpg" title="Add Button Image" alt="Add Button Image">
-                <a class="subheaders_link" href="{{ route('songs.create')}}">A&ntilde;adir Canci&oacute;n </a>
+                <a class="subheaders_link" href="{{ route('songs.create')}}">A&ntilde;adir Canción</a>
             </div>
         </section>
 

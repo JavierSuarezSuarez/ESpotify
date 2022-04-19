@@ -3,6 +3,7 @@
 @section('mainContent')
     <div class="d-flex justify-content-center">
         <form class="admin-form border rounded p-5 bg-light mt-4 mb-4">
+            @csrf
             <h1 class="text-center">Create/Modify Playlist</h1>
             <label for="name" class="mt-2">Nombre</label>
             <div class="form-group">
@@ -13,7 +14,7 @@
                 <input type="file" class="custom-file-input" id="customFile">
                 <label class="custom-file-label" for="customFile">Seleccionar portada</label>
             </div>
-            <button type="button" class="btn save-btn mt-4">Save</button>
+            <button type="submit" class="btn save-btn mt-4">Save</button>
         </form>
     </div>
 @endsection
