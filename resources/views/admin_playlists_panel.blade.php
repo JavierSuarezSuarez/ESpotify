@@ -1,152 +1,70 @@
 <?php
-    $user = Illuminate\Support\Facades\Auth::user();
+$user = Illuminate\Support\Facades\Auth::user();
 ?>
+@extends('layouts/admin-layout')
 
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link href="{{ asset('css/admin_playlists_panel_style.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/headers.css') }}" rel="stylesheet">
-        <!--<script src="../js/jquery-3.6.0.min.js"></script>-->
-        <title>Panel de Playlists</title>
-    </head>
+@section('styles')
+    <link href="{{ asset('css/admin_playlists_panel_style.css') }}" rel="stylesheet">
+@stop
 
-    <body>
-        <!-- Header Section -->
-        <header class="admin_headers">
-            <img class="logo" src="images/logo.jpg">
+@section('mainContent')
 
-            <div class="admin_headers_nav_div">
-                <a class="header_links" href="/search"> <img class="header_lupa" title="Header Lupa" alt="Header Lupa" src="images/lupa.jpg"></a>
-                <a class="header_links" href="/users"> Usuarios</a>
-                <a class="header_links" href="/songs"> Canciones</a>
-                <a class="header_links" href="/profile"> Perfil</a>
-                <a class="header_links" href="/logout"> Cerrar Sesi&oacute;n</a>
-                <a class="header_links" href="/profile"> <img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user -> foto}}"></a>
-            </div>
-        </header>
+        <section class="subheaders_section d-flex justify-content-between align-items-center">
 
-
-        <hr class="hr">
-
-        <!-- Playlists - Browser - Add Playlist Subheader Section -->
-        <section class="subheaders_section">
-
-            <header class="subheaders">
-                <h2 class="subheaders_titles"> Playlists</h2>
-            </header>
-
-            <div class="subheaders_browser_div">
-                <input class="browser_input" type="text" placeholder="Search...">
+            <div class="title">
+                <h2 class="text-light">Playlists</h2>
             </div>
 
-            <div class="subheaders_btn_div">
-                <img class="subheaders_btn_image" src="images/addbtn.jpg" title="Add Button Image" alt="Add Button Image">
-                <a class="subheaders_link" href="{{ route('playlists.create')}}">A&ntilde;adir Playlist </a>
+
+            <form class="form-inline d-flex justify-content-between align-items-center">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn my-2 my-sm-0 text-light" type="submit"><i class="uil uil-search"></i></button>
+            </form>
+
+            <div class="mx-4">
+                <a class="h5 d-flex align-items-center justify-content-center my-0 mx-2 text-light text-decoration-none" href="{{ route('playlists.create')}}"><i class="uil uil-plus-circle text-light icono mx-2"></i>A&ntilde;adir Playlist</a>
             </div>
 
         </section>
-
 
 
         <!-- Playlists Section -->
-        <section class="playlists_section">
+        <section class="playlists_section d-flex">
 
-            <div class="playlist_div">
+            <div class="playlist_div d-flex flex-column justify-content-center align-items-center">
                 <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
-                <p class="playlist_name_text">TITULO DE PLAYLIST</p>
-                <p class="createdby_text">CREADA POR: USUARIO</p>
-                <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
-                <p class="followers_text"> FOLLOWERS: 200.000  </p>
+                <p class="playlist_name_text text-light">TITULO DE PLAYLIST</p>
+                <p class="createdby_text text-light">CREADA POR: USUARIO</p>
+                <p class="datesongnumber_text text-light">DD/mm/YYYY - X CANCIONES</p>
+                <p class="followers_text text-light"> FOLLOWERS: 200.000  </p>
 
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+                <div class="edit_delete_btns d-flex">
+                    <button class="edit_btn btn" type="submit">
+                        <i class="uil uil-pen text-primary action-icon"></i>
                     </button>
 
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+                    <button class="delete_btn btn" type="submit">
+                        <i class="uil uil-trash-alt text-danger action-icon"></i>
                     </button>
                 </div>
             </div>
 
-            <div class="playlist_div">
+            <div class="playlist_div d-flex flex-column justify-content-center align-items-center mx-3">
                 <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
-                <p class="playlist_name_text">TITULO DE PLAYLIST</p>
-                <p class="createdby_text">CREADA POR: USUARIO</p>
-                <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
-                <p class="followers_text"> FOLLOWERS: 200.000  </p>
+                <p class="playlist_name_text text-light">TITULO DE PLAYLIST</p>
+                <p class="createdby_text text-light">CREADA POR: USUARIO</p>
+                <p class="datesongnumber_text text-light">DD/mm/YYYY - X CANCIONES</p>
+                <p class="followers_text text-light"> FOLLOWERS: 200.000  </p>
 
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
+                <div class="edit_delete_btns d-flex">
+                    <button class="edit_btn btn" type="submit">
+                        <i class="uil uil-pen text-primary action-icon"></i>
                     </button>
 
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
-            <div class="playlist_div">
-                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
-                <p class="playlist_name_text">TITULO DE PLAYLIST</p>
-                <p class="createdby_text">CREADA POR: USUARIO</p>
-                <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
-                <p class="followers_text"> FOLLOWERS: 200.000  </p>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
-            <div class="playlist_div">
-                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
-                <p class="playlist_name_text">TITULO DE PLAYLIST</p>
-                <p class="createdby_text">CREADA POR: USUARIO</p>
-                <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
-                <p class="followers_text"> FOLLOWERS: 200.000  </p>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
-                    </button>
-                </div>
-            </div>
-
-            <div class="playlist_div">
-                <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
-                <p class="playlist_name_text">TITULO DE PLAYLIST</p>
-                <p class="createdby_text">CREADA POR: USUARIO</p>
-                <p class="datesongnumber_text">DD/mm/YYYY - X CANCIONES</p>
-                <p class="followers_text"> FOLLOWERS: 200.000  </p>
-
-                <div class="edit_delete_btns">
-                    <button class="edit_btn">
-                        <img  class="edit_btn_img" title="Edit" alt="Edit" src="images/editbtn.png">
-                    </button>
-
-                    <button class="delete_btn" type="button">
-                        <img class="delete_btn_img" title="Delete" alt="Delete" src="images/deletebtn.png">
+                    <button class="delete_btn btn" type="submit">
+                        <i class="uil uil-trash-alt text-danger action-icon"></i>
                     </button>
                 </div>
             </div>
         </section>
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
-</html>
+@endsection

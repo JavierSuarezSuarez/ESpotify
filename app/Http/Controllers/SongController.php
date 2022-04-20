@@ -78,6 +78,7 @@ class SongController extends Controller
     public function edit(Song $song)
     {
         //
+
         return view('admin-song-form', ["song" => $song]);
     }
 
@@ -88,9 +89,25 @@ class SongController extends Controller
      * @param  \App\Models\Song  $song
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSongRequest $request, Song $song)
+    public function update(UpdateSongRequest $request, $id)
     {
         //
+        $validated = $request->validate([
+            'nombre' => 'required',
+            'artistas' => 'required',
+            'album' => 'required',
+            'url' => 'required',
+        ]);
+
+        $song = Song::where('id', $id)->firstOrFail();
+
+        $song->user_id = $song->user_id;
+        $song->nombre = $request->nombre;
+        $song->artistas = $request->artistas;
+        $song->album = $request->album;
+        $song->url = $request->url;
+        $song->imagen = $song->imagen;
+        $song->save();
 
         return redirect("/songs");
 

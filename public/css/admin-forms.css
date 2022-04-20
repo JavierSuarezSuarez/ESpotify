@@ -2,6 +2,10 @@
     font-family: 'Space Mono', monospace;
 }
 
+.form-container {
+    background-color: #282828;
+}
+
 .admin-form {
     border-radius: 20px !important;
 }
