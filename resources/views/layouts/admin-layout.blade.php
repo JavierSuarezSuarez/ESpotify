@@ -1,3 +1,7 @@
+<?php
+$user = Illuminate\Support\Facades\Auth::user();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
