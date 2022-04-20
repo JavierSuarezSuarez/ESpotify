@@ -1,107 +1,19 @@
-
-/*######################################################## MEDIA QUERIES #####################################*/
-/*Media Query para PC */
-@media only screen and (min-width:768px) {
-    /*--------------------------------------------------- Header ---------------------------------------------------------*/
-    .admin_headers {
-        background: #282828;
-    }
-
-    .logo {
-        width: 7%;
-        margin-left: 2%;
-        margin-bottom: 2%;
-        margin-top: 2%;
-    }
-
-    .burguer_logo {
-        display: none;
-    }
-
-    .admin_headers_nav_div {
-        float: right;
-        margin-top: 5%;
-        width: 49%;
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
-        grid-gap: 5%;
-        text-align: center;
-        margin-right: 3%;
-    }
-
-    .mobile_admin_headers_nav_div {
-        display: none;
-    }
-
-    .header_links {
-        color: white;
-        text-decoration: none;
-    }
-
-    .header_lupa {
-        width: 50%;
-        margin-top: -7%;
-        max-width: 66px;
-    }
-
-    .header_profile_img {
-        width: 77%;
-        margin-top: -24%;
-        max-width: 62px;
-    }
-
-    .hr {
-        margin: 0;
-        color: black;
-    }
-
+* {
+    font-family: 'Space Mono', monospace;
 }
 
+.admin_header {
+    background-color: #282828;
+}
 
-/*Media Query para Movil */
-@media only screen and (max-width: 767px) {
-    /*--------------------------------------------------- Header ---------------------------------------------------------*/
-    .admin_headers {
-        background: #282828;
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
+.logo {
+    max-width: 100px;
+}
 
-    .burguer_logo {
-        width: 23%;
-        margin-left: 15%;
-        margin-top: 12%;
-        margin-bottom: 0%;
-    }
+.hamburger {
+    display: none;
+}
 
-    .logo {
-        width: 32%;
-        margin-left: 32%;
-        margin-bottom: 2%;
-        margin-top: 1%;
-    }
-
-    .admin_headers_nav_div {
-        display: none;
-    }
-
-    .mobile_admin_headers_nav_div {
-        float: right;
-        margin-top: 5%;
-        width: 39%;
-        display: grid;
-        grid-template-columns: auto;
-        text-align: center;
-        margin-right: 2%;
-        margin-left: 37%;
-    }
-
-    .header_profile_img {
-        width: 67%;
-    }
-
-    .hr {
-        margin: 0;
-        color: black;
-    }
+.header_profile_img {
+    max-width: 50px;
 }

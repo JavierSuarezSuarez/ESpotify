@@ -9,47 +9,44 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 
-        <!--==================== BOOTSTRAPRAP ====================-->
+        <!--==================== BOOTSTRAP ====================-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <link rel="stylesheet" href="{{ asset('css/admin-forms.css') }}">
-        <title>Document</title>
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/headers.css') }}">
+        @yield('styles')
+        <title>@yield('title')</title>
     </head>
     <body>
-        <header>
-            <div class="container-fluid p-0 w-100">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div class="container-fluid">
-                        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
-                            <img src="{{ asset('images/logo.png') }}" class="img-fluid float-start" width="80" alt="logoEspotify" />
-                            <ul class="navbar-nav d-flex">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#"><i class="uil uil-search"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Canciones</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Playlists</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Perfil</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Cerrar sesión</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+        <header class="admin_header">
+            <nav class="navbar d-flex justify-content-between shadow">
+                <div class="mx-3"><img class="logo" src="../images/logo.jpg" alt="LOGO"></div>
+                <div class="push-left mx-5">
+                    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                        <span class="hamburger-line hamburger-line-top"></span>
+                        <span class="hamburger-line hamburger-line-middle"></span>
+                        <span class="hamburger-line hamburger-line-bottom"></span>
+                    </button>
+                    <!--  Menu compatible with wp_nav_menu  -->
+
+                    <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled">
+                        <li class="menu-item current-menu-item m-2"><a class="header_links nav__link text-light" href="/search"><i class="uil uil-search"></i></a></li>
+                        @if(!Request::is('users*'))<li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/users">Usuarios</a></li>@endif
+                        @if(!Request::is('songs*'))<li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/songs">Canciones</a></li>@endif
+                        @if(!Request::is('playlists*'))<li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/playlists">Playlists</a></li>@endif
+                        <li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/profile">Perfil</a></li>
+                        <li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/logout">Cerrar Sesi&oacute;n</a></li>
+                        <li class="menu-item m-2"><a class="header_links nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user->foto}}"></a></li>
+                    </ul>
+                </div>
+            </nav>
         </header>
         <main class="bg-primary">
             @yield('mainContent')
         </main>
-        <!-- Site footer -->
-        <footer class="site-footer bg-dark">
+    <!-- Site footer -->
+        {{--<footer class="site-footer">
             <div class="container text-light">
                 <div class="row">
                     <div class="col-xs-6 col-md-3">
@@ -110,7 +107,7 @@
                 </div>
                 <hr>
             </div>
-        </footer>
+        </footer>--}}
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

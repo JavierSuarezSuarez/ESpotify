@@ -101,7 +101,6 @@ Route::get('/search', function () {
     return view('search_dashboard');
 });
 
-
 /*-------------------------------------------Form routes-------------------------------------------------------------*/
 
 Route::get('/userform', function () {
