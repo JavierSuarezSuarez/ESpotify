@@ -25,7 +25,11 @@ use Illuminate\Support\Facades\Auth;
 
 /*------------------------------------------Main route-----------------------------------------------------------*/
 Route::get('/', function () {
-    return view('index');
+    return view('home/homeunregistered');
+});
+
+Route::get('/home', function () {
+    return view('home/home');
 });
 
 /*------------------------------------------Resource routes-----------------------------------------------------------*/

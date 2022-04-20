@@ -16,7 +16,7 @@
     <header class="admin_headers">
         <img class="burguer_logo" src="images/burguermenu.jpg"> <!-- Movil -->
 
-        <img class="logo" src="images/logo.jpg">
+        <a href="home"><img class="logo" src="images/logo.jpg"></a>
 
         <!-- PC -->
         <div class="admin_headers_nav_div">

@@ -1,3 +1,9 @@
+<?php
+$user = Illuminate\Support\Facades\Auth::user();
+$songs = Illuminate\Support\Facades\DB::table('songs') ->get();
+?>
+
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -21,7 +27,15 @@
                 <div class="px-3 py-2 d-flex flex-row justify-content-center">
                     <div>
                         <h3 class="fw-bold mb-4">Top artistas</h3>
-                        <div class="d-flex flex-row justify-content-between mb-2">
+                        @foreach($songs as $song)
+                            <div class="d-flex flex-row justify-content-between mb-2">
+                                <h4>{{$song -> artistas}}</h4>
+                                <img class="ms-5" src="{{asset('images/theweekend.png')}}">
+                            </div>
+                        @endforeach
+
+
+                        <!--<div class="d-flex flex-row justify-content-between mb-2">
                             <h4>The Weekend</h4>
                             <img class="ms-5" src="{{asset('images/theweekend.png')}}">
                         </div>
@@ -37,13 +51,21 @@
                             <h4>Lil Nax X</h4>
                             <img src="{{asset('images/lilnasx.png')}}">
                         </div>
-                    </div>
+                    </div>-->
                     <div class="d-flex justify-content-center align-items-center">
-                        <img class="logo mx-4" src="{{asset('images/logo.png')}}">
+                        <img class="logo mx-4" src="{{asset('images/logo_home.png')}}">
                     </div>
                     <div>
                         <h3 class="fw-bold mb-4">Top canciones</h3>
-                        <div class="d-flex flex-row justify-content-between mb-2">
+
+                        @foreach ($songs as $song)
+
+                            <div class="d-flex flex-row justify-content-between mb-2">
+                                <h4>{{$song -> nombre}}</h4>
+                                <img class="ms-4" src="{{asset('images/tears.png')}}">
+                            </div>
+                        @endforeach
+                        <!--<div class="d-flex flex-row justify-content-between mb-2">
                             <h4>Save your tears</h4>
                             <img class="ms-4" src="{{asset('images/tears.png')}}">
                         </div>
@@ -58,7 +80,7 @@
                         <div class="d-flex flex-row justify-content-between mb-2">
                             <h4>Industry Baby</h4>
                             <img src="{{asset('images/industrybaby.png')}}">
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -84,7 +106,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center align-items-center">
-                        <img class="logo mx-4" src="{{asset('images/logo.png')}}">
+                        <img class="logo mx-4" src="{{asset('images/logo_home.png')}}">
                     </div>
                     <div>
                         <h3 class="fw-bold mb-4">Fav canciones</h3>
