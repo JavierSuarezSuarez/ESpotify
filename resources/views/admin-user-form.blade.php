@@ -1,7 +1,14 @@
-@extends('layouts/general-layout')
+<?php
+$user = Illuminate\Support\Facades\Auth::user();
+?>
+@extends('layouts/admin-layout')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/admin-forms.css') }}">
+@stop
 
 @section('mainContent')
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center form-container">
         <form class="admin-form border rounded p-5 bg-light mt-4 mb-4">
             <h1 class="text-center">Create/Modify User</h1>
             <label for="name" class="mt-2">Nombre</label>

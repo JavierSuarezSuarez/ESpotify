@@ -26,6 +26,7 @@ class PlaylistController extends Controller
     public function create()
     {
         //
+        return view('admin-playlist-form', ["playlist" => new Playlist()]);
     }
 
     /**
