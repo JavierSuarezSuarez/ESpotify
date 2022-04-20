@@ -20,16 +20,15 @@
             </div>
         @endif
 
-        <div class="jumbotron">
-            <div class="container">
-                <img class="login_logo" src="images/logo.jpg">
-                <form class="box" method="POST" action="/login">
-                    @csrf
-                    <input name = "email" id="email" type="text" placeholder="EMAIL">
-                    <input name ="password" id="password" type="password" placeholder="CONTRASEÑA">
-                    <input type="submit" class="btn btn-default full-width" value="INICIAR SESIÓN">
-                </form>
-            </div>
+
+        <div class="login-container">
+            <img class="login_logo" src="images/logo.jpg">
+            <form class="login-form" method="POST" action="/login">
+                @csrf
+                <input name="email" id="email" type="text" placeholder="EMAIL">
+                <input name="password" id="password" type="password" placeholder="CONTRASEÑA">
+                <input type="submit" class="btn btn-default full-width" value="INICIAR SESIÓN">
+            </form>
         </div>
 
     </body>

@@ -9,40 +9,36 @@
         <title>Registrarse</title>
     </head>
     <body>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-        <div class="jumbotron">
-            <div class="container">
-                <img class="signup_logo" src="images/logo.jpg">
-                <div class="box">
-                    <form method="POST" action="/signup">
-                        @csrf
-                        <input name="nombre" type="text" placeholder="NOMBRE">
-                        <input name="apellidos" type="text" placeholder="APELLIDOS">
-                        <input name="email" type="email" placeholder="EMAIL">
-                        <input name="password" type="password" placeholder="CONTRASEÑA">
-                        <input name="password_confirmation" type="password" placeholder="REPETIR CONTRASEÑA">
-                        <input name="tipo" type="hidden" value="2">
-                        <input name="foto" type="hidden" value="images/profile.png">
-                        <input type="submit" class="btn btn-default full-width" value="UNIRSE A ESPOTIFY">
-                    </form>
-                    <div class="already_account_div">
-                        <h6 class="already_account_text">¿YA TIENES UNA CUENTA?</h6>
-                        <button onclick="window.location='{{ url("login") }}'" class="btn btn-default full-width">INICIAR SESIÓN</button>
-                    </div>
-                </div>
+        <div class="signup-container">
+            <img class="signup_logo" src="images/logo.jpg">
+            <form method="POST" action="/signup" class="signup-form">
+                @csrf
+                <input name="nombre" type="text" placeholder="NOMBRE">
+                <input name="apellidos" type="text" placeholder="APELLIDOS">
+                <input name="email" type="email" placeholder="EMAIL">
+                <input name="password" type="password" placeholder="CONTRASEÑA">
+                <input name="password_confirmation" type="password" placeholder="REPETIR CONTRASEÑA">
+                <input name="tipo" type="hidden" value="2">
+                <input name="foto" type="hidden" value="images/profile.png">
+                <input type="submit" class="btn btn-default full-width" value="UNIRSE A ESPOTIFY">
+            </form>
+            <div class="already_account_div">
+                <h6 class="already_account_text text-light">¿YA TIENES UNA CUENTA?</h6>
+                <button onclick="window.location='{{ url("login") }}'" class="btn btn-default full-width">INICIAR SESIÓN</button>
             </div>
         </div>
-
     </body>
-
 </html>
+
+
+
