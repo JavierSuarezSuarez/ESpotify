@@ -19,9 +19,9 @@
             </div>
         @endif
 
-        <div class="signup-container">
+        <div class="signup-container d-flex flex-column align-items-center">
             <img class="signup_logo" src="images/logo.jpg">
-            <form method="POST" action="/signup" class="signup-form">
+            <form method="POST" action="/signup" class="signup-form d-flex flex-column align-items-center">
                 @csrf
                 <input name="nombre" type="text" placeholder="NOMBRE">
                 <input name="apellidos" type="text" placeholder="APELLIDOS">
@@ -32,7 +32,7 @@
                 <input name="foto" type="hidden" value="images/profile.png">
                 <input type="submit" class="btn btn-default full-width" value="UNIRSE A ESPOTIFY">
             </form>
-            <div class="already_account_div">
+            <div class="already_account_div d-flex flex-column align-items-center">
                 <h6 class="already_account_text text-light">¿YA TIENES UNA CUENTA?</h6>
                 <button onclick="window.location='{{ url("login") }}'" class="btn btn-default full-width">INICIAR SESIÓN</button>
             </div>

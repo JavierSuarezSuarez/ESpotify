@@ -3,9 +3,6 @@ body {
 }
 .signup-container {
     margin-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .signup_logo {
@@ -13,9 +10,6 @@ body {
 }
 
 .signup-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     min-width: 200px;
 }
 
@@ -42,12 +36,6 @@ input, button {
     border: 1px solid white;
     font-weight:bold;
     font-family: monospace;
-}
-
-.already_account_div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .already_account_text {

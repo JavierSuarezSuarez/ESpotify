@@ -21,9 +21,9 @@
         @endif
 
 
-        <div class="login-container">
+        <div class="login-container d-flex flex-column align-items-center">
             <img class="login_logo" src="images/logo.jpg">
-            <form class="login-form" method="POST" action="/login">
+            <form class="login-form d-flex flex-column align-items-center" method="POST" action="/login">
                 @csrf
                 <input name="email" id="email" type="text" placeholder="EMAIL">
                 <input name="password" id="password" type="password" placeholder="CONTRASEÑA">
