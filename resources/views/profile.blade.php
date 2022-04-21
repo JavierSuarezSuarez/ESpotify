@@ -1,4 +1,12 @@
-@extends('layouts/admin-layout')
+<?php
+    $user = Illuminate\Support\Facades\Auth::user();
+?>
+
+@if($user->tipo == 1)
+    @extends('layouts/admin-layout')
+@elseif($user->tipo == 2)
+    @extends('layouts/registered-user-layout')
+@endif
 
 @section('styles')
     <link href="{{ asset('css/profile_style.css') }}" rel="stylesheet">

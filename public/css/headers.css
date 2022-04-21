@@ -17,3 +17,22 @@
 .header_profile_img {
     max-width: 50px;
 }
+
+@media only screen and (max-width: 775px) {
+    .admin_header {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .responsive-profile-image {
+        display: block !important;
+    }
+}
