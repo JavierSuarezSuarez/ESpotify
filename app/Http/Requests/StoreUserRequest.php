@@ -13,7 +13,8 @@ class StoreUserRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        //Mirar si el usuario es administrador
+        return true;
     }
 
     /**

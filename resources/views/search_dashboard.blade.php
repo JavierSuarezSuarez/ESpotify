@@ -1,7 +1,8 @@
 <?php
 $user = Illuminate\Support\Facades\Auth::user();
 ?>
-@extends('layouts/admin-layout')
+
+@extends( ($user -> tipo == 1) ? 'layouts/admin-layout':'layouts/registered-user-layout')
 
 @section('styles')
     <link href="{{ asset('css/search_dashboard_style.css') }}" rel="stylesheet">

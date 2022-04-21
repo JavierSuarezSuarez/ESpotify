@@ -24,7 +24,7 @@
                 <button id="menu-toggler" data-class="menu-active" class="hamburger btn">
                     <i class="uil uil-bars text-light"></i>
                 </button>
-                <div class="mx-3"><img class="logo" src="../images/logo.jpg" alt="LOGO"></div>
+                <div class="mx-3"><a href="/home"><img class="logo" src="../images/logo.jpg" alt="LOGO"></a></div>
                 <div class="push-left mx-5">
                     <!--  Menu compatible with wp_nav_menu  -->
                     <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled nav-menu">

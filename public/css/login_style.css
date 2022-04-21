@@ -23,6 +23,14 @@ input {
     color: #ffffff;
 }
 
+.loginbtn {
+    background-color: #3500D3;
+    color: #ffffff;
+    border: 1px solid white;
+    font-weight:bold;
+    font-family: monospace;
+}
+
 /* Media Query para PC */
 @media only screen and (min-width: 768px){
     .login_logo {

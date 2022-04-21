@@ -27,7 +27,7 @@
                 @csrf
                 <input name="email" id="email" type="text" placeholder="EMAIL">
                 <input name="password" id="password" type="password" placeholder="CONTRASEÑA">
-                <input type="submit" class="btn btn-default full-width" value="INICIAR SESIÓN">
+                <input type="submit" class="loginbtn btn btn-default full-width" value="INICIAR SESIÓN">
             </form>
         </div>
 
