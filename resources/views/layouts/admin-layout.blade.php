@@ -20,14 +20,12 @@
     </head>
     <body>
         <header class="admin_header">
-            <nav class="navbar d-flex justify-content-between shadow">
+            <nav class="navbar d-flex justify-content-between shadow w-100">
+                <button id="menu-toggler" data-class="menu-active" class="hamburger btn">
+                    <i class="uil uil-bars text-light"></i>
+                </button>
                 <div class="mx-3"><img class="logo" src="../images/logo.jpg" alt="LOGO"></div>
                 <div class="push-left mx-5">
-                    <button id="menu-toggler" data-class="menu-active" class="hamburger">
-                        <span class="hamburger-line hamburger-line-top"></span>
-                        <span class="hamburger-line hamburger-line-middle"></span>
-                        <span class="hamburger-line hamburger-line-bottom"></span>
-                    </button>
                     <!--  Menu compatible with wp_nav_menu  -->
 
                     <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled">
@@ -39,6 +37,7 @@
                         <li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/logout">Cerrar Sesi&oacute;n</a></li>
                         <li class="menu-item m-2"><a class="header_links nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user->foto}}"></a></li>
                     </ul>
+                    <a class="nav__link profile-image d-none responsive-profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user->foto}}"></a>
                 </div>
             </nav>
         </header>
