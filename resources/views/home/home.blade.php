@@ -16,7 +16,7 @@
 
 <body>
     <main class="main-home h-100 d-flex justify-content-end align-items-center">
-        <section class="d-flex flex-column me-5">
+        <section class="section-home d-flex flex-column">
             <div class="top-panel mb-5">
                 <div class="px-3 py-2 d-flex flex-row justify-content-center">
                     <div>

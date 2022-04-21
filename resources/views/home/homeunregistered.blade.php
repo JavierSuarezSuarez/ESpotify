@@ -16,7 +16,7 @@
         <main class="main-home w-100 h-100">
             <div class="filter w-100 h-100">
                 <section class="d-flex justify-content-center align-items-center h-100">
-                    <div class="d-flex flex-column unregistered-panel">
+                    <div class="d-flex flex-column mx-4 unregistered-panel">
                         <button type="button" class="button-home-unregistered mx-5 mt-5">Iniciar sesión</button>
                         <div class="px-4 py-4">
                             <p class="text-center my-0">¿No tienes cuenta?</p>

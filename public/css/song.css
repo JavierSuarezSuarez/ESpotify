@@ -34,3 +34,31 @@
 .album-icon, .song-icon{
     color: #fff;
 }
+
+@media screen and (max-width: 420px) {
+
+    .main-song .album-cover{
+        width: 250px;
+        height: auto;
+    }
+
+    h2{
+        font-size: 1.25rem;
+    }
+
+    h3{
+        font-size: 1rem;
+    }
+
+    h4{
+        font-size: .75rem;
+    }
+
+    .album-icon{
+        font-size: 24px;
+    }
+
+    .song-icon{
+        font-size: 36px;
+    }
+}
