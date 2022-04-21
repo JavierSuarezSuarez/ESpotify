@@ -30,7 +30,6 @@ $user = Illuminate\Support\Facades\Auth::user();
 
         <!-- Playlists Section -->
         <section class="playlists_section d-flex">
-
             <div class="playlist_div d-flex flex-column justify-content-center align-items-center">
                 <a href="#"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <p class="playlist_name_text text-light">TITULO DE PLAYLIST</p>
