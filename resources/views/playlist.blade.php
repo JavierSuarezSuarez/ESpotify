@@ -18,30 +18,30 @@
     </header>
 
     <main class="main-playlist h-100 d-flex flex-column justify-content-center align-items-center">
-        <section class="container d-flex flex-column justify-content-center align-items-center">
-            <div class="d-flex flex-row mb-5">
-                <div class="me-4">
+        <section class="container d-flex flex-column justify-content-center">
+            <div class="d-flex flex-column flex-md-row mb-5 justify-content-between">
+                <div class="">
                     <img src="{{asset('images/playlist_cover.png')}}">
                 </div>
-                <div class="d-flex flex-column mt-5">
-                    <h2>Playlist</h2>
-                    <h3>Sound of Street</h3>
+                <div class="d-flex flex-column mt-5 me-5">
+                    <h2 class="playlist">Playlist</h2>
+                    <h3 class="playlist-title">Sound of Street</h3>
                     <div class="d-flex flex-row mt-5">
                         <p>@pepemoreno</p>
                         <p class="mx-2">* 50 canciones</p>
                         <p>2h 58 min</p>
-                        <button class="ms-4">Añadir cancion</button>
+                        <p class="d-flex flex-row jusify-content-center align-items-center"><button class="ms-4"><i class='bx bxs-plus-circle mx-2'></i>Añadir cancion</button></p>
                     </div>
                 </div>
 
                 <div>
-                    <button>Seguir</button>
+                    <button class="follow-button">Seguir <i class='bx bx-plus'></i> </button>
                 </div>
 
             </div>
 
             <div class="">
-                <table class="table">
+                 <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -65,8 +65,8 @@
                             <td>1 ene 2022</td>
                             <td>3:30</td>
                             <td>
-                                <button>Play</button>
-                                <button>Delete</button>
+                                <button><i class='bx bx-play playlist-icon' ></i></button>
+                                <button><i class='bx bxs-x-circle playlist-icon'></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -81,8 +81,8 @@
                             <td>1 ene 2022</td>
                             <td>3:30</td>
                             <td>
-                                <button>Play</button>
-                                <button>Delete</button>
+                                <button><i class='bx bx-play playlist-icon' ></i></button>
+                                <button><i class='bx bxs-x-circle playlist-icon'></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -97,8 +97,8 @@
                             <td>1 ene 2022</td>
                             <td>3:30</td>
                             <td>
-                                <button>Play</button>
-                                <button>Delete</button>
+                                <button><i class='bx bx-play playlist-icon'></i></button>
+                                <button><i class='bx bxs-x-circle playlist-icon'></i></button>
                             </td>
                         </tr>
                     </tbody>

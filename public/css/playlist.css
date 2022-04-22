@@ -1,7 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
 .main-playlist{
     background-color: #282828;
 }
 
 h2,h3,h4,h4,p,th,td{
     color: #fff;
+}
+
+.playlist{
+    font-weight: lighter;
+}
+
+.playlist-title{
+    font-weight: bold;
+    font-size: 3rem;
+    word-spacing: 1rem;
+}
+
+button{
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 0;
+}
+
+.follow-button{
+    border: 2px solid #3500D3;
+    border-radius: 1rem;
+    padding: .5rem 1.5rem;
+}
+
+.playlist-icon{
+    font-size: 24px;
 }
