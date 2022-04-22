@@ -28,3 +28,7 @@ Route::get('/home', function () {
 Route::get('/song', function () {
     return view('/song');
 });
+
+Route::get('/playlist', function () {
+    return view('/playlist');
+});
