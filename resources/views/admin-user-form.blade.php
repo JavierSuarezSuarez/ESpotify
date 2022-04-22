@@ -1,7 +1,7 @@
 <?php
 $user = Illuminate\Support\Facades\Auth::user();
 ?>
-@extends('layouts/admin-layout')
+@extends( ($user -> tipo == 1) ? 'layouts/admin-layout':'layouts/registered-user-layout')
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/admin-forms.css') }}">
@@ -12,7 +12,9 @@ $user = Illuminate\Support\Facades\Auth::user();
         <form action ="{{ $userForm->id == null ? route('users.store') : '/users/'.$userForm->id }}" method="POST" class="admin-form border rounded p-5 bg-light mt-4 mb-4">
             @if ($userForm->id) {{ method_field('PUT') }} @endif
             @csrf
-            <h1 class="text-center">Create/Modify User</h1>
+
+            @if ($userForm->id) <h1 class="text-center">Modify User</h1>
+            @else <h1 class="text-center">Create User</h1>@endif
 
             <label for="nombre" class="mt-2">Nombre</label>
             <div class="form-group">
@@ -46,13 +48,15 @@ $user = Illuminate\Support\Facades\Auth::user();
                 @if ($userForm->tipo == 1)
                     <input id="flexCheckDefault" name="flexCheckDefault" class="form-check-input" type="checkbox" value="flag" checked>
                     <input name="tipo" type="hidden" value="1">
+                    <label class="form-check-label" for="flexCheckDefault">Admin</label>
                 @else
-                    <input id="flexCheckDefault" name="flexCheckDefault" class="form-check-input" type="checkbox" value="flag">
-                    <input name="tipo" type="hidden" value="2">
+                    @if ($user->tipo == 1)
+                        <input id="flexCheckDefault" name="flexCheckDefault" class="form-check-input" type="checkbox" value="flag">
+                        <input name="tipo" type="hidden" value="2">
+                        <label class="form-check-label" for="flexCheckDefault">Admin</label>
+                    @endif
                 @endif
 
-
-                <label class="form-check-label" for="flexCheckDefault">Admin</label>
             </div>
             <button type="submit" class="btn save-btn mt-4">Save</button>
         </form>

@@ -12,7 +12,10 @@ $user = Illuminate\Support\Facades\Auth::user();
         <form action="{{ $song->id == null ? route('songs.store') : '/songs/'.$song->id }}" method="POST" class="admin-form border rounded p-5 bg-light mt-4 mb-4">
             @if ($song->id) {{ method_field('PUT') }} @endif
             @csrf
-            <h1 class="text-center">Create/Modify Song</h1>
+
+            @if ($song->id) <h1 class="text-center">Modify Song</h1>
+            @else <h1 class="text-center">Create Song</h1>@endif
+
             <label for="name" class="mt-2">Nombre</label>
             <div class="form-group">
                 <input id="nombre" name="nombre" type="text" class="form-control" placeholder="" value="{{old('nombre', $song->nombre)}}">

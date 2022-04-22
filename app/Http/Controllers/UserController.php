@@ -87,6 +87,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+
         return view('admin-user-form', ["userForm" => $user]);
     }
 
@@ -122,7 +123,14 @@ class UserController extends Controller
         $user->foto = $user->foto;
         $user->save();
 
-        return redirect("/users");
+
+        //Dependiendo de si se ha modificado un usuario o el perfil propio, se redirige a un lado u otro
+        $userLogged = Auth::user();
+        if($userLogged->tipo == 1) {
+            return redirect("/users");
+        }else {
+            return redirect("/profile");
+        }
     }
 
     /**

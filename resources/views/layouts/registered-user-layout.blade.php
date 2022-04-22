@@ -24,7 +24,7 @@
                 <button id="menu-toggler" data-class="menu-active" class="hamburger btn">
                     <i class="uil uil-bars text-light"></i>
                 </button>
-                <div class="mx-3"><a href="/home"><img class="logo" src="../images/logo.jpg" alt="LOGO"></a></div>
+                <div class="mx-3"><a href="/home"><img class="logo" src="/images/logo.jpg" alt="LOGO"></a></div>
                 <div class="push-left mx-5">
                     <!--  Menu compatible with wp_nav_menu  -->
                     <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled nav-menu">
@@ -33,9 +33,9 @@
                         @if(!Request::is('playlists*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/userplaylists">Playlists</a></li>@endif
                         <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/profile">Perfil</a></li>
                         <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/logout">Cerrar Sesi&oacute;n</a></li>
-                        <li class="menu-item m-2"><a class="nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user->foto}}"></a></li>
+                        <li class="menu-item m-2"><a class="nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a></li>
                     </ul>
-                    <a class="nav__link profile-image d-none responsive-profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user->foto}}"></a>
+                    <a class="nav__link profile-image d-none responsive-profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a>
                 </div>
 
             </nav>
