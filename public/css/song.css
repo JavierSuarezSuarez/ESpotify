@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+.main-song{
+    background-color: #282828;
+}
+
+.main-song h2,h3,h4, .white-text{
+    color: #fff;
+}
+
+.main-song .album-cover{
+    width: 400px;
+    height: auto;
+}
+
+.button-song{
+    background: none;
+    border: none;
+}
+
+.song-icon{
+    font-size: 48px;
+}
+
+.album-icon{
+    font-size: 36px;
+}
+
+.album-icon, .song-icon{
+    color: #fff;
+}
+
+@media screen and (max-width: 420px) {
+
+    .main-song .album-cover{
+        width: 250px;
+        height: auto;
+    }
+
+    h2{
+        font-size: 1.25rem;
+    }
+
+    h3{
+        font-size: 1rem;
+    }
+
+    h4{
+        font-size: .75rem;
+    }
+
+    .album-icon{
+        font-size: 24px;
+    }
+
+    .song-icon{
+        font-size: 36px;
+    }
+}

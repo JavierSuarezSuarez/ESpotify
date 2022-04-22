@@ -38,6 +38,10 @@
     background-color: #cbd5e0;
 }
 
+.main-home .section-home{
+    margin-right: 3rem;
+}
+
 h3, h4, p{
     color: #fff;
 }
@@ -49,6 +53,45 @@ h3{
 .logo{
     width: 75px;
     height: 75px;
+}
+
+@media screen and (max-width: 370px){
+
+    img{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    h3{
+        font-size: 1.25rem;
+    }
+
+    h4{
+        font-size: 0.75rem;
+    }
+
+    .main-home{
+        justify-content: center !important;
+    }
+
+
+    .section-home {
+        margin-right: 0 !important;
+    }
+
+    .logo{
+        width: 40px;
+        height: 40px;
+    }
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
+
 }
 
 
