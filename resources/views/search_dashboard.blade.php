@@ -32,7 +32,7 @@ $user = Illuminate\Support\Facades\Auth::user();
             </div>
 
             <div class="result_div d-flex">
-                <a href="#"><img class="result_img" title="Playlist Image" alt="Playlist Image" src="images/song.jpg"></a>
+                <a href="#"><img class="result_img" title="Playlist Image" alt="Playlist Image" src="images/playlist.jpg"></a>
                 <div class="playlist_text_div">
                     <a href="#" class="playlist_name_text text-light text-decoration-none"><h2>TITULO DE PLAYLIST</h2></a>
                     <p class="createdby_text text-light">CREADA POR: USUARIO</p>

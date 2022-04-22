@@ -22,7 +22,7 @@
 
 
         <div class="login-container d-flex flex-column align-items-center">
-            <img class="login_logo" src="images/logo.jpg">
+            <a href="/"><img class="login_logo" src="images/logo.jpg"></a>
             <form class="login-form d-flex flex-column align-items-center" method="POST" action="/login">
                 @csrf
                 <input name="email" id="email" type="text" placeholder="EMAIL">

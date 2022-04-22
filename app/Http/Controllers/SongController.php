@@ -18,7 +18,6 @@ class SongController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -28,8 +27,6 @@ class SongController extends Controller
      */
     public function create()
     {
-        //
-
         return view('admin-song-form', ["song" => new Song()]);
     }
 
@@ -69,7 +66,7 @@ class SongController extends Controller
      */
     public function show(Song $song)
     {
-        //
+        return view('song', ["song" => $song]);
     }
 
     /**
@@ -80,8 +77,6 @@ class SongController extends Controller
      */
     public function edit(Song $song)
     {
-        //
-
         return view('admin-song-form', ["song" => $song]);
     }
 

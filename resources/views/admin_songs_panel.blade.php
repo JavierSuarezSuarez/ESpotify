@@ -34,9 +34,9 @@
         @foreach($songs as $song)
             <div class="song_div d-flex align-items-center justify-content-between">
                 <div class="d-flex justify-content-center">
-                    <a href="#"><img class="song_img" title="Song Image" alt="Song Image" src="{{$song -> imagen}}"></a>
+                    <a href="{{route('songs.show', $song -> id)}}"><img class="song_img" title="Song Image" alt="Song Image" src="{{$song -> imagen}}"></a>
                     <div class="song_text_div">
-                        <a href="#" class="song_name_text text-light text-decoration-none"><h2>{{$song -> nombre}}</h2></a>
+                        <a href="{{route('songs.show', $song -> id)}}" class="song_name_text text-light text-decoration-none"><h2>{{$song -> nombre}}</h2></a>
                         <p class="song_album_text text-light">{{$song -> album}}</p>
                         <p class="song_artist_text text-light">{{$song -> artistas}}</p>
                     </div>

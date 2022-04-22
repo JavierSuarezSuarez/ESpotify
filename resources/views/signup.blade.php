@@ -20,7 +20,7 @@
         @endif
 
         <div class="signup-container d-flex flex-column align-items-center">
-            <img class="signup_logo" src="images/logo.jpg">
+            <a href="/"><img class="signup_logo" src="images/logo.jpg"></a>
             <form method="POST" action="/signup" class="signup-form d-flex flex-column align-items-center">
                 @csrf
                 <input name="nombre" type="text" placeholder="NOMBRE">

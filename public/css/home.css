@@ -55,6 +55,12 @@ h3{
     height: 75px;
 }
 
+
+.imgToResize {
+    max-width: 41px;
+    border-radius: 41%;
+}
+
 @media screen and (max-width: 370px){
 
     img{
