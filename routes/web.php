@@ -104,4 +104,6 @@ Route::get('/search', function () {
 
 
 /*------------------------------------------Pruebas route-------------------------------------------------------------*/
-
+Route::get('/playlist', function () {
+    return view('playlist');
+})->middleware('auth');
