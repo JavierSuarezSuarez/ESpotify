@@ -9,10 +9,10 @@ $songs = Illuminate\Support\Facades\DB::table('songs') ->get();
 @stop
 
 @section('mainContent')
-    <main class="main-home h-100 d-flex justify-content-end align-items-center">
-        <section class="section-home d-flex flex-column">
+    <section class="main-home h-100 d-flex justify-content-end align-items-center">
+        <div class="section-home d-flex flex-column">
 
-            <div class="top-panel mb-5">
+            <div class="top-panel mb-5 mt-5">
                 <div class="px-3 py-2 d-flex flex-row justify-content-center">
                     <div>
                         <h3 class="fw-bold mb-4">Top artistas</h3>
@@ -47,7 +47,7 @@ $songs = Illuminate\Support\Facades\DB::table('songs') ->get();
 
 
 
-            <div class="fav-panel">
+            <div class="fav-panel mb-5">
                 <div class="px-3 py-2 d-flex flex-row justify-content-between">
                     <div>
                         <h3 class="fw-bold mb-4">Fav artistas</h3>
@@ -80,7 +80,7 @@ $songs = Illuminate\Support\Facades\DB::table('songs') ->get();
                 </div>
             </div>
 
-        </section>
-    </main>
+        </div>
+    </section>
 
 @endsection

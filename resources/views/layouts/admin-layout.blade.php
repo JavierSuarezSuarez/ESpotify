@@ -45,7 +45,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                 </div>
             </nav>
         </header>
-        <main class="bg-dark">
+        <main>
             @yield('mainContent')
         </main>
 

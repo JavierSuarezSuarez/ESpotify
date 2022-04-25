@@ -9,8 +9,8 @@ $user = Illuminate\Support\Facades\Auth::user();
 @stop
 
 @section('mainContent')
-    <main class="main-song h-100 d-flex flex-column justify-content-center align-items-center">
-        <section>
+    <section class="main-song h-100 d-flex flex-column justify-content-center align-items-center mt-5">
+        <div>
             <div>
                 <div class="d-flex flex-row justify-content-between mb-2">
                     <h2>{{$song->artistas}}</h2>
@@ -45,9 +45,9 @@ $user = Illuminate\Support\Facades\Auth::user();
                 </div>
 
             </div>
-        </section>
+        </div>
 
-    </main>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{asset('js/song.js')}}"></script>

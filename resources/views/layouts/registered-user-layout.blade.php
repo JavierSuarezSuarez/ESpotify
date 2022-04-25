@@ -40,7 +40,7 @@
 
             </nav>
         </header>
-        <main class="bg-dark">
+        <main>
             @yield('mainContent')
         </main>
         <!-- Site footer -->
