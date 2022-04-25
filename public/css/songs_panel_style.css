@@ -1,0 +1,63 @@
+/*--------------------------------------------------- Content --------------------------------------------------------*/
+
+/*----------------------------------- Users - Browser - Add User Subheader Section -------------------*/
+.title {
+    margin-left: 4rem;
+}
+.subheaders_section {
+    background-color: #282828;
+    padding-top: 4rem;
+}
+
+.icono {
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+/*----------------------------------- Users Section -------------------------------------------------*/
+.songs_section {
+    background-color: #282828;
+    padding: 4rem;
+}
+
+.song_div {
+    margin-bottom: 4rem;
+}
+
+.song_img {
+    width: 200px;
+}
+
+.action-icon {
+    font-size: 2rem;
+}
+
+.song_text_div {
+    margin-left: 4rem;
+}
+
+@media only screen and (max-width: 768px){
+    .subheaders_section {
+        display: none !important;
+    }
+
+    .song_img {
+        width: 50%;
+    }
+
+    .songs_section {
+        padding: 1.5rem;
+    }
+
+    .song_text_div {
+        margin-left: 0;
+        font-size: 0.7rem;
+    }
+
+    .song_album_text, .song_artist_text, .song_duration_text {
+        margin: 0;
+    }
+
+    .song_div {
+        margin-bottom: 1.5rem;
+    }
+}

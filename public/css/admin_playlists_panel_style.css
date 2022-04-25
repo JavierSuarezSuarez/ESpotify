@@ -1,0 +1,34 @@
+
+/*--------------------------------------------------- Content --------------------------------------------------------*/
+
+/*----------------------------------- Users - Browser - Add User Subheader Section -------------------*/
+.title {
+    margin-left: 4rem;
+}
+.subheaders_section {
+    background-color: #282828;
+    padding-top: 4rem;
+}
+
+.icono {
+    font-size: 3rem;
+}
+/*----------------------------------- Users Section -------------------------------------------------*/
+.playlists_section {
+    background-color: #282828;
+    padding: 4rem;
+}
+
+.playlist_img {
+    width: 200px;
+}
+
+.action-icon {
+    font-size: 2rem;
+}
+
+.playlist_div {
+    margin-right: 2rem;
+}
+
+

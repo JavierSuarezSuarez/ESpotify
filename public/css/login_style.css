@@ -1,0 +1,124 @@
+body {
+    background-color: #282828
+}
+.login-container {
+    margin-top: 4rem;
+}
+
+.login_logo {
+    width: 250px;
+}
+
+.login-form {
+    min-width: 200px;
+}
+
+input {
+    min-width: 250px;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    background-color: #464646;
+    border-radius: 0.2rem;
+    border: none;
+    color: #ffffff;
+}
+
+.loginbtn {
+    background-color: #3500D3;
+    color: #ffffff;
+    border: 1px solid white;
+    font-weight:bold;
+    font-family: monospace;
+}
+
+/* Media Query para PC */
+@media only screen and (min-width: 768px){
+    .login_logo {
+        width: 500px;
+    }
+    input {
+        width: 500px;
+    }
+}
+
+/*
+body {
+    background: #282828;
+}
+
+.jumbotron {
+    text-align: center;
+    width: 30rem;
+    border-radius: 0.5rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 4rem auto;
+    background-color: #282828;
+    padding: 2rem;
+    margin-top: 10.5%;
+}
+
+.container .glyphicon-list-alt {
+    font-size: 10rem;
+    margin-top: 3rem;
+    color: #f96145;
+}
+
+input {
+    width: 120%;
+    margin-bottom: 1.4rem;
+    padding: 0.8rem;
+    background-color: #464646;
+    border-radius: 0.2rem;
+    border: none;
+    margin-left: -10%;
+    color: #ffffff;
+}
+
+h2 {
+    margin-bottom: 3rem;
+    font-weight: bold;
+    color: #ababab;
+}
+
+.btn {
+    border-radius: 0.2rem;
+}
+
+.btn .glyphicon {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.full-width {
+    background-color: #3500D3;
+    width: 75%;
+    color: #ffffff;
+    border: 1px solid white;
+    font-weight:bold;
+    font-family: monospace;
+    margin-left: 0%;
+}
+
+.login_logo{
+    width: 57%;
+    position: absolute;
+    margin-bottom: 22%;
+    margin-left:-29%;
+}
+
+.box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -3%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: #3d3d3d;
+}
+
+
+*/

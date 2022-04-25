@@ -1,0 +1,37 @@
+@media only screen and (max-width: 768px){
+    .subheaders_section {
+        display: none !important;
+    }
+
+    .playlists_section {
+        flex-direction: column;
+    }
+
+    .playlist_div {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .playlist_img {
+        width: 50%;
+    }
+
+    .playlists_section {
+        padding: 1.5rem;
+    }
+
+    .playlist_text_div {
+        margin-left: -1.5rem;
+        font-size: 0.7rem;
+        align-items: flex-start !important;
+    }
+
+    .playlist_name_text, .createdby_text, .datesongnumber_text, .followers_text {
+        margin: 0;
+    }
+
+    .action-icon {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,24 @@
+.subheaders_section {
+    background-color: #282828;
+    padding-top: 4rem;
+}
+
+.search-bar {
+    margin-left: 4rem;
+}
+
+.results_section {
+    background-color: #282828;
+    padding: 4rem 0 0 4rem;
+}
+
+.result_img {
+    width: 200px;
+}
+
+.playlist_text_div {
+    margin-left: 4rem;
+}
+.result_div {
+    margin-bottom: 4rem;
+}

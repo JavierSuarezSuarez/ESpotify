@@ -1,0 +1,158 @@
+body {
+    background-color: #282828
+}
+.signup-container {
+    margin-top: 2.5rem;
+}
+
+.signup_logo {
+    width: 250px;
+}
+
+.signup-form {
+    min-width: 200px;
+}
+
+input, button {
+    min-width: 250px;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    background-color: #464646;
+    border-radius: 0.2rem;
+    border: none;
+    color: #ffffff;
+}
+
+.btn .glyphicon {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.btn {
+    border-radius: 0.2rem;
+    background-color: #3500D3;
+    width: 75%;
+    color: #ffffff;
+    border: 1px solid white;
+    font-weight:bold;
+    font-family: monospace;
+}
+
+.already_account_text {
+    font-size: 0.75rem;
+}
+
+/* Media Query para PC */
+@media only screen and (min-width: 768px){
+    .signup_logo {
+        width: 400px;
+    }
+    input, button {
+        width: 400px;
+    }
+}
+
+/*
+body {
+    background: #282828;
+}
+
+.jumbotron {
+    text-align: center;
+    width: 30rem;
+    border-radius: 0.5rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 4rem auto;
+    background-color: #282828;
+    padding: 2rem;
+    margin-top: 8%;
+}
+
+.container .glyphicon-list-alt {
+    font-size: 10rem;
+    margin-top: 3rem;
+    color: #f96145;
+}
+
+input {
+    width: 140%;
+    margin-bottom: 1.4rem;
+    padding: 0.8rem;
+    background-color: #464646;
+    border-radius: 0.2rem;
+    border: none;
+    margin-left: -20%;
+    color: #ffffff;
+}
+h2 {
+    margin-bottom: 3rem;
+    font-weight: bold;
+    color: #ababab;
+}
+.btn {
+    border-radius: 0.2rem;
+}
+.btn .glyphicon {
+    font-size: 3rem;
+    color: #fff;
+}
+.full-width {
+    background-color: #3500D3;
+    width: 75%;
+    color: #ffffff;
+    border: 1px solid white;
+    font-weight:bold;
+    font-family: monospace;
+    margin-left: 0%;
+}
+
+.signup_logo{
+    width: 39%;
+    margin-top: -11%;
+}
+
+.box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: #3d3d3d;
+}
+
+.already_account_div{
+    margin-bottom: 5%;
+}
+
+.already_account_text{
+    margin-top: -2%;
+    margin-bottom: 3%;
+    color: #9B9B9B;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+
+
+!* Media Query para Móvil *!
+@media only screen and (max-width: 767px){
+
+    input {
+        width: 120%;
+        margin-bottom: 1.4rem;
+        padding: 0.8rem;
+        background-color: #464646;
+        border-radius: 0.2rem;
+        border: none;
+        margin-left: -9%;
+        color: #ffffff;
+    }
+
+}
+
+*/

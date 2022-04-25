@@ -6,8 +6,11 @@ use App\Http\Requests\StoreSongRequest;
 use App\Http\Requests\UpdateSongRequest;
 use App\Models\Song;
 
+
 class SongController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +18,6 @@ class SongController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -25,7 +27,7 @@ class SongController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin-song-form', ["song" => new Song()]);
     }
 
     /**
@@ -36,7 +38,24 @@ class SongController extends Controller
      */
     public function store(StoreSongRequest $request)
     {
-        //
+        $validated = $request->validate([
+            'nombre' => 'required',
+            'artistas' => 'required',
+            'album' => 'required',
+            'url' => 'required',
+        ]);
+        if($validated) {
+            $song = new Song();
+            $song->user_id = 1;
+            $song->nombre = $request->nombre;
+            $song->artistas = $request->artistas;
+            $song->album = $request->album;
+            $song->url = $request->url;
+            $song->imagen = $request->imagen;
+            $song->save();
+            return redirect("/songs");
+        }
+        return redirect("/songs");
     }
 
     /**
@@ -47,7 +66,7 @@ class SongController extends Controller
      */
     public function show(Song $song)
     {
-        //
+        return view('song', ["song" => $song]);
     }
 
     /**
@@ -58,29 +77,49 @@ class SongController extends Controller
      */
     public function edit(Song $song)
     {
-        //
+        return view('admin-song-form', ["song" => $song]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSongRequest  $request
      * @param  \App\Models\Song  $song
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSongRequest $request, Song $song)
+    public function update(UpdateSongRequest $request, $id)
     {
         //
+        $validated = $request->validate([
+            'nombre' => 'required',
+            'artistas' => 'required',
+            'album' => 'required',
+            'url' => 'required',
+        ]);
+
+        $song = Song::where('id', $id)->firstOrFail();
+
+        $song->user_id = $song->user_id;
+        $song->nombre = $request->nombre;
+        $song->artistas = $request->artistas;
+        $song->album = $request->album;
+        $song->url = $request->url;
+        $song->imagen = $song->imagen;
+        $song->save();
+
+        return redirect("/songs");
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Song  $song
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function destroy(Song $song)
+    public function destroy($id)
     {
-        //
+        $songtoDelete = Song::find($id);
+        $songtoDelete -> delete();
+        return redirect('/songs');
     }
 }

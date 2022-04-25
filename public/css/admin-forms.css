@@ -1,0 +1,21 @@
+* {
+    font-family: 'Space Mono', monospace;
+}
+
+.form-container {
+    background-color: #282828;
+}
+
+.admin-form {
+    border-radius: 20px !important;
+}
+
+.save-btn {
+    background-color: #3500D3;
+    color: #fff;
+    width: 100%;
+}
+
+h1 {
+    color: #3500D3;
+}
