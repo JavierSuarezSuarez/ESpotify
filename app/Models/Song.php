@@ -22,4 +22,13 @@ class Song extends Model
         'album',
         'url',
     ];
+
+
+    /*-------------------------------------------------Relationships------------------------------------------------*/
+
+    //One to Many: Admin User that added the song
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

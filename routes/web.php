@@ -76,7 +76,8 @@ Route::get('/songs', function () {
 })->middleware('auth');
 
 Route::get('/playlists', function () {
-    return view('admin_playlists_panel');
+    $playlists = DB::table('playlists') ->get();
+    return view('admin_playlists_panel', ['playlists' => $playlists]);
 })->middleware('auth');
 
 /*Route::get('/playlists', function () {

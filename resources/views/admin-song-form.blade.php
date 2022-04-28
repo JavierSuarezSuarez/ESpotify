@@ -13,8 +13,8 @@ $user = Illuminate\Support\Facades\Auth::user();
             @if ($song->id) {{ method_field('PUT') }} @endif
             @csrf
 
-            @if ($song->id) <h1 class="text-center">Modify Song</h1>
-            @else <h1 class="text-center">Create Song</h1>@endif
+            @if ($song->id) <h1 class="text-center">Modificar Canción</h1>
+            @else <h1 class="text-center">Añadir Canción</h1>@endif
 
             <label for="name" class="mt-2">Nombre</label>
             <div class="form-group">
@@ -37,7 +37,10 @@ $user = Illuminate\Support\Facades\Auth::user();
                 <input type="file" id="imagen" name="imagen" class="custom-file-input" id="customFile" value="{{old('imagen', $song->imagen)}}">
                 <label class="custom-file-label" for="customFile">Seleccionar foto</label>
             </div>
-            <button type="submit" class="btn save-btn mt-4">Save</button>
+
+            @if ($song->id == null) <input name="user_id" type="hidden" value="{{$user -> id}}"> @endif
+
+            <button type="submit" class="btn save-btn mt-4">Confirmar</button>
         </form>
     </div>
 @endsection

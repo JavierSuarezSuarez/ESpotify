@@ -44,4 +44,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /*-------------------------------------------------Relationships------------------------------------------------*/
+
+    //One to Many: Songs added by an admin user
+    public function songs()
+    {
+        return $this->hasMany(Song::class);
+    }
+
+    //One to Many: Playlists added by an admin user
+    public function playlists()
+    {
+        return $this->hasMany(Playlist::class);
+    }
+
+
 }

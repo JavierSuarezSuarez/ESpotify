@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+
+
     /**
      * Run the migrations.
      *
@@ -14,16 +16,11 @@ return new class extends Migration
     public function up()
     {
         Schema::enableForeignKeyConstraints();
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('playlists', function (Blueprint $table) {
             $table->id();
-            $table->string('foto');
+            $table->foreignId('user_id')->constrained('users');
             $table->string('nombre');
-            $table->string('apellidos');
-            $table->string('tipo');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
+            $table->string('imagen');
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('playlists');
     }
 };

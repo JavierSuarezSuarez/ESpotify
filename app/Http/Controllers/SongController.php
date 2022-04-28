@@ -12,9 +12,7 @@ class SongController extends Controller
 
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * Display a listing of the resource. Not Implemented
      */
     public function index()
     {
@@ -22,8 +20,6 @@ class SongController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -32,9 +28,6 @@ class SongController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreSongRequest  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(StoreSongRequest $request)
     {
@@ -46,7 +39,7 @@ class SongController extends Controller
         ]);
         if($validated) {
             $song = new Song();
-            $song->user_id = 1;
+            $song->user_id = $request->user_id;
             $song->nombre = $request->nombre;
             $song->artistas = $request->artistas;
             $song->album = $request->album;
@@ -60,9 +53,6 @@ class SongController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Models\Song  $song
-     * @return \Illuminate\Http\Response
      */
     public function show(Song $song)
     {
@@ -71,9 +61,6 @@ class SongController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Song  $song
-     * @return \Illuminate\Http\Response
      */
     public function edit(Song $song)
     {
@@ -82,9 +69,6 @@ class SongController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \App\Models\Song  $song
-     * @return \Illuminate\Http\Response
      */
     public function update(UpdateSongRequest $request, $id)
     {
@@ -112,9 +96,6 @@ class SongController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function destroy($id)
     {
