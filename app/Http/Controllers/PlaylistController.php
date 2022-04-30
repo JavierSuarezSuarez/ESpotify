@@ -51,7 +51,8 @@ class PlaylistController extends Controller
      */
     public function show(Playlist $playlist)
     {
-        return view('playlist', ["playlist" => $playlist]);
+        $playlistWithrelation = Playlist::with("user" )->where('id','=',$playlist->id)->get()->first();
+        return view('playlist', ["playlist" => $playlistWithrelation]);
     }
 
     /**

@@ -20,6 +20,7 @@ class Playlist extends Model
     ];
 
 
+
     /*-------------------------------------------------Relationships------------------------------------------------*/
 
     //One to Many: User that added the playlist

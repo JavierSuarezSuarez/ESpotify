@@ -36,6 +36,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+
     /**
      * The attributes that should be cast.
      *
@@ -53,7 +54,7 @@ class User extends Authenticatable
         return $this->hasMany(Song::class);
     }
 
-    //One to Many: Playlists added by an admin user
+    //One to Many: Playlists added by a user
     public function playlists()
     {
         return $this->hasMany(Playlist::class);

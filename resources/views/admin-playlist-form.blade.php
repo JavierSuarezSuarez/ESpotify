@@ -1,7 +1,7 @@
 <?php
 $user = Illuminate\Support\Facades\Auth::user();
 ?>
-@extends('layouts/admin-layout')
+@extends( ($user -> tipo == 1) ? 'layouts/admin-layout':'layouts/registered-user-layout')
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/admin-forms.css') }}">
@@ -16,8 +16,6 @@ $user = Illuminate\Support\Facades\Auth::user();
             @if ($playlist->id) <h1 class="text-center">Modificar Playlist</h1>
             @else <h1 class="text-center">Crear Playlist</h1>@endif
 
-            <h1 class="text-center">Create/Modify Playlist</h1>
-
             <label for="name" class="mt-2">Nombre</label>
             <div class="form-group">
                 <input type="text" id="nombre" name="nombre" class="form-control" placeholder="" value="{{old('nombre', $playlist->nombre)}}">
@@ -30,6 +28,8 @@ $user = Illuminate\Support\Facades\Auth::user();
             </div>
 
             @if ($playlist->id == null) <input name="user_id" type="hidden" value="{{$user -> id}}"> @endif
+
+            <input name="tipo" type="hidden" value="{{$user -> tipo}}">
             <button type="submit" class="btn save-btn mt-4">Confirmar</button>
         </form>
     </div>

@@ -18,12 +18,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
 
-
-/*------------------------------------------Main route-----------------------------------------------------------*/
+/*------------------------------------------Main routes-----------------------------------------------------------*/
 Route::get('/', function () {
     return view('home/homeunregistered');
 });
@@ -76,22 +72,16 @@ Route::get('/songs', function () {
 })->middleware('auth');
 
 Route::get('/playlists', function () {
-    $playlists = DB::table('playlists') ->get();
+    $playlists =  App\Models\Playlist::with('user')->get();
     return view('admin_playlists_panel', ['playlists' => $playlists]);
 })->middleware('auth');
 
-/*Route::get('/playlists', function () {
-    $songs = DB::table('playlists')
-        ->join('users', 'users.id', 'playlists.user_id')
-        ->select('playlists.nombre', 'playlists.imagen', 'playlists.created_at', 'playlists.sum(songs)','users.nombre as usernombre')
-        ->get();
-    return view('admin_playlists_panel', ['playlists' => $playlists]);
-});*/
 
 
 /*------------------------------------------User routes---------------------------------------------------------------*/
 Route::get('/userplaylists', function () {
-    return view('playlists_panel');
+    $userWithPlaylists = Auth::user()->load("playlists");
+    return view('playlists_panel', ['userWithPlaylists' => $userWithPlaylists]);
 })->middleware('auth');
 
 Route::get('/usersongs', function () {
@@ -103,8 +93,4 @@ Route::get('/search', function () {
 })->middleware('auth');
 
 
-
 /*------------------------------------------Pruebas route-------------------------------------------------------------*/
-Route::get('/playlist', function () {
-    return view('playlist');
-})->middleware('auth');

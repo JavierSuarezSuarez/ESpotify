@@ -9,17 +9,21 @@ $user = Illuminate\Support\Facades\Auth::user();
 @stop
 
 @section('mainContent')
+
+
     <section class="main-playlist d-flex flex-column justify-content-center align-items-center mt-5">
         <div class="container d-flex flex-column justify-content-center">
             <div class="d-flex flex-column flex-lg-row mb-3 justify-content-between">
+
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="{{asset('images/playlist_cover.png')}}" class="w-100">
+                    <img src="{{$playlist->imagen}}" class="w-100 playlistImg">
                 </div>
+
                 <div class="d-flex flex-column mt-3 mt-md-5 mx-lg-4">
                     <h2 class="playlist">Playlist</h2>
-                    <h3 class="playlist-title">Sound of Street</h3>
+                    <h3 class="playlist-title">{{$playlist->nombre}}</h3>
                     <div class="d-flex flex-column flex-md-row mt-sm-2 mt-md-3 align-items-md-center">
-                        <p>@pepemoreno</p>
+                        <p>{{$playlist->user->nombre}}</p>
                         <p class="mx-md-2">* 50 canciones</p>
                         <p>2h 58 min</p>
                         <p class="d-flex flex-row jusify-content-center align-items-center"><button class="ml-md-4 add-song"><i class='bx bxs-plus-circle mx-2'></i>Añadir cancion</button></p>
