@@ -37,7 +37,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                     <p class="playlist_name_text text-light">{{$playlist -> nombre}}</p>
                     <p class="createdby_text text-light">CREADA POR: {{$playlist->user->nombre}} {{$playlist->user->apellidos}}</p>
                     <p class="datesongnumber_text text-light">DD/mm/YYYY - X CANCIONES</p>
-                    <p class="followers_text text-light"> FOLLOWERS: 200.000  </p>
+                    <p class="followers_text text-light"> FOLLOWERS: {{$playlist->users->count()}} </p>
 
                     <div class="edit_delete_btns d-flex">
                         <form class="" action="{{ route('playlists.edit', $playlist -> id)}}" method="PUT">

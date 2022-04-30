@@ -11,6 +11,7 @@ $user = Illuminate\Support\Facades\Auth::user();
 @section('mainContent')
 
 
+
     <section class="main-playlist d-flex flex-column justify-content-center align-items-center mt-5">
         <div class="container d-flex flex-column justify-content-center">
             <div class="d-flex flex-column flex-lg-row mb-3 justify-content-between">
@@ -31,9 +32,20 @@ $user = Illuminate\Support\Facades\Auth::user();
                 </div>
 
                 <div class="d-flex align-items-start mt-3 mt-md-5">
-                    <div>
-                        <button class="follow-button">Seguir <i class='bx bx-plus'></i> </button>
-                    </div>
+                    @if($followerRelation->isEmpty())
+                        <form action="{{route('followers.store')}}" method="POST">
+                            @csrf
+                            <input name="playlist_id" type="hidden" value="{{$playlist -> id}}">
+                            <input name="user_id" type="hidden" value="{{$user -> id}}">
+                            <button class="follow-button">Seguir <i class='bx bx-plus'></i> </button>
+                        </form>
+                    @else
+                        <form action="{{route('followers.destroy',  $playlist -> id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="follow-button">Dejar de Seguir <i class='bx bx-plus'></i> </button>
+                        </form>
+                    @endif
                 </div>
 
             </div>

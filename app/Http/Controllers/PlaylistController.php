@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePlaylistRequest;
 use App\Http\Requests\UpdatePlaylistRequest;
+use App\Models\Followers;
 use App\Models\Playlist;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PlaylistController extends Controller
 {
@@ -51,8 +54,18 @@ class PlaylistController extends Controller
      */
     public function show(Playlist $playlist)
     {
+        //Relation One to Many
         $playlistWithrelation = Playlist::with("user" )->where('id','=',$playlist->id)->get()->first();
-        return view('playlist', ["playlist" => $playlistWithrelation]);
+
+
+        //Relation Many to Many
+        $userLogged = Auth::user();
+        $followerRelation = DB::table('followers')
+            ->where('playlist_id', '=', $playlist->id)
+            ->where('user_id', '=', $userLogged->id)->get();
+
+
+        return view('playlist', ["playlist" => $playlistWithrelation, "followerRelation" => $followerRelation]);
     }
 
     /**

@@ -29,4 +29,10 @@ class Playlist extends Model
         return $this->belongsTo(User::class);
     }
 
+    //Many to Many: Followers
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'followers')->using(Followers::class);
+    }
+
 }

@@ -60,5 +60,10 @@ class User extends Authenticatable
         return $this->hasMany(Playlist::class);
     }
 
+    //Many to Many: Followers
+    public function playlistsFollowed()
+    {
+        return $this->belongsToMany(Playlist::class,'followers')->using(Followers::class);
+    }
 
 }

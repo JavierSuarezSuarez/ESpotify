@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FollowersController;
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\UserController;
@@ -33,6 +34,12 @@ Route::resources([
     'users' => UserController::class,
     'songs' => SongController::class,
     'playlists' => PlaylistController::class
+]);
+
+
+/*------------------------------------------Relationship Resource routes-----------------------------------------------------------*/
+Route::resources([
+    'followers' => FollowersController::class,
 ]);
 
 /*------------------------------------------Login/Logout routes--------------------------------------------------------------*/
@@ -72,7 +79,7 @@ Route::get('/songs', function () {
 })->middleware('auth');
 
 Route::get('/playlists', function () {
-    $playlists =  App\Models\Playlist::with('user')->get();
+    $playlists =  App\Models\Playlist::with('user', 'users')->get();
     return view('admin_playlists_panel', ['playlists' => $playlists]);
 })->middleware('auth');
 
