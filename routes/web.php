@@ -49,6 +49,10 @@ Route::post('/login', 'App\Http\Controllers\LoginController@authenticate');
 //GET logout
 Route::get('/logout', 'App\Http\Controllers\LoginController@destroy');
 
+//Browser
+Route::post('/browser', 'App\Http\Controllers\BrowserController@browse');
+
+
 /*------------------------------------------Sign Up routes------------------------------------------------------------*/
 //GET signup view
 Route::get('/signup', function () { return view('signup'); })->name('signup');
