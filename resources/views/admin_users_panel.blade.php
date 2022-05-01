@@ -15,7 +15,7 @@ $user = Illuminate\Support\Facades\Auth::user();
         </div>
 
 
-        <form class="form-inline d-flex justify-content-between align-items-center">
+        <form method="POST" action="/browser" class="form-inline d-flex justify-content-between align-items-center">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn my-2 my-sm-0 text-light" type="submit"><i class="uil uil-search"></i></button>
         </form>
