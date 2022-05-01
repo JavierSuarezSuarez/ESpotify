@@ -19,6 +19,7 @@
 
         <form method="get" action="/browse" class="form-inline d-flex justify-content-between align-items-center">
             <input class="form-control mr-sm-2" type="search" id="Search" name="Search" placeholder="Search" aria-label="Search">
+            <input name="flag" type="hidden" value="songs">
             <button class="btn my-2 my-sm-0 text-light" type="submit"><i class="uil uil-search"></i></button>
         </form>
 
@@ -96,7 +97,6 @@
         @endforeach
     </section>
     @endif
-    <!--<div id="resultados"> </div>-->
 
 @endsection
 

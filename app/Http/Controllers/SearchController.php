@@ -10,29 +10,35 @@ class SearchController extends Controller
 {
     public function browse(Request $request){
 
-        if($request->Search){
-            $songs = DB::table('songs')->where('nombre','LIKE','%'.$request->Search.'%')->get();
+        switch($request->flag){
+            case 'songs':
 
-            //$songs = Song::select("*")->where("nombre","LIKE",'{$request->Search}%');
-            //dd($songs);-->
-            return view('admin_songs_panel', ["buscar" =>$songs]);
+                if($request->Search){
+                    $songs = DB::table('songs')->where('nombre','LIKE','%'.$request->Search.'%')
+                        ->orWhere('artistas','LIKE','%'.$request->Search.'%')->get();
+                    return view('admin_songs_panel', ["buscar" =>$songs]);
+                }
+
+                return redirect()->to('/songs');
+
+            break;
+
+            case 'users':
+
+                if($request->Search){
+                    $users = DB::table('users')->where('nombre','LIKE','%'.$request->Search.'%')
+                        ->orWhere('apellidos','LIKE','%'.$request->Search.'%')->get();
+                    return view('admin_users_panel', ["buscar" =>$users]);
+                }
+
+                return redirect()->to('/users');
+
+            break;
+
+            default:  return redirect()->to('/home');
+
         }
 
-        return redirect()->to('/songs');
-
-        /*
-        $nombres = Songs::where("nombre",'like',$request->text."%")->take(10)->get(); paginate(5)
-        return   view("admin_songs_panel", compact("nombres"));
-        */
-
-        /*
-        $busqueda = $request->input('Search');
-        $nombres = Songs::query()
-            ->where('nombre', 'LIKE', "%{$busqueda}%")
-            ->orderBy('id','desc')
-            ->paginate(1);
-        return view('admin_songs_panel', compact('nombres'));
-        */
-
     }
+
 }

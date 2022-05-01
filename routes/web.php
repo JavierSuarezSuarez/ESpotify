@@ -55,8 +55,8 @@ Route::post('/login', 'App\Http\Controllers\LoginController@authenticate');
 Route::get('/logout', 'App\Http\Controllers\LoginController@destroy');
 
 //Browser
-//Route::post('/search', 'App\Http\Controllers\SearchController@browse');
 Route::get('/browse', 'App\Http\Controllers\SearchController@browse');
+
 
 
 /*------------------------------------------Sign Up routes------------------------------------------------------------*/
