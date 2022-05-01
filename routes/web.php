@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\FollowersController;
 use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\PlaylistSongsController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -18,12 +20,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
 
-
-/*------------------------------------------Main route-----------------------------------------------------------*/
+/*------------------------------------------Main routes-----------------------------------------------------------*/
 Route::get('/', function () {
     return view('home/homeunregistered');
 });
@@ -37,6 +35,13 @@ Route::resources([
     'users' => UserController::class,
     'songs' => SongController::class,
     'playlists' => PlaylistController::class
+]);
+
+
+/*------------------------------------------Relationship Resource routes-----------------------------------------------------------*/
+Route::resources([
+    'followers' => FollowersController::class,
+    'playlistsongs' => PlaylistSongsController::class
 ]);
 
 /*------------------------------------------Login/Logout routes--------------------------------------------------------------*/
@@ -81,21 +86,16 @@ Route::get('/songs', function () {
 })->middleware('auth');
 
 Route::get('/playlists', function () {
-    return view('admin_playlists_panel');
+    $playlists =  App\Models\Playlist::with('user', 'users')->get();
+    return view('admin_playlists_panel', ['playlists' => $playlists]);
 })->middleware('auth');
 
-/*Route::get('/playlists', function () {
-    $songs = DB::table('playlists')
-        ->join('users', 'users.id', 'playlists.user_id')
-        ->select('playlists.nombre', 'playlists.imagen', 'playlists.created_at', 'playlists.sum(songs)','users.nombre as usernombre')
-        ->get();
-    return view('admin_playlists_panel', ['playlists' => $playlists]);
-});*/
 
 
 /*------------------------------------------User routes---------------------------------------------------------------*/
 Route::get('/userplaylists', function () {
-    return view('playlists_panel');
+    $userWithPlaylists = Auth::user()->load("playlists", "playlists.users");
+    return view('playlists_panel', ['userWithPlaylists' => $userWithPlaylists]);
 })->middleware('auth');
 
 Route::get('/usersongs', function () {
@@ -107,8 +107,4 @@ Route::get('/search', function () {
 })->middleware('auth');
 
 
-
 /*------------------------------------------Pruebas route-------------------------------------------------------------*/
-Route::get('/playlist', function () {
-    return view('playlist');
-})->middleware('auth');

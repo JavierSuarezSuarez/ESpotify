@@ -14,16 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::enableForeignKeyConstraints();
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('playlistssongs', function (Blueprint $table) {
             $table->id();
-            $table->string('foto');
-            $table->string('nombre');
-            $table->string('apellidos');
-            $table->string('tipo');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
+            $table->foreignId('playlist_id')->constrained('playlists');
+            $table->foreignId('song_id')->constrained('songs');
             $table->timestamps();
         });
     }
@@ -35,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('playlistssongs');
     }
 };

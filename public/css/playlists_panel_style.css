@@ -1,5 +1,5 @@
 @media only screen and (max-width: 768px){
-    .subheaders_section {
+    .subheaders_section,.edit_delete_btns {
         display: none !important;
     }
 
