@@ -1,3 +1,8 @@
+/*const sound = new Howl({
+    src: ['https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3'],
+    html5: true
+});*/
+
 const sound = new Howl({
     src: ['../audio/Imagine-Dragons-Thunder.mp3'],
     html5: true
