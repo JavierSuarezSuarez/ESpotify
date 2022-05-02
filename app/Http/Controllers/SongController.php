@@ -43,7 +43,19 @@ class SongController extends Controller
             'artistas' => 'required',
             'album' => 'required',
             'url' => 'required',
+            'imagen' => 'required',
         ]);
+
+/*        $input = $request->all();
+
+        if($imagen = $request->file('imagen')) {
+            dd('entro');
+            $destinationPath = 'images/';
+            $SongImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
+            $imagen->move($destinationPath, $SongImage);
+            $input['imagen'] = "$SongImage";
+        }*/
+
         if($validated) {
             $song = new Song();
             $song->user_id = 1;
