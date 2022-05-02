@@ -36,18 +36,17 @@ class SongController extends Controller
             'artistas' => 'required',
             'album' => 'required',
             'url' => 'required',
-            'imagen' => 'required',
+            'imagen' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
-/*        $input = $request->all();
-
+        $input = $request->all();
         if($imagen = $request->file('imagen')) {
-            dd('entro');
             $destinationPath = 'images/';
             $SongImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
             $imagen->move($destinationPath, $SongImage);
             $input['imagen'] = "$SongImage";
-        }*/
+            $SongImage = '/images/' . $SongImage;
+        }
 
         if($validated) {
             $song = new Song();
@@ -56,7 +55,7 @@ class SongController extends Controller
             $song->artistas = $request->artistas;
             $song->album = $request->album;
             $song->url = $request->url;
-            $song->imagen = $request->imagen;
+            $song->imagen = $SongImage;
             $song->save();
             return redirect("/songs");
         }
