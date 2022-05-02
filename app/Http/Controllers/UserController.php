@@ -42,8 +42,16 @@ class UserController extends Controller
             'apellidos' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'foto' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
         $request['password'] = bcrypt($request['password']);
+
+        if($foto = $request->file('foto')) {
+            $destinationPath = 'images/uploaded/';
+            $UserImage = date('YmdHis') . "." . $foto->getClientOriginalExtension();
+            $foto->move($destinationPath, $UserImage);
+            $UserImage = '/images/uploaded/' . $UserImage;
+        }
 
         if($validated) {
             $user = new User();
@@ -52,7 +60,7 @@ class UserController extends Controller
             $user->email = $request->email;
             $user->password = $request->password;
             $user->tipo = $request->tipo;
-            $user->foto = $request->foto;
+            $user->foto = $UserImage;
             $user->save();
             return redirect("/users");
         }
@@ -91,7 +99,17 @@ class UserController extends Controller
             'apellidos' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'foto' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+
         ]);
+
+        if($foto = $request->file('foto')) {
+            $destinationPath = 'images/uploaded/';
+            $UserImage = date('YmdHis') . "." . $foto->getClientOriginalExtension();
+            $foto->move($destinationPath, $UserImage);
+            $UserImage = '/images/uploaded/' . $UserImage;
+        }
+
 
         $user = User::where('id', $id)->firstOrFail();
 
@@ -100,7 +118,7 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->password = $request->password;
         $user->tipo = $request->tipo;
-        $user->foto = $user->foto;
+        $user->foto = $UserImage;
         $user->save();
 
 

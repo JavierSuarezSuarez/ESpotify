@@ -39,13 +39,11 @@ class SongController extends Controller
             'imagen' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
-        $input = $request->all();
         if($imagen = $request->file('imagen')) {
-            $destinationPath = 'images/';
+            $destinationPath = 'images/uploaded/';
             $SongImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
             $imagen->move($destinationPath, $SongImage);
-            $input['imagen'] = "$SongImage";
-            $SongImage = '/images/' . $SongImage;
+            $SongImage = '/images/uploaded/' . $SongImage;
         }
 
         if($validated) {
@@ -89,7 +87,16 @@ class SongController extends Controller
             'artistas' => 'required',
             'album' => 'required',
             'url' => 'required',
+            'imagen' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
+
+        if($imagen = $request->file('imagen')) {
+            $destinationPath = 'images/uploaded/';
+            $SongImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
+            $imagen->move($destinationPath, $SongImage);
+            $SongImage = '/images/uploaded/' . $SongImage;
+        }
+
 
         $song = Song::where('id', $id)->firstOrFail();
 
@@ -98,7 +105,7 @@ class SongController extends Controller
         $song->artistas = $request->artistas;
         $song->album = $request->album;
         $song->url = $request->url;
-        $song->imagen = $song->imagen;
+        $song->imagen = $SongImage;
         $song->save();
 
         return redirect("/songs");

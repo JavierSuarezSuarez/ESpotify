@@ -9,7 +9,7 @@ $user = Illuminate\Support\Facades\Auth::user();
 
 @section('mainContent')
     <div class="d-flex justify-content-center form-container">
-        <form action ="{{ $userForm->id == null ? route('users.store') : '/users/'.$userForm->id }}" method="POST" class="admin-form border rounded p-5 bg-light mt-4 mb-4">
+        <form action ="{{ $userForm->id == null ? route('users.store') : '/users/'.$userForm->id }}" method="POST" enctype="multipart/form-data" class="admin-form border rounded p-5 bg-light mt-4 mb-4">
             @if ($userForm->id) {{ method_field('PUT') }} @endif
             @csrf
 

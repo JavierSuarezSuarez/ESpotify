@@ -33,14 +33,23 @@ class PlaylistController extends Controller
     public function store(StorePlaylistRequest $request)
     {
         $validated = $request->validate([
-            'nombre' => 'required'
+            'nombre' => 'required',
+            'imagen' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
+
+        if($imagen = $request->file('imagen')) {
+            $destinationPath = 'images/uploaded/';
+            $PlaylistImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
+            $imagen->move($destinationPath, $PlaylistImage);
+            $PlaylistImage = '/images/uploaded/' . $PlaylistImage;
+        }
+
 
         if($validated) {
             $playlist = new Playlist();
             $playlist->user_id = $request->user_id;
             $playlist->nombre = $request->nombre;
-            $playlist->imagen = $request->imagen;
+            $playlist->imagen = $PlaylistImage;
             $playlist->save();
             if($request -> tipo == 1) return redirect("/playlists");
             else return redirect("/userplaylists");
@@ -82,13 +91,21 @@ class PlaylistController extends Controller
     public function update(UpdatePlaylistRequest $request, $id)
     {
         $validated = $request->validate([
-            'nombre' => 'required'
+            'nombre' => 'required',
+            'imagen' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
+
+        if($imagen = $request->file('imagen')) {
+            $destinationPath = 'images/uploaded/';
+            $PlaylistImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
+            $imagen->move($destinationPath, $PlaylistImage);
+            $PlaylistImage = '/images/uploaded/' . $PlaylistImage;
+        }
 
         $playlist = Playlist::where('id', $id)->firstOrFail();
 
         $playlist->nombre = $request->nombre;
-        $playlist->imagen = $playlist->imagen;
+        $playlist->imagen = $PlaylistImage;
         $playlist->save();
 
         if($request -> tipo == 1) return redirect("/playlists");
