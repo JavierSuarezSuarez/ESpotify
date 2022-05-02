@@ -13,15 +13,15 @@ $user = Illuminate\Support\Facades\Auth::user();
             @if ($playlist->id) {{ method_field('PUT') }} @endif
             @csrf
 
-            @if ($playlist->id) <h1 class="text-center">Modificar Playlist</h1>
-            @else <h1 class="text-center">Crear Playlist</h1>@endif
+            @if ($playlist->id) <h1 class="text-center text-light">Modificar Playlist</h1>
+            @else <h1 class="text-center text-light">Crear Playlist</h1>@endif
 
-            <label for="name" class="mt-2">Nombre</label>
+            <label for="name" class="mt-2 text-light">Nombre</label>
             <div class="form-group">
                 <input type="text" id="nombre" name="nombre" class="form-control" placeholder="" value="{{old('nombre', $playlist->nombre)}}">
             </div>
 
-            <label for="foto">Foto</label>
+            <label for="foto" class="text-light">Foto</label>
             <div class="custom-file container">
                 <input type="file" id="imagen" name="imagen" class="custom-file-input" id="customFile" value="{{old('imagen', $playlist->imagen)}}">
                 <label class="custom-file-label" for="customFile">Seleccionar portada</label>
