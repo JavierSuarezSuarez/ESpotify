@@ -1,5 +1,6 @@
 <?php
 $user = Illuminate\Support\Facades\Auth::user();
+$i = 1;
 ?>
 @extends( ($user -> tipo == 1) ? 'layouts/admin-layout':'layouts/registered-user-layout')
 
@@ -9,6 +10,7 @@ $user = Illuminate\Support\Facades\Auth::user();
 @stop
 
 @section('mainContent')
+
 
     <section class="main-playlist d-flex flex-column justify-content-center align-items-center mt-5">
         <div class="container d-flex flex-column justify-content-center">
@@ -61,104 +63,58 @@ $user = Illuminate\Support\Facades\Auth::user();
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>
-                            <div>
-                                <p><strong>Thunder</strong></p>
-                                <p>Imagine Dragons</p>
-                            </div>
-                        </td>
-                        <td>Evolve</td>
-                        <td>1 ene 2022</td>
-                        <td>3:30</td>
-                        <td>
-                            <button><i class='bx bx-play playlist-icon' ></i></button>
-                            <button><i class='bx bxs-x-circle playlist-icon'></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>
-                            <div>
-                                <p><strong>Thunder</strong></p>
-                                <p>Imagine Dragons</p>
-                            </div>
-                        </td>
-                        <td>Evolve</td>
-                        <td>1 ene 2022</td>
-                        <td>3:30</td>
-                        <td>
-                            <button><i class='bx bx-play playlist-icon' ></i></button>
-                            <button><i class='bx bxs-x-circle playlist-icon'></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>
-                            <div>
-                                <p><strong>Thunder</strong></p>
-                                <p>Imagine Dragons</p>
-                            </div>
-                        </td>
-                        <td>Evolve</td>
-                        <td>1 ene 2022</td>
-                        <td>3:30</td>
-                        <td>
-                            <button><i class='bx bx-play playlist-icon'></i></button>
-                            <button><i class='bx bxs-x-circle playlist-icon'></i></button>
-                        </td>
-                    </tr>
+
+                    @foreach($playlistSongs->songs as $playlistSong)
+                        <tr>
+                            <th scope="row">{{$i++}}</th>
+                            <td>
+                                <div>
+                                    <p><strong>{{$playlistSong->nombre}}</strong></p>
+                                    <p>{{$playlistSong->artistas}}</p>
+                                </div>
+                            </td>
+                            <td>{{$playlistSong->album}}</td>
+                            <td>1 ene 2022</td>
+                            <td>3:30</td>
+                            <td>
+                                <!--<button><i class='bx bx-play playlist-icon' ></i></button>-->
+                                <form action="{{route('playlistsongs.destroy',  $parameteres=[$playlist->id, $playlistSongs -> id])}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button><i class='bx bxs-x-circle playlist-icon'></i></button>
+                                </form>
+
+                            </td>
+                        </tr>
+                    @endforeach
+
                     </tbody>
                 </table>
             </div>
 
             <div class="cards-div d-flex flex-column">
-                <div class="playlist-card d-flex flex-row justify-content-between">
-                    <div class="d-flex flex-row">
-                        <div>
-                            <p><strong>Thunder</strong></p>
-                            <p>Imagine Dragons</p>
+                @foreach($playlistSongs->songs as $playlistSong)
+                    <div class="playlist-card d-flex flex-row justify-content-between">
+                        <div class="d-flex flex-row">
+                            <div>
+                                <p><strong>{{$playlistSong->nombre}}</strong></p>
+                                <p>{{$playlistSong->artistas}}</p>
+                            </div>
+                            <p>{{$playlistSong->album}}</p>
                         </div>
-                        <p>Evolve</p>
-                    </div>
-                    <div class="card-delete d-flex align-items-center px-4">
-                        <button><i class='bx bxs-x-circle playlist-icon'></i></button>
-                    </div>
-                </div>
-
-
-                <div class="playlist-card d-flex flex-row justify-content-between">
-                    <div class="d-flex flex-row">
-                        <div>
-                            <p><strong>Thunder</strong></p>
-                            <p>Imagine Dragons</p>
+                        <div class="card-delete d-flex align-items-center px-4">
+                            <button><i class='bx bxs-x-circle playlist-icon'></i></button>
                         </div>
-                        <p>Evolve</p>
                     </div>
-                    <div class="card-delete d-flex align-items-center px-4">
-                        <button><i class='bx bxs-x-circle playlist-icon'></i></button>
-                    </div>
-                </div>
+                @endforeach
 
-
-                <div class="playlist-card d-flex flex-row justify-content-between">
-                    <div class="d-flex flex-row">
-                        <div>
-                            <p><strong>Thunder</strong></p>
-                            <p>Imagine Dragons</p>
-                        </div>
-                        <p>Evolve</p>
-                    </div>
-                    <div class="card-delete d-flex align-items-center px-4">
-                        <button><i class='bx bxs-x-circle playlist-icon'></i></button>
-                    </div>
-                </div>
             </div>
 
         </div>
     </section>
 
+
+    <!-- Modal to Add songs to the playlist -->
     <div class="modal fade" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content addSongModal">
@@ -169,7 +125,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                     </button>
                 </div>
                 <div class="modal-body">
-                    @foreach($songs as $song)
+                    @foreach($songsModal as $song)
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="text-light">
                                 {{$song -> nombre}}
@@ -178,8 +134,8 @@ $user = Illuminate\Support\Facades\Auth::user();
                             <form action="{{route('playlistsongs.store')}}" method="POST">
                                 @csrf
                                 <input name="playlist_id" type="hidden" value="{{$playlist -> id}}">
-                                <input name="user_id" type="hidden" value="{{$song -> id}}">
-                                <button class="edit_btn btn text-light" type="button">
+                                <input name="song_id" type="hidden" value="{{$song -> id}}">
+                                <button class="edit_btn btn text-light">
                                     <i class="h3 uil uil-plus-circle"></i>
                                 </button>
                             </form>
@@ -187,7 +143,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                     @endforeach
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="save-btn btn btn-primary">Save changes</button>
+                    <!--<button type="button" class="save-btn btn btn-primary">Save changes</button>-->
                 </div>
             </div>
         </div>

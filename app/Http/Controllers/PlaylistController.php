@@ -67,14 +67,21 @@ class PlaylistController extends Controller
         $playlistWithrelation = Playlist::with("user" )->where('id','=',$playlist->id)->get()->first();
 
 
-        //Relation Many to Many
+        //Relation Many to Many (Followers)
         $userLogged = Auth::user();
         $followerRelation = DB::table('followers')
             ->where('playlist_id', '=', $playlist->id)
             ->where('user_id', '=', $userLogged->id)->get();
-        $songs = DB::table('songs') ->get();
 
-        return view('playlist', ["playlist" => $playlistWithrelation, "followerRelation" => $followerRelation, "songs" => $songs]);
+
+        //Relation Many to Many (PlaylistSongs)
+
+        $playlistSongs = Playlist::where('id','=',$playlist->id)->with("songs" )->get()->first();
+        $songsModal = DB::table('songs')->get();
+
+
+        return view('playlist', ["playlist" => $playlistWithrelation, "followerRelation" => $followerRelation,
+                                      "songsModal" => $songsModal, "playlistSongs" => $playlistSongs]);
     }
 
     /**

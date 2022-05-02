@@ -12,19 +12,21 @@ class PlaylistSongsController extends Controller
     {
         $relation = new PlaylistSongs();
         $relation->playlist_id = $request->playlist_id;
-        $relation->user_id = $request->user_id;
+        $relation->song_id = $request->song_id;
         $relation->save();
         return redirect(route('playlists.show',  $request->playlist_id));
     }
 
 
-    public function destroy($playlistId, $songId)
+    public function destroy($x)
     {
-        $relationID = PlaylistSongs::select('id')
+        dd($x);
+
+        /*$relationID = PlaylistSongs::select('id')
             ->where('playlist_id','=',$playlistId)
             ->where('song_id','=',$songId)->get();
 
         PlaylistSongs::destroy($relationID);
-        return redirect(route('playlists.show',  $playlistId));
+        return redirect(route('playlists.show',  $playlistId));*/
     }
 }
