@@ -13,26 +13,26 @@ $user = Illuminate\Support\Facades\Auth::user();
             @if ($song->id) {{ method_field('PUT') }} @endif
             @csrf
 
-            @if ($song->id) <h1 class="text-center">Modificar Canción</h1>
-            @else <h1 class="text-center">Añadir Canción</h1>@endif
+            @if ($song->id) <h1 class="text-center text-light">Modificar Canción</h1>
+            @else <h1 class="text-center text-light">Añadir Canción</h1>@endif
 
-            <label for="name" class="mt-2">Nombre</label>
+            <label for="name" class="mt-2 text-light">Nombre</label>
             <div class="form-group">
                 <input id="nombre" name="nombre" type="text" class="form-control" placeholder="" value="{{old('nombre', $song->nombre)}}">
             </div>
-            <label for="artistas">Artistas</label>
+            <label for="artistas" class="text-light">Artistas</label>
             <div class="form-group">
                 <input type="text" id="artistas" name="artistas" class="form-control" placeholder="" value="{{old('artistas', $song->artistas)}}">
             </div>
-            <label for="album">Album</label>
+            <label for="album" class="text-light">Album</label>
             <div class="form-group">
                 <input type="text" id="album" name="album" class="form-control" placeholder="" value="{{old('album', $song->album)}}">
             </div>
-            <label for="url">Url</label>
+            <label for="url" class="text-light">Url</label>
             <div class="form-group">
                 <input type="text" id="url" name="url" class="form-control" placeholder="" value="{{old('url', $song->url)}}">
             </div>
-            <label for="foto">Foto</label>
+            <label for="foto" class="text-light">Foto</label>
             <div class="custom-file container">
                 <input type="file" id="imagen" name="imagen" class="custom-file-input" id="customFile" value="{{old('imagen', $song->imagen)}}">
                 <label class="custom-file-label" for="customFile">Seleccionar foto</label>

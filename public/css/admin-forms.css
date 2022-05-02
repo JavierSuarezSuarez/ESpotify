@@ -3,15 +3,16 @@
 }
 
 .form-container {
-    background-color: #282828;
+    background-color: #282828 !important;
 }
 
 .admin-form {
     border-radius: 20px !important;
+    background-color: #3500D3 !important;
 }
 
 .save-btn {
-    background-color: #3500D3;
+    background-color: #282828;
     color: #fff;
     width: 100%;
 }

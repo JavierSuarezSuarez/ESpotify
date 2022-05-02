@@ -72,9 +72,9 @@ class PlaylistController extends Controller
         $followerRelation = DB::table('followers')
             ->where('playlist_id', '=', $playlist->id)
             ->where('user_id', '=', $userLogged->id)->get();
+        $songs = DB::table('songs') ->get();
 
-
-        return view('playlist', ["playlist" => $playlistWithrelation, "followerRelation" => $followerRelation]);
+        return view('playlist', ["playlist" => $playlistWithrelation, "followerRelation" => $followerRelation, "songs" => $songs]);
     }
 
     /**

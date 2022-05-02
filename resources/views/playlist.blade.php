@@ -10,8 +10,6 @@ $user = Illuminate\Support\Facades\Auth::user();
 
 @section('mainContent')
 
-
-
     <section class="main-playlist d-flex flex-column justify-content-center align-items-center mt-5">
         <div class="container d-flex flex-column justify-content-center">
             <div class="d-flex flex-column flex-lg-row mb-3 justify-content-between">
@@ -27,7 +25,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                         <p>{{$playlist->user->nombre}}</p>
                         <p class="mx-md-2">* 50 canciones</p>
                         <p>2h 58 min</p>
-                        <p class="d-flex flex-row jusify-content-center align-items-center"><button class="ml-md-4 add-song"><i class='bx bxs-plus-circle mx-2'></i>Añadir cancion</button></p>
+                        <p class="d-flex flex-row jusify-content-center align-items-center"><button type="button" data-toggle="modal" data-target="#addSongModal" class="ml-md-4 add-song"><i class='bx bxs-plus-circle mx-2'></i>Añadir cancion</button></p>
                     </div>
                 </div>
 
@@ -160,5 +158,39 @@ $user = Illuminate\Support\Facades\Auth::user();
 
         </div>
     </section>
+
+    <div class="modal fade" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content addSongModal">
+                <div class="modal-header">
+                    <h5 class="modal-title text-light" id="exampleModalLongTitle">Añadir canciones</h5>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @foreach($songs as $song)
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="text-light">
+                                {{$song -> nombre}}
+                            </div>
+
+                            <form action="{{route('playlistsongs.store')}}" method="POST">
+                                @csrf
+                                <input name="playlist_id" type="hidden" value="{{$playlist -> id}}">
+                                <input name="user_id" type="hidden" value="{{$song -> id}}">
+                                <button class="edit_btn btn text-light" type="button">
+                                    <i class="h3 uil uil-plus-circle"></i>
+                                </button>
+                            </form>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="save-btn btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
