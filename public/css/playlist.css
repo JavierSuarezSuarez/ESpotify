@@ -57,6 +57,15 @@ button{
 .playlistImg {
     max-width: 241px;
 }
+
+.addSongModal {
+    background-color: #282828 !important;
+}
+
+.save-btn {
+    background-color: #3500D3 !important;
+}
+
 @media screen and (max-width: 768px){
 
     .table-div{
