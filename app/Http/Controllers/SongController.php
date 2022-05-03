@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreSongRequest;
 use App\Http\Requests\UpdateSongRequest;
 use App\Models\Song;
+use App\Models\Playlist;
+use Illuminate\Support\Facades\DB;
 
 
 class SongController extends Controller
@@ -16,6 +18,22 @@ class SongController extends Controller
      */
     public function index()
     {
+
+        //Obtiene todas las canciones contenidas en las playlists creadas por el usuario X
+        $createdPlaylistsSongs = DB::table('playlists')
+            ->join('playlistssongs', 'playlists.id', '=', 'playlistssongs.playlist_id')
+            ->join('songs', 'playlistssongs.song_id', '=', 'songs.id')
+            ->where('playlists.user_id', '=', 2)
+            ->distinct('songs.id')
+//            ->orderByRaw('COUNT(*) DESC')
+            ->get();
+        $songs = DB::table('songs')
+            ->groupByRaw('artistas')
+            ->get();
+
+
+        dd($songs);
+        return view('songs_panel');
     }
 
     /**

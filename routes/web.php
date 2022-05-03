@@ -86,7 +86,6 @@ Route::get('/playlists', function () {
 })->middleware('auth');
 
 
-
 /*------------------------------------------User routes---------------------------------------------------------------*/
 Route::get('/userplaylists', function () {
     $userWithPlaylists = Auth::user()->load("playlists", "playlists.users");
@@ -101,5 +100,5 @@ Route::get('/search', function () {
     return view('search_dashboard');
 })->middleware('auth');
 
-
+Route::get('/usersongs', [SongController::class, 'index']);
 /*------------------------------------------Pruebas route-------------------------------------------------------------*/
