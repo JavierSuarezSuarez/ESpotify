@@ -6,6 +6,7 @@ use App\Http\Requests\StorePlaylistRequest;
 use App\Http\Requests\UpdatePlaylistRequest;
 use App\Models\Followers;
 use App\Models\Playlist;
+use App\Models\Song;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -75,9 +76,21 @@ class PlaylistController extends Controller
 
 
         //Relation Many to Many (PlaylistSongs)
-
         $playlistSongs = Playlist::where('id','=',$playlist->id)->with("songs" )->get()->first();
-        $songsModal = DB::table('songs')->get();
+
+        $prueba = DB::table("songs")->get();
+
+        /*$songsModal =  DB::table("songs")
+                     ->join("playlistssongs","songs.id",'=','playlistssongs.song_id')
+                     ->where('playlistssongs.playlist_id','!=',$playlist->id)->get();
+
+        /*$songsModal =  DB::table('playlistssongs',)->join("songs","playlistssongs.song_id",'=','songs.id')
+            ->where("playlistssongs.playlist_id", "!=", $playlist->id)->get();*/
+
+
+        $songsModal =  DB::table('songs')->get();
+
+        dd($prueba);
 
 
         return view('playlist', ["playlist" => $playlistWithrelation, "followerRelation" => $followerRelation,

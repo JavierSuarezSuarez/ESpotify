@@ -81,7 +81,7 @@ Route::get('/songs', function () {
 })->middleware('auth');
 
 Route::get('/playlists', function () {
-    $playlists =  App\Models\Playlist::with('user', 'users')->get();
+    $playlists =  App\Models\Playlist::with('user', 'users', 'songs')->get();
     return view('admin_playlists_panel', ['playlists' => $playlists]);
 })->middleware('auth');
 
