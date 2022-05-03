@@ -18,15 +18,14 @@ class PlaylistSongsController extends Controller
     }
 
 
-    public function destroy($x)
+    public function destroy(Request $request)
     {
-        dd($x);
 
-        /*$relationID = PlaylistSongs::select('id')
-            ->where('playlist_id','=',$playlistId)
-            ->where('song_id','=',$songId)->get();
+        $relationID = PlaylistSongs::select('id')
+            ->where('playlist_id','=',$request->playlist_id)
+            ->where('song_id','=',$request->song_id)->get();
 
         PlaylistSongs::destroy($relationID);
-        return redirect(route('playlists.show',  $playlistId));*/
+        return redirect(route('playlists.show',  $request->playlist_id));
     }
 }
