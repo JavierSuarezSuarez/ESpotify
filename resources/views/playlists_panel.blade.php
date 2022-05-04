@@ -39,7 +39,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                 <div class="playlist_text_div d-flex flex-column align-items-center">
                     <p class="playlist_name_text text-light">{{$playlist -> nombre}}</p>
                     <p class="createdby_text text-light">CREADA POR: {{$playlist->user->nombre}} {{$playlist->user->apellidos}}</p>
-                    <p class="datesongnumber_text text-light">DD/mm/YYYY - X CANCIONES</p>
+                    <p class="datesongnumber_text text-light">{{$playlist->created_at}} - {{$playlist->songs->count()}} CANCION/ES</p>
                     <p class="followers_text text-light"> FOLLOWERS: {{$playlist->users->count()}} </p>
                 </div>
 

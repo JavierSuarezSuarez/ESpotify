@@ -90,7 +90,7 @@ class PlaylistController extends Controller
 
         $songsModal =  DB::table('songs')->get();
 
-        dd($prueba);
+        //dd($prueba);
 
 
         return view('playlist', ["playlist" => $playlistWithrelation, "followerRelation" => $followerRelation,

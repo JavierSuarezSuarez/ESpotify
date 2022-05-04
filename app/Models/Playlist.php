@@ -17,6 +17,7 @@ class Playlist extends Model
         'user_id',
         'nombre',
         'imagen',
+        'created_at'
     ];
 
 
@@ -38,7 +39,7 @@ class Playlist extends Model
     //Many to Many: Songs in the playlist
     public function songs()
     {
-        return $this->belongsToMany(Song::class, 'playlistssongs')->using(PlaylistSongs::class);
+        return $this->belongsToMany(Song::class, 'playlistssongs')->using(PlaylistSongs::class)->withTimestamps();;
     }
 
 }

@@ -26,8 +26,7 @@ $i = 1;
                     <div class="d-flex flex-column flex-md-row mt-sm-2 mt-md-3 align-items-md-center">
                         <p>{{$playlist->user->nombre}}</p>
                         <p class="mx-md-2">* {{$playlistSongs->songs->count()}} cancion/es</p>
-                        <p>2h 58 min</p>
-                        <p class="d-flex flex-row jusify-content-center align-items-center"><button type="button" data-toggle="modal" data-target="#addSongModal" class="ml-md-4 add-song"><i class='bx bxs-plus-circle mx-2'></i>Añadir cancion</button></p>
+                        <p class="d-flex flex-row jusify-content-center align-items-center"><button type="button" data-toggle="modal" data-target="#addSongModal" class="ml-md-4 add-song bg-primary"><i class='bx bxs-plus-circle mx-2'></i>Añadir cancion</button></p>
                     </div>
                 </div>
 
@@ -37,13 +36,13 @@ $i = 1;
                             @csrf
                             <input name="playlist_id" type="hidden" value="{{$playlist -> id}}">
                             <input name="user_id" type="hidden" value="{{$user -> id}}">
-                            <button class="follow-button">Seguir <i class='bx bx-plus'></i> </button>
+                            <button class="follow-button bg-primary">Seguir <i class='bx bx-plus'></i> </button>
                         </form>
                     @else
                         <form action="{{route('followers.destroy',  $playlist -> id)}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="follow-button">Dejar de Seguir <i class='bx bx-plus'></i> </button>
+                            <button class="follow-button bg-info">Dejar de Seguir <i class='bx bx-plus'></i> </button>
                         </form>
                     @endif
                 </div>
@@ -58,11 +57,11 @@ $i = 1;
                         <th scope="col">Título</th>
                         <th scope="col">Album</th>
                         <th scope="col">Fecha de incorporacion</th>
-                        <th scope="col">Duración</th>
                         <th scope="col" colspan="2">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
+
 
                     @foreach($playlistSongs->songs as $playlistSong)
                         <tr>
@@ -74,10 +73,9 @@ $i = 1;
                                 </div>
                             </td>
                             <td>{{$playlistSong->album}}</td>
-                            <td>1 ene 2022</td>
-                            <td>3:30</td>
+                            <td>{{$playlistSong->pivot->created_at}}</td>
+
                             <td>
-                                <!--<button><i class='bx bx-play playlist-icon' ></i></button>-->
                                 <form action="{{route('playlistsongs.destroy',$playlist -> id)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -85,7 +83,6 @@ $i = 1;
                                     <input name="song_id" type="hidden" value="{{$playlistSong -> id}}">
                                     <button><i class='bx bxs-x-circle playlist-icon'></i></button>
                                 </form>
-
                             </td>
                         </tr>
                     @endforeach
@@ -105,8 +102,6 @@ $i = 1;
                             <p>{{$playlistSong->album}}</p>
                         </div>
                         <div class="card-delete d-flex align-items-center px-4">
-                            <!--<button><i class='bx bxs-x-circle playlist-icon'></i></button>-->
-
                             <form action="{{route('playlistsongs.destroy',$playlist -> id)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
