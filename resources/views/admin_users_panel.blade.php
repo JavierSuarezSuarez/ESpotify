@@ -15,8 +15,9 @@ $user = Illuminate\Support\Facades\Auth::user();
         </div>
 
 
-        <form class="form-inline d-flex justify-content-between align-items-center">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form method="get" action="/browse" class="form-inline d-flex justify-content-between align-items-center">
+            <input class="form-control mr-sm-2" type="search" name="Search" placeholder="Search" aria-label="Search">
+            <input name="flag" type="hidden" value="users">
             <button class="btn my-2 my-sm-0 text-light" type="submit"><i class="uil uil-search"></i></button>
         </form>
 
@@ -27,8 +28,9 @@ $user = Illuminate\Support\Facades\Auth::user();
     </section>
 
     <!-- Users Section -->
+    @if (isset($buscar))
     <section class="users_section d-flex">
-        @foreach($users as $user)
+        @foreach($buscar as $user)
             <div class="user_div d-flex flex-column justify-content-center align-items-center mx-3">
                 <img class="user_img" title="User Image" alt="User Image" src="{{$user -> foto}}">
                 <p class="user_name_text text-light">{{$user -> nombre}} {{$user -> apellidos}}</p>
@@ -53,4 +55,34 @@ $user = Illuminate\Support\Facades\Auth::user();
             </div>
         @endforeach
     </section>
+
+    @else
+        <section class="users_section d-flex">
+            @foreach($users as $user)
+                <div class="user_div d-flex flex-column justify-content-center align-items-center mx-3">
+                    <img class="user_img" title="User Image" alt="User Image" src="{{$user -> foto}}">
+                    <p class="user_name_text text-light">{{$user -> nombre}} {{$user -> apellidos}}</p>
+
+                    <div class="edit_delete_btns d-flex">
+                        <form  class="user_edit_form" action="{{ route('users.edit', $user -> id)}}" method="PUT">
+                            @csrf
+                            <button class="edit_btn btn" type="submit">
+                                <i class="uil uil-pen text-primary action-icon"></i>
+                            </button>
+                        </form>
+
+                        <form class="user_delete_form" action="{{ route('users.destroy', $user -> id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="delete_btn btn" type="submit">
+                                <i class="uil uil-trash-alt text-danger action-icon"></i>
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            @endforeach
+        </section>
+    @endif
+
 @endsection
