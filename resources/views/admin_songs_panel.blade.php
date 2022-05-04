@@ -99,18 +99,3 @@
     @endif
 
 @endsection
-
-<!--
-<script>
-window.addEventListener('load'), function(){
-    document.getElementById("Search").addEventListener("keyup", () => {
-        if((document.getElementById("Search").value.length)>=1)
-            fetch(`/songs?Search=${document.getElementById("Search").value}`,{method:'get'})
-            .then(response => response.text())
-            .then(html => { document.getElementById("resultados").innerHTML = html})
-        else
-            document.getElementById("resultados").innerText = ""
-        })
-}
-</script>
--->

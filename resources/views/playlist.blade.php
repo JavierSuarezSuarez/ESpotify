@@ -131,6 +131,7 @@ $i = 1;
                 </div>
                 <div class="modal-body">
                     @foreach($songsModal as $song)
+                        @if($playlistSongs->songs->contains($song->id) == false)
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="text-light">
                                 {{$song -> nombre}}
@@ -145,11 +146,10 @@ $i = 1;
                                 </button>
                             </form>
                         </div>
+                        @endif
                     @endforeach
                 </div>
-                <div class="modal-footer">
-                    <!--<button type="button" class="save-btn btn btn-primary">Save changes</button>-->
-                </div>
+                <div class="modal-footer"></div>
             </div>
         </div>
     </div>
