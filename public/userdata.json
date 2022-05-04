@@ -24,5 +24,21 @@
         "tipo": "2",
         "email": "rodrigomedsan@gmail.com",
         "password": "$2y$10$Zj1g/5B07zCGdQdSMAv7ZeQleCk7cydliKiqPe68AhtePxffm5phq"
+    },
+    {
+        "foto": "images/nmonzon.jpg",
+        "nombre": "Nelson",
+        "apellidos": "Monzón López (Admin)",
+        "tipo": "1",
+        "email": "adminnelsonmonlop@gmail.com",
+        "password": "$2y$10$78g33ecRQ4tzeIzZpGDGROoHO84cdUOrEZjmHYY3qOVl2PHRiO.O6"
+    },
+    {
+        "foto": "images/nmonzon.jpg",
+        "nombre": "Nelson",
+        "apellidos": "Monzón López (User)",
+        "tipo": "2",
+        "email": "usernelsonmonlop@gmail.com",
+        "password": "$2y$10$ksOlDADHCS0YITUZHNr5du89/swC6iHYoHJ9CqbgDk1wz.zoYQf3C"
     }
 ]

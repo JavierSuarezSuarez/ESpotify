@@ -105,6 +105,8 @@ class UserController extends Controller
 
         ]);
 
+        $request['password'] = bcrypt($request['password']);
+
 
         $user = User::where('id', $id)->firstOrFail();
 
