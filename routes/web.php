@@ -69,8 +69,8 @@ Route::post('/signup', 'App\Http\Controllers\SignUpController@register');
 /*------------------------------------------Profile route-------------------------------------------------------------*/
 //GET profile view with the logged user
 Route::get('/profile', function () {
-    $user = Auth::user();
-    return view('profile',['user' => $user]);
+    $userWithPlaylists = Auth::user()->load("playlists");
+    return view('profile',['user' => $userWithPlaylists]);
 })->middleware('auth');
 
 

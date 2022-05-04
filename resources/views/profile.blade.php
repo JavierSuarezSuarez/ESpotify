@@ -19,7 +19,7 @@
                 <div class="user_data_mobile_div">
                     <h3 class="user_full_name">{{$user -> nombre}} {{$user -> apellidos}}</h3>
                     <h4 class="playlist_text">Playlists: </h4>
-                    <p class="user_playlists">6</p> <br>
+                    <p class="user_playlists">{{$user->playlists->count()}}</p> <br>
                 </div>
                 <div class="button_div">
                     <form  class="user_edit_form" action="{{ route('users.edit', $user -> id)}}" method="PUT">

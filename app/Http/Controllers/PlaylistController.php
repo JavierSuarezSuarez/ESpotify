@@ -33,9 +33,10 @@ class PlaylistController extends Controller
      */
     public function store(StorePlaylistRequest $request)
     {
+
         $validated = $request->validate([
             'nombre' => 'required',
-            'imagen' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+            'imagen' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
 
         if($imagen = $request->file('imagen')) {
@@ -43,6 +44,8 @@ class PlaylistController extends Controller
             $PlaylistImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
             $imagen->move($destinationPath, $PlaylistImage);
             $PlaylistImage = '/images/uploaded/' . $PlaylistImage;
+        }else {
+            $PlaylistImage ='/images/playlist_cover.png';
         }
 
 
@@ -96,17 +99,19 @@ class PlaylistController extends Controller
     {
         $validated = $request->validate([
             'nombre' => 'required',
-            'imagen' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+            'imagen' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
+
+        $playlist = Playlist::where('id', $id)->firstOrFail();
 
         if($imagen = $request->file('imagen')) {
             $destinationPath = 'images/uploaded/';
             $PlaylistImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
             $imagen->move($destinationPath, $PlaylistImage);
             $PlaylistImage = '/images/uploaded/' . $PlaylistImage;
+        } else {
+            $PlaylistImage =$playlist->imagen;
         }
-
-        $playlist = Playlist::where('id', $id)->firstOrFail();
 
         $playlist->nombre = $request->nombre;
         $playlist->imagen = $PlaylistImage;
