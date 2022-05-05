@@ -24,15 +24,12 @@ class SongController extends Controller
             ->join('playlistssongs', 'playlists.id', '=', 'playlistssongs.playlist_id')
             ->join('songs', 'playlistssongs.song_id', '=', 'songs.id')
             ->where('playlists.user_id', '=', 2)
+            ->orderBy('songs.artistas')
             ->distinct('songs.id')
-//            ->orderByRaw('COUNT(*) DESC')
-            ->get();
-        $songs = DB::table('songs')
-            ->groupByRaw('artistas')
             ->get();
 
 
-        dd($songs);
+        dd($createdPlaylistsSongs);
         return view('songs_panel');
     }
 
