@@ -18,7 +18,7 @@ return new class extends Migration
         Schema::enableForeignKeyConstraints();
         Schema::create('playlists', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('nombre');
             $table->string('imagen');
             $table->timestamps();

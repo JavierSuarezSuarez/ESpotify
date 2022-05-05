@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::enableForeignKeyConstraints();
         Schema::create('followers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('playlist_id')->constrained('playlists');
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('playlist_id')->constrained('playlists')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
