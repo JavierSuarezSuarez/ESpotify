@@ -18,11 +18,11 @@ $user = Illuminate\Support\Facades\Auth::user();
         <form method="get" action="/browse" class="form-inline d-flex justify-content-between align-items-center">
             <input class="form-control mr-sm-2" type="search" name="Search" placeholder="Search" aria-label="Search">
             <input name="flag" type="hidden" value="users">
-            <button class="btn my-2 my-sm-0 text-light" type="submit"><i class="uil uil-search"></i></button>
+            <button class="btn my-2 my-sm-0 text-light" type="submit"><em class="uil uil-search"></em></button>
         </form>
 
         <div class="mx-4">
-            <a class="h5 d-flex align-items-center justify-content-center my-0 mx-2 text-light text-decoration-none" href="{{ route('users.create')}}"><i class="uil uil-plus-circle text-light icono mx-2"></i>A&ntilde;adir Usuario</a>
+            <a class="h5 d-flex align-items-center justify-content-center my-0 mx-2 text-light text-decoration-none" href="{{ route('users.create')}}"><em class="uil uil-plus-circle text-light icono mx-2"></em>A&ntilde;adir Usuario</a>
         </div>
 
     </section>
@@ -39,7 +39,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                     <form  class="user_edit_form" action="{{ route('users.edit', $user -> id)}}" method="PUT">
                         @csrf
                         <button class="edit_btn btn" type="submit">
-                            <i class="uil uil-pen text-primary action-icon"></i>
+                            <em class="uil uil-pen text-primary action-icon"></em>
                         </button>
                     </form>
 
@@ -47,7 +47,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                         @csrf
                         @method('DELETE')
                         <button class="delete_btn btn" type="submit">
-                            <i class="uil uil-trash-alt text-danger action-icon"></i>
+                            <em class="uil uil-trash-alt text-danger action-icon"></em>
                         </button>
                     </form>
 
@@ -67,7 +67,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                         <form  class="user_edit_form" action="{{ route('users.edit', $user -> id)}}" method="PUT">
                             @csrf
                             <button class="edit_btn btn" type="submit">
-                                <i class="uil uil-pen text-primary action-icon"></i>
+                                <em class="uil uil-pen text-primary action-icon"></em>
                             </button>
                         </form>
 
@@ -75,7 +75,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                             @csrf
                             @method('DELETE')
                             <button class="delete_btn btn" type="submit">
-                                <i class="uil uil-trash-alt text-danger action-icon"></i>
+                                <em class="uil uil-trash-alt text-danger action-icon"></em>
                             </button>
                         </form>
 

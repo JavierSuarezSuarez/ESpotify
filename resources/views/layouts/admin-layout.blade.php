@@ -26,14 +26,14 @@ $user = Illuminate\Support\Facades\Auth::user();
         <header class="admin_header">
             <nav class="navbar d-flex justify-content-between shadow w-100">
                 <button id="menu-toggler" data-class="menu-active" class="hamburger btn">
-                    <i class="uil uil-bars text-light"></i>
+                    <em class="uil uil-bars text-light"></em>
                 </button>
                 <div class="mx-3"><a href="/home"><img class="logo" src="/images/logo.jpg" alt="LOGO"></a></div>
                 <div class="push-left mx-5">
                     <!--  Menu compatible with wp_nav_menu  -->
 
                     <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled">
-                        <li class="menu-item current-menu-item m-2"><a class="header_links nav__link text-light" href="/search"><i class="uil uil-search"></i></a></li>
+                        <li class="menu-item current-menu-item m-2"><a class="header_links nav__link text-light" href="/search"><em class="uil uil-search"></em></a></li>
                         @if(!Request::is('users*'))<li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/users">Usuarios</a></li>@endif
                         @if(!Request::is('songs*'))<li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/songs">Canciones</a></li>@endif
                         @if(!Request::is('playlists*'))<li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/playlists">Playlists</a></li>@endif

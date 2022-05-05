@@ -20,11 +20,11 @@
         <form method="get" action="/browse" class="form-inline d-flex justify-content-between align-items-center">
             <input class="form-control mr-sm-2" type="search" id="Search" name="Search" placeholder="Search" aria-label="Search">
             <input name="flag" type="hidden" value="songs">
-            <button class="btn my-2 my-sm-0 text-light" type="submit"><i class="uil uil-search"></i></button>
+            <button class="btn my-2 my-sm-0 text-light" type="submit"><em class="uil uil-search"></em></button>
         </form>
 
         <div class="mx-4">
-            <a class="h5 d-flex align-items-center justify-content-center my-0 mx-2 text-light text-decoration-none" href="{{ route('songs.create')}}"><i class="uil uil-plus-circle text-light icono mx-2"></i>A&ntilde;adir Canción</a>
+            <a class="h5 d-flex align-items-center justify-content-center my-0 mx-2 text-light text-decoration-none" href="{{ route('songs.create')}}"><em class="uil uil-plus-circle text-light icono mx-2"></em>A&ntilde;adir Canción</a>
         </div>
 
     </section>
@@ -48,7 +48,7 @@
                     <form class="song_edit_form" action="{{ route('songs.edit', $song -> id)}}" method="PUT">
                         @csrf
                         <button class="edit_btn btn" type="submit">
-                            <i class="uil uil-pen text-primary action-icon"></i>
+                            <em class="uil uil-pen text-primary action-icon"></em>
                         </button>
                     </form>
 
@@ -56,7 +56,7 @@
                         @csrf
                         @method('DELETE')
                         <button class="delete_btn btn" type="submit">
-                            <i class="uil uil-trash-alt text-danger action-icon"></i>
+                            <em class="uil uil-trash-alt text-danger action-icon"></em>
                         </button>
                     </form>
                 </div>
@@ -81,7 +81,7 @@
                     <form class="song_edit_form" action="{{ route('songs.edit', $song -> id)}}" method="PUT">
                         @csrf
                         <button class="edit_btn btn" type="submit">
-                            <i class="uil uil-pen text-primary action-icon"></i>
+                            <em class="uil uil-pen text-primary action-icon"></em>
                         </button>
                     </form>
 
@@ -89,7 +89,7 @@
                         @csrf
                         @method('DELETE')
                         <button class="delete_btn btn" type="submit">
-                            <i class="uil uil-trash-alt text-danger action-icon"></i>
+                            <em class="uil uil-trash-alt text-danger action-icon"></em>
                         </button>
                     </form>
                 </div>

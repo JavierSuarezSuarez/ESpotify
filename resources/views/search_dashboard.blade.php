@@ -17,7 +17,7 @@ $user = Illuminate\Support\Facades\Auth::user();
             <form class="form-inline d-flex justify-content-between align-items-center search-bar" method="get" action="/browse">
                 <input class="form-control mr-sm-2" type="search" id="Search" name="Search" placeholder="Search" aria-label="Search">
                 <input name="flag" type="hidden" value="search">
-                <button class="btn my-2 my-sm-0 text-light" type="submit"><i class="uil uil-search"></i></button>
+                <button class="btn my-2 my-sm-0 text-light" type="submit"><em class="uil uil-search"></em></button>
             </form>
 
         </section>

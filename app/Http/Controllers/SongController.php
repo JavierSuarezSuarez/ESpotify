@@ -136,7 +136,6 @@ class SongController extends Controller
             $SongImage =$song->imagen;
         }
 
-        $song->user_id = $song->user_id;
         $song->nombre = $request->nombre;
         $song->artistas = $request->artistas;
         $song->album = $request->album;

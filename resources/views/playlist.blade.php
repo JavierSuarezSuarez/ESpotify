@@ -19,7 +19,7 @@ $i = 1;
             <div class="d-flex flex-column flex-lg-row mb-3 justify-content-between">
 
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="{{$playlist->imagen}}" class="w-100 playlistImg">
+                    <img src="{{$playlist->imagen}}" class="w-100 playlistImg" alt="logo-playlist">
                 </div>
 
                 <div class="d-flex flex-column mt-3 mt-md-5 mx-lg-4">
@@ -29,7 +29,7 @@ $i = 1;
                         <p>{{$playlist->user->nombre}}</p>
                         <p class="mx-md-2">* {{$playlistSongs->songs->count()}} cancion/es</p>
                         @if($playlist->user->id == $user->id || $user->tipo == 1)
-                            <p class="d-flex flex-row jusify-content-center align-items-center"><button type="button" data-toggle="modal" data-target="#addSongModal" class="ml-md-4 add-song bg-primary"><i class='bx bxs-plus-circle mx-2'></i>Añadir cancion</button></p>
+                            <p class="d-flex flex-row jusify-content-center align-items-center"><button type="button" data-toggle="modal" data-target="#addSongModal" class="ml-md-4 add-song bg-primary"><em class='bx bxs-plus-circle mx-2'></em>Añadir cancion</button></p>
                         @endif
                     </div>
                 </div>
@@ -40,13 +40,13 @@ $i = 1;
                             @csrf
                             <input name="playlist_id" type="hidden" value="{{$playlist -> id}}">
                             <input name="user_id" type="hidden" value="{{$user -> id}}">
-                            <button class="follow-button bg-primary">Seguir <i class='bx bx-plus'></i> </button>
+                            <button class="follow-button bg-primary">Seguir <em class='bx bx-plus'></em> </button>
                         </form>
                     @else
                         <form action="{{route('followers.destroy',  $playlist -> id)}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="follow-button bg-info">Dejar de Seguir <i class='bx bx-plus'></i> </button>
+                            <button class="follow-button bg-info">Dejar de Seguir <em class='bx bx-plus'></em> </button>
                         </form>
                     @endif
                 </div>
@@ -56,7 +56,7 @@ $i = 1;
 
             <!--------------------------------------Playlist Table of Songs Added ------------------------------------->
             <div class="table-div table-responsive mt-3">
-                <table class="table">
+                <table class="table" aria-describedby="table-songs">
                     <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -119,7 +119,7 @@ $i = 1;
                                 @method('DELETE')
                                 <input name="playlist_id" type="hidden" value="{{$playlist -> id}}">
                                 <input name="song_id" type="hidden" value="{{$playlistSong -> id}}">
-                                <button><i class='bx bxs-x-circle playlist-icon'></i></button>
+                                <button><em class='bx bxs-x-circle playlist-icon'></em></button>
                             </form>
                         </div>
                     </div>
@@ -155,7 +155,7 @@ $i = 1;
                                     <input name="playlist_id" type="hidden" value="{{$playlist -> id}}">
                                     <input name="song_id" type="hidden" value="{{$song -> id}}">
                                     <button class="edit_btn btn text-light">
-                                        <i class="h3 uil uil-plus-circle"></i>
+                                        <em class="h3 uil uil-plus-circle"></em>
                                     </button>
                                 </form>
                             </div>

@@ -15,21 +15,20 @@ $user = Illuminate\Support\Facades\Auth::user();
                 <div class="d-flex flex-row justify-content-between mb-2">
                     <h1 class="url" id="urlSong" >{{$song->url}}</h1>
                     <h2>{{$song->artistas}}</h2>
-                    <i class='bx bxs-user album-icon'></i>
+                    <em class='bx bxs-user album-icon'></em>
                 </div>
                 <div class="d-flex flex-row justify-content-between mb-2">
                     <h3>{{$song->album}}</h3>
-                    <i class='bx bxs-album album-icon'></i>
+                    <em class='bx bxs-album album-icon'></em>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
                     <h4>{{$song->nombre}}</h4>
-                    <i class='bx bxs-music album-icon'></i>
+                    <em class='bx bxs-music album-icon'></em>
                 </div>
 
                 <div class="my-4">
-                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="{{$song->url}}"></iframe>
+                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="{{$song->url}}" title="song-title"></iframe>
                 </div>
-
             </div>
         </div>
 

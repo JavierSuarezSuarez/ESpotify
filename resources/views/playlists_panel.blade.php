@@ -19,11 +19,11 @@ $user = Illuminate\Support\Facades\Auth::user();
         <form class="form-inline d-flex justify-content-between align-items-center" method="get" action="/browse">
             <input class="form-control mr-sm-2" type="search" id="Search" name="Search" placeholder="Search" aria-label="Search">
             <input name="flag" type="hidden" value="userplaylists">
-            <button class="btn my-2 my-sm-0 text-light" type="submit"><i class="uil uil-search"></i></button>
+            <button class="btn my-2 my-sm-0 text-light" type="submit"><em class="uil uil-search"></em></button>
         </form>
 
         <div class="mx-4">
-            <a class="h5 d-flex align-items-center justify-content-center my-0 mx-2 text-light text-decoration-none" href="{{ route('playlists.create')}}"><i class="uil uil-plus-circle text-light icono mx-2"></i>A&ntilde;adir Playlist</a>
+            <a class="h5 d-flex align-items-center justify-content-center my-0 mx-2 text-light text-decoration-none" href="{{ route('playlists.create')}}"><em class="uil uil-plus-circle text-light icono mx-2"></em>A&ntilde;adir Playlist</a>
         </div>
     </section>
 
@@ -44,7 +44,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                         <form class="" action="{{ route('playlists.edit', $playlist -> id)}}" method="PUT">
                             @csrf
                             <button class="edit_btn btn" type="submit">
-                                <i class="uil uil-pen text-primary action-icon"></i>
+                                <em class="uil uil-pen text-primary action-icon"></em>
                             </button>
                         </form>
 
@@ -52,14 +52,13 @@ $user = Illuminate\Support\Facades\Auth::user();
                             @csrf
                             @method('DELETE')
                             <button class="delete_btn btn" type="submit">
-                                <i class="uil uil-trash-alt text-danger action-icon"></i>
+                                <em class="uil uil-trash-alt text-danger action-icon"></em>
                             </button>
                         </form>
                     </div>
                 </div>
             @endforeach
         </section>
-
     @else
 
         <section class="playlists_section d-flex w-100">
@@ -77,7 +76,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                         <form class="" action="{{ route('playlists.edit', $playlist -> id)}}" method="PUT">
                             @csrf
                             <button class="edit_btn btn" type="submit">
-                                <i class="uil uil-pen text-primary action-icon"></i>
+                                <em class="uil uil-pen text-primary action-icon"></em>
                             </button>
                         </form>
 
@@ -85,7 +84,7 @@ $user = Illuminate\Support\Facades\Auth::user();
                             @csrf
                             @method('DELETE')
                             <button class="delete_btn btn" type="submit">
-                                <i class="uil uil-trash-alt text-danger action-icon"></i>
+                                <em class="uil uil-trash-alt text-danger action-icon"></em>
                             </button>
                         </form>
                     </div>
