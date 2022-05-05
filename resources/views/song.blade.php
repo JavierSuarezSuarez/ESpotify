@@ -13,6 +13,7 @@ $user = Illuminate\Support\Facades\Auth::user();
         <div>
             <div>
                 <div class="d-flex flex-row justify-content-between mb-2">
+                    <h1 class="url" id="urlSong" >{{$song->url}}</h1>
                     <h2>{{$song->artistas}}</h2>
                     <i class='bx bxs-user album-icon'></i>
                 </div>
@@ -25,30 +26,12 @@ $user = Illuminate\Support\Facades\Auth::user();
                     <i class='bx bxs-music album-icon'></i>
                 </div>
 
-                <img src="{{$song->imagen}}" class="album-cover my-3">
-
-                <div id="timer" class="white-text">0:00</div>
-                <div id="duration" class="white-text">0:00</div>
-
-                <div class="d-flex flex-row justify-content-center align-items-center">
-                    <div id="loading"></div>
-                    <button id="prevBtn" class="button-song" type="button"><i class='bx bx-skip-previous song-icon'></i></button>
-                    <button id="playBtn" class="button-song mx-2" type="button"><i class='bx bx-play song-icon'></i></button>
-                    <button id="pauseBtn" class="button-song mx-2" type="button"><i class='bx bx-pause song-icon'></i></button>
-                    <button id="nextBtn" class="button-song" type="button"><i class='bx bx-skip-next song-icon'></i></button>
-                </div>
-
-                <div id="volume" class="fadeout">
-                    <div id="barFull" class="bar"></div>
-                    <div id="barEmpty" class="bar"></div>
-                    <div id="sliderBtn"></div>
+                <div class="my-4">
+                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="{{$song->url}}"></iframe>
                 </div>
 
             </div>
         </div>
 
     </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{{asset('js/song.js')}}"></script>
 @endsection

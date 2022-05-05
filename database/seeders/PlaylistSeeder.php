@@ -25,6 +25,7 @@ class PlaylistSeeder extends Seeder
                 "user_id" => $value -> user_id,
                 "nombre" => $value -> nombre,
                 "imagen" => $value -> imagen,
+                "created_at" => $value -> created_at
             ]);
         }
     }

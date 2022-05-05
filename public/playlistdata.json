@@ -2,27 +2,31 @@
     {
         "user_id": "1",
         "nombre": "Top Hits",
-        "imagen": "/images/playlist.jpg"
+        "imagen": "/images/playlist.jpg",
+        "created_at": "2022-03-03 10:30:48"
 
     },
 
     {
         "user_id": "2",
         "nombre": "Top España",
-        "imagen": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_es_large.jpg"
+        "imagen": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_es_large.jpg",
+        "created_at": "2022-03-23 15:45:50"
 
     },
 
     {
         "user_id": "2",
         "nombre": "Verano Forever",
-        "imagen": "https://i.scdn.co/image/ab67706f000000033df8d7968bb793754b0e3702"
+        "imagen": "https://i.scdn.co/image/ab67706f000000033df8d7968bb793754b0e3702",
+        "created_at": "2022-04-10 12:20:10"
 
     },
     {
         "user_id": "3",
         "nombre": "EDM Hits 2022",
-        "imagen": "https://i.scdn.co/image/ab67706c0000bebbcfe0edfef26cd18aad865dee"
+        "imagen": "https://i.scdn.co/image/ab67706c0000bebbcfe0edfef26cd18aad865dee",
+        "created_at": "2022-05-01 23:35:32"
 
     }
 ]

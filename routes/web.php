@@ -54,6 +54,11 @@ Route::post('/login', 'App\Http\Controllers\LoginController@authenticate');
 //GET logout
 Route::get('/logout', 'App\Http\Controllers\LoginController@destroy');
 
+//Browser
+Route::get('/browse', 'App\Http\Controllers\SearchController@browse');
+
+
+
 /*------------------------------------------Sign Up routes------------------------------------------------------------*/
 //GET signup view
 Route::get('/signup', function () { return view('signup'); })->name('signup');
@@ -64,8 +69,8 @@ Route::post('/signup', 'App\Http\Controllers\SignUpController@register');
 /*------------------------------------------Profile route-------------------------------------------------------------*/
 //GET profile view with the logged user
 Route::get('/profile', function () {
-    $user = Auth::user();
-    return view('profile',['user' => $user]);
+    $userWithPlaylists = Auth::user()->load("playlists");
+    return view('profile',['user' => $userWithPlaylists]);
 })->middleware('auth');
 
 
@@ -81,7 +86,7 @@ Route::get('/songs', function () {
 })->middleware('auth');
 
 Route::get('/playlists', function () {
-    $playlists =  App\Models\Playlist::with('user', 'users')->get();
+    $playlists =  App\Models\Playlist::with('user', 'users', 'songs')->get();
     return view('admin_playlists_panel', ['playlists' => $playlists]);
 })->middleware('auth');
 

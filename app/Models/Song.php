@@ -35,6 +35,6 @@ class Song extends Model
     //Many to Many: Playlists where the song is in
     public function playlists()
     {
-        return $this->belongsToMany(Playlist::class, 'playlistssongs')->using(PlaylistSongs::class);
+        return $this->belongsToMany(Playlist::class, 'playlistssongs')->using(PlaylistSongs::class)->withTimestamps();;
     }
 }
