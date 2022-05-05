@@ -27,6 +27,7 @@ class SongSeeder extends Seeder
                 "imagen" => $value -> imagen,
                 "artistas" => $value -> artistas,
                 "album" => $value -> album,
+                "genero" => $value -> genero,
                 "url" => $value -> url,
             ]);
         }

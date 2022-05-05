@@ -25,34 +25,15 @@ $user = Illuminate\Support\Facades\Auth::user();
 
         <!-- Songs Section -->
         <section class="songs_section d-flex flex-column">
-            <div class="song_div d-flex align-items-center">
-                <a href="#"> <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg"></a>
-                <div class="song_text_div">
-                    <a href="#" class="song_name_text text-light">T&Iacute;TULO CANCI&Oacute;N</a>
-                    <p class="song_album_text text-light">Album</p>
-                    <p class="song_artist_text text-light">ARTISTAS</p>
-                    <p class="song_duration_text text-light">3:18</p>
+            @foreach($songs as $song)
+                <div class="song_div d-flex align-items-center">
+                    <a href="#"> <img class="song_img" title="User Image" alt="User Image" src="{{$song->imagen}}"></a>
+                    <div class="song_text_div">
+                        <a href="#" class="song_name_text text-light">{{$song->nombre}}</a>
+                        <p class="song_album_text text-light">{{$song->album}}</p>
+                        <p class="song_artist_text text-light">{{$song->artistas}}</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="song_div d-flex align-items-center">
-                <a href="#"> <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg"></a>
-                <div class="song_text_div">
-                    <a href="#" class="song_name_text text-light">T&Iacute;TULO CANCI&Oacute;N</a>
-                    <p class="song_album_text text-light">Album</p>
-                    <p class="song_artist_text text-light">ARTISTAS</p>
-                    <p class="song_duration_text text-light">3:18</p>
-                </div>
-            </div>
-
-            <div class="song_div d-flex align-items-center">
-                <a href="#"> <img class="song_img" title="User Image" alt="User Image" src="images/song.jpg"></a>
-                <div class="song_text_div">
-                    <a href="#" class="song_name_text text-light">T&Iacute;TULO CANCI&Oacute;N</a>
-                    <p class="song_album_text text-light">Album</p>
-                    <p class="song_artist_text text-light">ARTISTAS</p>
-                    <p class="song_duration_text text-light">3:18</p>
-                </div>
-            </div>
+            @endforeach
         </section>
 @endsection

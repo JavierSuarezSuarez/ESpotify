@@ -19,7 +19,6 @@ class PlaylistSeeder extends Seeder
         $playlistjson = File::get("public/playlistdata.json");
         $playlistsdata = json_decode($playlistjson);
 
-
         foreach ($playlistsdata as $key => $value) {
             DB::table('playlists') -> insert([
                 "user_id" => $value -> user_id,

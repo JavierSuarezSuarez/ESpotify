@@ -28,6 +28,10 @@ $user = Illuminate\Support\Facades\Auth::user();
             <div class="form-group">
                 <input type="text" id="album" name="album" class="form-control" placeholder="" value="{{old('album', $song->album)}}">
             </div>
+            <label for="genero" class="text-light">Género</label>
+            <div class="form-group">
+                <input type="text" id="genero" name="genero" class="form-control" placeholder="" value="{{old('genero', $song->genero)}}">
+            </div>
             <label for="url" class="text-light">Url</label>
             <div class="form-group">
                 <input type="text" id="url" name="url" class="form-control" placeholder="" value="{{old('url', $song->url)}}">

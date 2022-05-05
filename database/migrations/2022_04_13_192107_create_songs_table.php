@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('imagen');
             $table->string('artistas');
             $table->string('album');
+            $table->string('genero');
             $table->string('url');
             $table->timestamps();
         });

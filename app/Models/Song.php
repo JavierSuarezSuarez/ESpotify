@@ -20,6 +20,7 @@ class Song extends Model
         'imagen',
         'artistas',
         'album',
+        'genero',
         'url',
     ];
 

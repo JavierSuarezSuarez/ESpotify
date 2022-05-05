@@ -24,13 +24,28 @@ class SongController extends Controller
             ->join('playlistssongs', 'playlists.id', '=', 'playlistssongs.playlist_id')
             ->join('songs', 'playlistssongs.song_id', '=', 'songs.id')
             ->where('playlists.user_id', '=', 2)
-            ->orderBy('songs.artistas')
-            ->distinct('songs.id')
+            ->select('songs.genero', DB::raw('count(*) as total'))
+            ->groupBy('songs.genero', 'songs.id')
+            ->orderByDesc('total')
             ->get();
 
+        foreach ($createdPlaylistsSongs as $song) {
+            if ($song->total > 1) {
+                $song->total = 1;
+            }
+        }
 
-        dd($createdPlaylistsSongs);
-        return view('songs_panel');
+        $createdPlaylistsSongs = $createdPlaylistsSongs->groupBy('genero');
+        //dd($createdPlaylistsSongs->toArray());
+        $recommendedSongs = [];
+        //dd($createdPlaylistsSongs->toArray());
+
+        foreach (array_keys($createdPlaylistsSongs->toArray()) as $genero) {
+            $recommendedSongs = array_merge($recommendedSongs, DB::table('songs')
+                ->where('genero', '=', $genero)->get()->toArray());
+        }
+
+        return view('songs_panel', ['songs' => $recommendedSongs]);
     }
 
     /**
@@ -50,6 +65,7 @@ class SongController extends Controller
             'nombre' => 'required',
             'artistas' => 'required',
             'album' => 'required',
+            'genero' => 'required',
             'url' => 'required',
             'imagen' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
@@ -69,6 +85,7 @@ class SongController extends Controller
             $song->nombre = $request->nombre;
             $song->artistas = $request->artistas;
             $song->album = $request->album;
+            $song->genero = $request->genero;
             $song->url = $request->url;
             $song->imagen = $SongImage;
             $song->save();
@@ -103,6 +120,7 @@ class SongController extends Controller
             'nombre' => 'required',
             'artistas' => 'required',
             'album' => 'required',
+            'genero' => 'required',
             'url' => 'required',
             'imagen' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
@@ -122,6 +140,7 @@ class SongController extends Controller
         $song->nombre = $request->nombre;
         $song->artistas = $request->artistas;
         $song->album = $request->album;
+        $song->genero = $request->genero;
         $song->url = $request->url;
         $song->imagen = $SongImage;
         $song->save();
