@@ -28,5 +28,52 @@
         "imagen": "https://i.scdn.co/image/ab67706c0000bebbcfe0edfef26cd18aad865dee",
         "created_at": "2022-05-01 23:35:32"
 
+    },
+    {
+        "user_id": "4",
+        "nombre": "Rock Classics",
+        "imagen": "https://i.scdn.co/image/ab67706f0000000325910874e56fc06b5f5ad4a1",
+        "created_at": "2022-05-16 17:20:32"
+
+    },
+    {
+        "user_id": "5",
+        "nombre": "Metal Essentials",
+        "imagen": "https://i.scdn.co/image/ab67706f000000031e192cf416d6921f47a0eae4",
+        "created_at": "2022-05-17 20:45:22"
+
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Metal Essentials",
+        "imagen": "https://i.scdn.co/image/ab67706f000000031e192cf416d6921f47a0eae4",
+        "created_at": "2022-05-17 20:45:22"
+
+    },
+
+    {
+        "user_id": "2",
+        "nombre": "Metal Essentials",
+        "imagen": "https://i.scdn.co/image/ab67706f000000031e192cf416d6921f47a0eae4",
+        "created_at": "2022-05-17 20:45:22"
+
+    },
+
+    {
+        "user_id": "3",
+        "nombre": "Metal Essentials",
+        "imagen": "https://i.scdn.co/image/ab67706f000000031e192cf416d6921f47a0eae4",
+        "created_at": "2022-05-17 20:45:22"
+
+    },
+
+    {
+        "user_id": "4",
+        "nombre": "Metal Essentials",
+        "imagen": "https://i.scdn.co/image/ab67706f000000031e192cf416d6921f47a0eae4",
+        "created_at": "2022-05-17 20:45:22"
+
     }
+
 ]

@@ -11,12 +11,42 @@
 
     {
         "user_id": "1",
-        "nombre": "no tears left to cry",
-        "imagen": "https://jenesaispop.com/wp-content/uploads/2018/04/ariana-1.jpg",
-        "artistas": "Ariana Grande",
-        "album": "Sweetener",
-        "genero": "Pop",
-        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/432427398&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        "nombre": "Levels",
+        "imagen": "https://m.media-amazon.com/images/I/61Mlz6e728L._SX355_.jpg",
+        "artistas": "Avicci",
+        "album": "True",
+        "genero": "Electronica",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/59197663&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Don't you worry child",
+        "imagen": "https://i1.sndcdn.com/artworks-000121800127-8vqnpv-t500x500.jpg",
+        "artistas": "Swedish House Mafia ft (John Martin)",
+        "album": "Until Now",
+        "genero": "Electronica",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/60140066&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Too Much",
+        "imagen": "https://m.media-amazon.com/images/I/91ykWCzynRL._SS500_.jpg",
+        "artistas": "Marshmello, Imanbek, Usher",
+        "album": "Single",
+        "genero": "Electronica",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/914997139&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Summer Air",
+        "imagen": "https://i.discogs.com/IZBmbfeMaBE6v9AHbe47mh0EErJDcUB9QGHAYSHjlSI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNzA0/Njk0LTE1NTkzOTQz/MzgtMzc5NC5qcGVn.jpeg",
+        "artistas": "Hardwell",
+        "album": "Revealed Volume 10",
+        "genero": "Electronica",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/696939117&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
 
     {
@@ -28,6 +58,56 @@
         "genero": "Rock",
         "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255824765&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
+
+    {
+        "user_id": "1",
+        "nombre": "Seven Nation Army",
+        "imagen": "https://m.media-amazon.com/images/I/61sAc-wMnlL._SY355_.jpg",
+        "artistas": "The White Stripes",
+        "album": "Elephant",
+        "genero": "Rock",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/27002942&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Knockin' On Heaven's Door",
+        "imagen": "https://m.media-amazon.com/images/I/61mXfUNATaL._SL1280_.jpg",
+        "artistas": "Guns N' Roses",
+        "album": "Nevermind",
+        "genero": "Rock",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/253540194&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Smells Like Teen Spirit",
+        "imagen": "https://m.media-amazon.com/images/I/71+DSOWiBML._SY355_.jpg",
+        "artistas": "Nirvana",
+        "album": "Nevermind",
+        "genero": "Rock",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/258954403&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Paint It, Black",
+        "imagen": "https://m.media-amazon.com/images/I/61Ee8l7SVnL._SX355_.jpg",
+        "artistas": "The Rolling Stones",
+        "album": "Aftermath",
+        "genero": "Rock",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/317705231&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "no tears left to cry",
+        "imagen": "https://jenesaispop.com/wp-content/uploads/2018/04/ariana-1.jpg",
+        "artistas": "Ariana Grande",
+        "album": "Sweetener",
+        "genero": "Pop",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/432427398&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
     {
         "user_id": "1",
         "nombre": "Thunder",
@@ -36,5 +116,85 @@
         "album": "Evolve",
         "genero": "Pop",
         "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/319720355&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "New Rules",
+        "imagen": "https://m.media-amazon.com/images/I/81v5ix0aDGL._SL1200_.jpg",
+        "artistas": "Dua Lipa",
+        "album": "Dua Lipa (Album)",
+        "genero": "Pop",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/325519648&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Blinding Lights",
+        "imagen": "https://jenesaispop.com/wp-content/uploads/2019/11/theweekend.jpg",
+        "artistas": "The Weeknd",
+        "album": "After Hours",
+        "genero": "Pop",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/718846078&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "good 4 you",
+        "imagen": "https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/602438077441.jpg",
+        "artistas": "Olivia Rodrigo",
+        "album": "Sour",
+        "genero": "Pop",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1048163956&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Enter Sandman",
+        "imagen": "https://m.media-amazon.com/images/I/51bUmhVinUL._SL1280_.jpg",
+        "artistas": "Metallica",
+        "album": "Metallica (Album)",
+        "genero": "Heavy",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/89789349&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Kingdom",
+        "imagen": "https://i.scdn.co/image/ab67616d0000b27381600202fa2aa00411c4dc48",
+        "artistas": "Downstait",
+        "album": "Kingdom (album)",
+        "genero": "Heavy",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1260116533&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Metalingus",
+        "imagen": "https://m.media-amazon.com/images/I/81MgOEXUsuL._SS500_.jpg",
+        "artistas": "Alter Bridge",
+        "album": "One Day Remains",
+        "genero": "Heavy",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/204823153&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "The Game",
+        "imagen": "https://i.ytimg.com/vi/F_JF8oSxXtM/0.jpg",
+        "artistas": "Motorhead",
+        "album": "WWF The Music, Vol. 5",
+        "genero": "Heavy",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/191786916&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    },
+
+    {
+        "user_id": "1",
+        "nombre": "Back in Black",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/ACDC_Back_in_Black_cover.svg/1200px-ACDC_Back_in_Black_cover.svg.png",
+        "artistas": "ACDC",
+        "album": "Back in Black (Album)",
+        "genero": "Heavy",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/154016669&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     }
 ]
