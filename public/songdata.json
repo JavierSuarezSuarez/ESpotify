@@ -170,12 +170,12 @@
 
     {
         "user_id": "1",
-        "nombre": "Metalingus",
-        "imagen": "https://m.media-amazon.com/images/I/81MgOEXUsuL._SS500_.jpg",
-        "artistas": "Alter Bridge",
-        "album": "One Day Remains",
+        "nombre": "Smoke on the Water",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/61g4FTNVyOL._SY445_SX342_QL70_ML2_.jpg",
+        "artistas": "Deep Purple",
+        "album": "Machine Head",
         "genero": "Heavy",
-        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/204823153&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149243221&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
 
     {
