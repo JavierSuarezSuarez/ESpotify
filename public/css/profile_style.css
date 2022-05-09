@@ -31,9 +31,10 @@
         margin-right: 10%;
     }
 
-    .user_img{
+    .user_img {
         width: 50%;
         margin-right: 20%;
+        border-radius: 102px;
     }
 
 
@@ -103,8 +104,9 @@
         float: right;
     }
 
-    .user_img{
+    .user_img {
         width: 40%;
+        border-radius: 182px;
     }
 
 

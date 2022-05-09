@@ -10,31 +10,22 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * Display a listing of the resource. Not implemented
      */
     public function index()
     {
-        //
     }
 
     /**
      * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
         return view('admin-user-form', ["userForm" => new User()]);
     }
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreUserRequest  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(StoreUserRequest $request)
     {
@@ -51,8 +42,18 @@ class UserController extends Controller
             'apellidos' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'foto' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
         $request['password'] = bcrypt($request['password']);
+
+        if($foto = $request->file('foto')) {
+            $destinationPath = 'images/uploaded/';
+            $UserImage = date('YmdHis') . "." . $foto->getClientOriginalExtension();
+            $foto->move($destinationPath, $UserImage);
+            $UserImage = '/images/uploaded/' . $UserImage;
+        } else {
+            $UserImage = 'images/profile.png';
+        }
 
         if($validated) {
             $user = new User();
@@ -61,7 +62,7 @@ class UserController extends Controller
             $user->email = $request->email;
             $user->password = $request->password;
             $user->tipo = $request->tipo;
-            $user->foto = $request->foto;
+            $user->foto = $UserImage;
             $user->save();
             return redirect("/users");
         }
@@ -70,9 +71,6 @@ class UserController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Models\User $user
-     * @return \Illuminate\Http\Response
      */
     public function show(User $user)
     {
@@ -81,25 +79,17 @@ class UserController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\User $user
-     * @return \Illuminate\Http\Response
      */
     public function edit(User $user)
     {
-
         return view('admin-user-form', ["userForm" => $user]);
     }
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \App\Models\User $user
-     * @return \Illuminate\Http\Response
      */
     public function update(UpdateUserRequest $request, $id)
     {
-
         //Gestionar rol del usuario modificado
         if($request->flexCheckDefault == "flag") {
             $request->tipo = "1";
@@ -111,16 +101,30 @@ class UserController extends Controller
             'apellidos' => 'required',
             'email' => 'required',
             'password' => 'required',
+            'foto' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+
         ]);
 
+        $request['password'] = bcrypt($request['password']);
+
+
         $user = User::where('id', $id)->firstOrFail();
+
+        if($foto = $request->file('foto')) {
+            $destinationPath = 'images/uploaded/';
+            $UserImage = date('YmdHis') . "." . $foto->getClientOriginalExtension();
+            $foto->move($destinationPath, $UserImage);
+            $UserImage = '/images/uploaded/' . $UserImage;
+        }else {
+            $UserImage =$user->foto;
+        }
 
         $user->nombre = $request->nombre;
         $user->apellidos = $request->apellidos;
         $user->email = $request->email;
         $user->password = $request->password;
         $user->tipo = $request->tipo;
-        $user->foto = $user->foto;
+        $user->foto = $UserImage;
         $user->save();
 
 
@@ -135,9 +139,6 @@ class UserController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function destroy($id)
     {

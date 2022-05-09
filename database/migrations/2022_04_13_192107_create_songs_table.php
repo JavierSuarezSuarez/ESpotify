@@ -13,13 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::enableForeignKeyConstraints();
         Schema::create('songs', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->foreignId('user_id') ->constrained('users')->onDelete('cascade');
             $table->string('nombre');
             $table->string('imagen');
             $table->string('artistas');
             $table->string('album');
+            $table->string('genero');
             $table->string('url');
             $table->timestamps();
         });

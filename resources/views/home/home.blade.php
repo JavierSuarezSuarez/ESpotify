@@ -1,6 +1,8 @@
 <?php
 $user = Illuminate\Support\Facades\Auth::user();
 $songs = Illuminate\Support\Facades\DB::table('songs') ->get();
+
+$i = 0;
 ?>
 @extends( ($user -> tipo == 1) ? 'layouts/admin-layout':'layouts/registered-user-layout')
 
@@ -18,10 +20,13 @@ $songs = Illuminate\Support\Facades\DB::table('songs') ->get();
                         <h3 class="fw-bold mb-4">Top artistas</h3>
 
                         @foreach($songs as $song)
-                            <div class="d-flex flex-row justify-content-between mb-2">
-                                <h4>{{$song->artistas}}</h4>
-                                <img class="imgToResize" src="{{$song->imagen}}">
-                            </div>
+                            @if($i < 4)
+                                <div class="d-flex flex-row justify-content-between mb-2">
+                                    <h4>{{$song->artistas}}</h4>
+                                    <img class="imgToResize" src="{{$song->imagen}}">
+                                </div>
+                                <?php $i++ ?>
+                            @endif
                         @endforeach
 
                     </div>
@@ -33,12 +38,15 @@ $songs = Illuminate\Support\Facades\DB::table('songs') ->get();
 
                     <div>
                         <h3 class="fw-bold mb-4">Top canciones</h3>
-
+                        <?php $i = 0 ?>
                         @foreach($songs as $song)
-                            <div class="d-flex flex-row justify-content-between mb-2">
-                                <a href="{{route('songs.show', $song -> id)}}"><h4>{{$song->nombre}}</h4></a>
-                                <a href="{{route('songs.show', $song -> id)}}"><img class="imgToResize" src="{{$song->imagen}}"></a>
-                            </div>
+                            @if($i < 4)
+                                <div class="d-flex flex-row justify-content-between mb-2">
+                                    <a href="{{route('songs.show', $song -> id)}}"><h4>{{$song->nombre}}</h4></a>
+                                    <a href="{{route('songs.show', $song -> id)}}"><img class="imgToResize" src="{{$song->imagen}}"></a>
+                                </div>
+                                <?php $i++ ?>
+                            @endif
                         @endforeach
 
                     </div>
@@ -52,11 +60,15 @@ $songs = Illuminate\Support\Facades\DB::table('songs') ->get();
                     <div>
                         <h3 class="fw-bold mb-4">Fav artistas</h3>
 
+                        <?php $i = 0 ?>
                         @foreach($songs as $song)
-                            <div class="d-flex flex-row justify-content-between mb-2 mb-2">
-                                <h4>{{$song->artistas}}</h4>
-                                <img class="imgToResize" src="{{$song->imagen}}">
-                            </div>
+                            @if($i < 4)
+                                <div class="d-flex flex-row justify-content-between mb-2 mb-2">
+                                    <h4>{{$song->artistas}}</h4>
+                                    <img class="imgToResize" src="{{$song->imagen}}">
+                                </div>
+                                <?php $i++ ?>
+                            @endif
                         @endforeach
 
                     </div>
@@ -69,11 +81,15 @@ $songs = Illuminate\Support\Facades\DB::table('songs') ->get();
                     <div>
                         <h3 class="fw-bold mb-4">Fav canciones</h3>
 
+                        <?php $i = 0 ?>
                         @foreach($songs as $song)
-                            <div class="d-flex flex-row justify-content-between mb-2">
-                                <a href="{{route('songs.show', $song -> id)}}"><h4>{{$song->nombre}}</h4></a>
-                                <a href="{{route('songs.show', $song -> id)}}"><img class="imgToResize" src="{{$song->imagen}}"></a>
-                            </div>
+                            @if($i < 4)
+                                <div class="d-flex flex-row justify-content-between mb-2">
+                                    <a href="{{route('songs.show', $song -> id)}}"><h4>{{$song->nombre}}</h4></a>
+                                    <a href="{{route('songs.show', $song -> id)}}"><img class="imgToResize" src="{{$song->imagen}}"></a>
+                                </div>
+                                <?php $i++ ?>
+                            @endif
                         @endforeach
 
                     </div>

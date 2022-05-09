@@ -41,7 +41,7 @@
     }
 
     .song_img {
-        width: 50%;
+        max-width: 200px;
     }
 
     .songs_section {
@@ -49,8 +49,8 @@
     }
 
     .song_text_div {
-        margin-left: 0;
-        font-size: 0.7rem;
+        margin-left: 4rem;
+        font-size: 1rem;
     }
 
     .song_album_text, .song_artist_text, .song_duration_text {

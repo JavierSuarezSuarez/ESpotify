@@ -20,6 +20,22 @@ class Song extends Model
         'imagen',
         'artistas',
         'album',
+        'genero',
         'url',
     ];
+
+
+    /*-------------------------------------------------Relationships------------------------------------------------*/
+
+    //One to Many: Admin User that added the song
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    //Many to Many: Playlists where the song is in
+    public function playlists()
+    {
+        return $this->belongsToMany(Playlist::class, 'playlistssongs')->using(PlaylistSongs::class)->withTimestamps();;
+    }
 }

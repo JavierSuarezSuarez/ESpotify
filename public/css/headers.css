@@ -16,6 +16,7 @@
 
 .header_profile_img {
     max-width: 50px;
+    border-radius: 30px;
 }
 
 @media only screen and (max-width: 775px) {
@@ -34,5 +35,9 @@
 
     .responsive-profile-image {
         display: block !important;
+    }
+
+    .nav-list {
+        justify-content: center !important;
     }
 }

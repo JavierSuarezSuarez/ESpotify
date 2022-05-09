@@ -20,31 +20,48 @@
     </head>
     <body>
         <header class="admin_header">
-            <nav class="navbar d-flex justify-content-between shadow w-100">
-                <button id="menu-toggler" data-class="menu-active" class="hamburger btn">
-                    <i class="uil uil-bars text-light"></i>
-                </button>
-                <div class="mx-3"><a href="/home"><img class="logo" src="/images/logo.jpg" alt="LOGO"></a></div>
-                <div class="push-left mx-5">
-                    <!--  Menu compatible with wp_nav_menu  -->
-                    <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled nav-menu">
-                        <li class="menu-item header_link current-menu-item m-2"><a class="header_links nav__link text-light" href="/search"><i class="uil uil-search"></i></a></li>
-                        @if(!Request::is('songs*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/usersongs">Canciones</a></li>@endif
-                        @if(!Request::is('playlists*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/userplaylists">Playlists</a></li>@endif
-                        <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/profile">Perfil</a></li>
-                        <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/logout">Cerrar Sesi&oacute;n</a></li>
-                        <li class="menu-item m-2"><a class="nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a></li>
-                    </ul>
-                    <a class="nav__link profile-image d-none responsive-profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a>
-                </div>
+            <nav class="navbar d-flex justify-content-between shadow w-100 navbar-expand-lg">
+                <div class="row d-flex justify-content-between align-items-center col-12">
+                    <button id="menu-toggler" data-class="menu-active" class="hamburger btn navbar-toggler col-4 col-sm-4 col-md-4" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                        <i class="uil uil-bars text-light"></i>
+                    </button>
 
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class=""><a href="/home"><img class="logo" src="/images/logo.jpg" alt="LOGO"></a></div>
+                    </div>
+
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-8 d-flex justify-content-end nav-list">
+                        <div class="push-left">
+                            <!--  Menu compatible with wp_nav_menu  -->
+                            <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled nav-menu">
+                                <li class="menu-item header_link current-menu-item m-2"><a class="header_links nav__link text-light" href="/search"><i class="uil uil-search"></i></a></li>
+                                @if(!Request::is('usersongs*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/usersongs">Canciones</a></li>@endif
+                                @if(!Request::is('userplaylists*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/userplaylists">Playlists</a></li>@endif
+                                <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/profile">Perfil</a></li>
+                                <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/logout">Cerrar Sesi&oacute;n</a></li>
+                                <li class="menu-item m-2"><a class="nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a></li>
+                            </ul>
+                            <a class="nav__link profile-image d-none responsive-profile-image col-4 col-sm-4 col-md-4" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </header>
+
         <main>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="navbar-nav p-2">
+                    <a class="text-decoration-none header_links nav__link text-light" href="/search">Search</a>
+                    @if(!Request::is('usersongs*'))<a class="header_links nav__link text-light text-decoration-none" href="/usersongs">Canciones</a>@endif
+                    @if(!Request::is('userplaylists*'))<a class="header_links nav__link text-light text-decoration-none" href="/userplaylists">Playlists</a>@endif
+                    <a class="header_links nav__link text-light text-decoration-none" href="/profile">Perfil</a>
+                    <a class="header_links nav__link text-light text-decoration-none" href="/logout">Cerrar Sesi&oacute;n</a>
+                </div>
+            </div>
             @yield('mainContent')
         </main>
         <!-- Site footer -->
-        <footer class="site-footer">
+        {{--<footer class="site-footer">
             <div class="container text-light">
                 <div class="row">
                     <div class="col-xs-6 col-md-3">
@@ -105,7 +122,7 @@
                 </div>
                 <hr>
             </div>
-        </footer>
+        </footer>--}}
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

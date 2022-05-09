@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\FollowersController;
 use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\PlaylistSongsController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -18,12 +20,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
 
-
-/*------------------------------------------Main route-----------------------------------------------------------*/
+/*------------------------------------------Main routes-----------------------------------------------------------*/
 Route::get('/', function () {
     return view('home/homeunregistered');
 });
@@ -39,6 +37,13 @@ Route::resources([
     'playlists' => PlaylistController::class
 ]);
 
+
+/*------------------------------------------Relationship Resource routes-----------------------------------------------------------*/
+Route::resources([
+    'followers' => FollowersController::class,
+    'playlistsongs' => PlaylistSongsController::class
+]);
+
 /*------------------------------------------Login/Logout routes--------------------------------------------------------------*/
 //GET login view
 Route::get('/login', function () { return view('login'); })->name('login');
@@ -48,6 +53,11 @@ Route::post('/login', 'App\Http\Controllers\LoginController@authenticate');
 
 //GET logout
 Route::get('/logout', 'App\Http\Controllers\LoginController@destroy');
+
+//Browser
+Route::get('/browse', 'App\Http\Controllers\SearchController@browse');
+
+
 
 /*------------------------------------------Sign Up routes------------------------------------------------------------*/
 //GET signup view
@@ -59,8 +69,8 @@ Route::post('/signup', 'App\Http\Controllers\SignUpController@register');
 /*------------------------------------------Profile route-------------------------------------------------------------*/
 //GET profile view with the logged user
 Route::get('/profile', function () {
-    $user = Auth::user();
-    return view('profile',['user' => $user]);
+    $userWithPlaylists = Auth::user()->load("playlists");
+    return view('profile',['user' => $userWithPlaylists]);
 })->middleware('auth');
 
 
@@ -76,21 +86,15 @@ Route::get('/songs', function () {
 })->middleware('auth');
 
 Route::get('/playlists', function () {
-    return view('admin_playlists_panel');
-})->middleware('auth');
-
-/*Route::get('/playlists', function () {
-    $songs = DB::table('playlists')
-        ->join('users', 'users.id', 'playlists.user_id')
-        ->select('playlists.nombre', 'playlists.imagen', 'playlists.created_at', 'playlists.sum(songs)','users.nombre as usernombre')
-        ->get();
+    $playlists =  App\Models\Playlist::with('user', 'users', 'songs')->get();
     return view('admin_playlists_panel', ['playlists' => $playlists]);
-});*/
+})->middleware('auth');
 
 
 /*------------------------------------------User routes---------------------------------------------------------------*/
 Route::get('/userplaylists', function () {
-    return view('playlists_panel');
+    $userWithPlaylists = Auth::user()->load("playlists", "playlists.users");
+    return view('playlists_panel', ['userWithPlaylists' => $userWithPlaylists]);
 })->middleware('auth');
 
 Route::get('/usersongs', function () {
@@ -101,9 +105,5 @@ Route::get('/search', function () {
     return view('search_dashboard');
 })->middleware('auth');
 
+Route::get('/usersongs', [SongController::class, 'index']);
 
-
-/*------------------------------------------Pruebas route-------------------------------------------------------------*/
-Route::get('/playlist', function () {
-    return view('playlist');
-})->middleware('auth');
