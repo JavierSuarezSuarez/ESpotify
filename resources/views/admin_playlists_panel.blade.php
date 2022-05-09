@@ -30,63 +30,67 @@ $user = Illuminate\Support\Facades\Auth::user();
         @if (isset($buscar))
 
             <section class="playlists_section d-flex">
-                @foreach($buscar as $playlist)
-                    <div class="playlist_div d-flex flex-column justify-content-center align-items-center">
-                        <a href="{{route('playlists.show', $playlist -> id)}}"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="{{$playlist -> imagen}}"></a>
-                        <p class="playlist_name_text text-light">{{$playlist -> nombre}}</p>
-                        <p class="createdby_text text-light">CREADA POR: {{$playlist->user->nombre}} {{$playlist->user->apellidos}}</p>
-                        <p class="datesongnumber_text text-light">{{$playlist->created_at}} - {{$playlist->songs->count()}} CANCION/ES</p>
-                        <p class="followers_text text-light"> FOLLOWERS: {{$playlist->users->count()}} </p>
+                <div class="row d-flex justify-content-center align-items-center">
+                    @foreach($buscar as $playlist)
+                        <div class="playlist_div d-flex flex-column justify-content-center align-items-center">
+                            <a href="{{route('playlists.show', $playlist -> id)}}"><img class="playlist_img mt-5" title="Playlist Image" alt="Playlist Image" src="{{$playlist -> imagen}}"></a>
+                            <p class="playlist_name_text text-light">{{$playlist -> nombre}}</p>
+                            <p class="createdby_text text-light">CREADA POR: {{$playlist->user->nombre}} {{$playlist->user->apellidos}}</p>
+                            <p class="datesongnumber_text text-light">{{$playlist->created_at}} - {{$playlist->songs->count()}} CANCION/ES</p>
+                            <p class="followers_text text-light"> FOLLOWERS: {{$playlist->users->count()}} </p>
 
-                        <div class="edit_delete_btns d-flex">
-                            <form class="" action="{{ route('playlists.edit', $playlist -> id)}}" method="PUT">
-                                @csrf
-                                <button class="edit_btn btn" type="submit">
-                                    <i class="uil uil-pen text-primary action-icon"></i>
-                                </button>
-                            </form>
+                            <div class="edit_delete_btns d-flex">
+                                <form class="" action="{{ route('playlists.edit', $playlist -> id)}}" method="PUT">
+                                    @csrf
+                                    <button class="edit_btn btn" type="submit">
+                                        <i class="uil uil-pen text-primary action-icon"></i>
+                                    </button>
+                                </form>
 
-                            <form class="" action="{{ route('playlists.destroy', $playlist -> id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="delete_btn btn" type="submit">
-                                    <i class="uil uil-trash-alt text-danger action-icon"></i>
-                                </button>
-                            </form>
+                                <form class="" action="{{ route('playlists.destroy', $playlist -> id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="delete_btn btn" type="submit">
+                                        <i class="uil uil-trash-alt text-danger action-icon"></i>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </section>
 
         @else
 
             <section class="playlists_section d-flex">
-                @foreach($playlists as $playlist)
-                    <div class="playlist_div d-flex flex-column justify-content-center align-items-center">
-                        <a href="{{route('playlists.show', $playlist -> id)}}"><img class="playlist_img" title="Playlist Image" alt="Playlist Image" src="{{$playlist -> imagen}}"></a>
-                        <p class="playlist_name_text text-light">{{$playlist -> nombre}}</p>
-                        <p class="createdby_text text-light">CREADA POR: {{$playlist->user->nombre}} {{$playlist->user->apellidos}}</p>
-                        <p class="datesongnumber_text text-light">{{$playlist->created_at}} - {{$playlist->songs->count()}} CANCION/ES</p>
-                        <p class="followers_text text-light"> FOLLOWERS: {{$playlist->users->count()}} </p>
+                <div class="row d-flex justify-content-center align-items-center">
+                    @foreach($playlists as $playlist)
+                        <div class="playlist_div d-flex flex-column justify-content-center align-items-center">
+                            <a href="{{route('playlists.show', $playlist -> id)}}"><img class="playlist_img mt-5" title="Playlist Image" alt="Playlist Image" src="{{$playlist -> imagen}}"></a>
+                            <p class="playlist_name_text text-light">{{$playlist -> nombre}}</p>
+                            <p class="createdby_text text-light">CREADA POR: {{$playlist->user->nombre}} {{$playlist->user->apellidos}}</p>
+                            <p class="datesongnumber_text text-light">{{$playlist->created_at}} - {{$playlist->songs->count()}} CANCION/ES</p>
+                            <p class="followers_text text-light"> FOLLOWERS: {{$playlist->users->count()}} </p>
 
-                        <div class="edit_delete_btns d-flex">
-                            <form class="" action="{{ route('playlists.edit', $playlist -> id)}}" method="PUT">
-                                @csrf
-                                <button class="edit_btn btn" type="submit">
-                                    <i class="uil uil-pen text-primary action-icon"></i>
-                                </button>
-                            </form>
+                            <div class="edit_delete_btns d-flex">
+                                <form class="" action="{{ route('playlists.edit', $playlist -> id)}}" method="PUT">
+                                    @csrf
+                                    <button class="edit_btn btn" type="submit">
+                                        <i class="uil uil-pen text-primary action-icon"></i>
+                                    </button>
+                                </form>
 
-                            <form class="" action="{{ route('playlists.destroy', $playlist -> id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="delete_btn btn" type="submit">
-                                    <i class="uil uil-trash-alt text-danger action-icon"></i>
-                                </button>
-                            </form>
+                                <form class="" action="{{ route('playlists.destroy', $playlist -> id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="delete_btn btn" type="submit">
+                                        <i class="uil uil-trash-alt text-danger action-icon"></i>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </section>
         @endif
 @endsection

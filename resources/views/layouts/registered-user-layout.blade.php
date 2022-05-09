@@ -21,22 +21,35 @@
     <body>
         <header class="admin_header">
             <nav class="navbar d-flex justify-content-between shadow w-100 navbar-expand-lg">
-                <button id="menu-toggler" data-class="menu-active" class="hamburger btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                    <i class="uil uil-bars text-light"></i>
-                </button>
-                <div class="mx-3"><a href="/home"><img class="logo" src="/images/logo.jpg" alt="LOGO"></a></div>
-                <div class="push-left mx-5">
-                    <!--  Menu compatible with wp_nav_menu  -->
-                    <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled nav-menu">
-                        <li class="menu-item header_link current-menu-item m-2"><a class="header_links nav__link text-light" href="/search"><i class="uil uil-search"></i></a></li>
-                        @if(!Request::is('usersongs*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/usersongs">Canciones</a></li>@endif
-                        @if(!Request::is('userplaylists*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/userplaylists">Playlists</a></li>@endif
-                        <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/profile">Perfil</a></li>
-                        <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/logout">Cerrar Sesi&oacute;n</a></li>
-                        <li class="menu-item m-2"><a class="nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a></li>
-                    </ul>
-                    <a class="nav__link profile-image d-none responsive-profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-4">
+                        <button id="menu-toggler" data-class="menu-active" class="hamburger btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                            <i class="uil uil-bars text-light"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <div class=""><a href="/home"><img class="logo" src="/images/logo.jpg" alt="LOGO"></a></div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="push-left mx-5">
+                            <!--  Menu compatible with wp_nav_menu  -->
+                            <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled nav-menu">
+                                <li class="menu-item header_link current-menu-item m-2"><a class="header_links nav__link text-light" href="/search"><i class="uil uil-search"></i></a></li>
+                                @if(!Request::is('usersongs*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/usersongs">Canciones</a></li>@endif
+                                @if(!Request::is('userplaylists*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/userplaylists">Playlists</a></li>@endif
+                                <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/profile">Perfil</a></li>
+                                <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/logout">Cerrar Sesi&oacute;n</a></li>
+                                <li class="menu-item m-2"><a class="nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a></li>
+                            </ul>
+                            <a class="nav__link profile-image d-none responsive-profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a>
+                        </div>
+                    </div>
                 </div>
+
+
+
             </nav>
         </header>
 

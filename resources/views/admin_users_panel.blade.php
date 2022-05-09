@@ -30,37 +30,10 @@ $user = Illuminate\Support\Facades\Auth::user();
     <!-- Users Section -->
     @if (isset($buscar))
     <section class="users_section d-flex">
-        @foreach($buscar as $user)
-            <div class="user_div d-flex flex-column justify-content-center align-items-center mx-3">
-                <img class="user_img" title="User Image" alt="User Image" src="{{$user -> foto}}">
-                <p class="user_name_text text-light">{{$user -> nombre}} {{$user -> apellidos}}</p>
-
-                <div class="edit_delete_btns d-flex">
-                    <form  class="user_edit_form" action="{{ route('users.edit', $user -> id)}}" method="PUT">
-                        @csrf
-                        <button class="edit_btn btn" type="submit">
-                            <i class="uil uil-pen text-primary action-icon"></i>
-                        </button>
-                    </form>
-
-                    <form class="user_delete_form" action="{{ route('users.destroy', $user -> id)}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button class="delete_btn btn" type="submit">
-                            <i class="uil uil-trash-alt text-danger action-icon"></i>
-                        </button>
-                    </form>
-
-                </div>
-            </div>
-        @endforeach
-    </section>
-
-    @else
-        <section class="users_section d-flex">
-            @foreach($users as $user)
+        <div class="row d-flex justify-content-center align-items-center">
+            @foreach($buscar as $user)
                 <div class="user_div d-flex flex-column justify-content-center align-items-center mx-3">
-                    <img class="user_img" title="User Image" alt="User Image" src="{{$user -> foto}}">
+                    <img class="user_img mt-5" title="User Image" alt="User Image" src="{{$user -> foto}}">
                     <p class="user_name_text text-light">{{$user -> nombre}} {{$user -> apellidos}}</p>
 
                     <div class="edit_delete_btns d-flex">
@@ -82,6 +55,36 @@ $user = Illuminate\Support\Facades\Auth::user();
                     </div>
                 </div>
             @endforeach
+        </div>
+    </section>
+
+    @else
+        <section class="users_section d-flex">
+            <div class="row d-flex justify-content-center align-items-center">
+                @foreach($users as $user)
+                    <div class="user_div d-flex flex-column justify-content-center align-items-center mx-3">
+                        <img class="user_img mt-5" title="User Image" alt="User Image" src="{{$user -> foto}}">
+                        <p class="user_name_text text-light">{{$user -> nombre}} {{$user -> apellidos}}</p>
+
+                        <div class="edit_delete_btns d-flex">
+                            <form  class="user_edit_form" action="{{ route('users.edit', $user -> id)}}" method="PUT">
+                                @csrf
+                                <button class="edit_btn btn" type="submit">
+                                    <i class="uil uil-pen text-primary action-icon"></i>
+                                </button>
+                            </form>
+
+                            <form class="user_delete_form" action="{{ route('users.destroy', $user -> id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="delete_btn btn" type="submit">
+                                    <i class="uil uil-trash-alt text-danger action-icon"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </section>
     @endif
 
