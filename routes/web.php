@@ -106,4 +106,4 @@ Route::get('/search', function () {
 })->middleware('auth');
 
 Route::get('/usersongs', [SongController::class, 'index']);
-/*------------------------------------------Pruebas route-------------------------------------------------------------*/
+
