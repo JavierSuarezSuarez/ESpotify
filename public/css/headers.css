@@ -36,4 +36,8 @@
     .responsive-profile-image {
         display: block !important;
     }
+
+    .nav-list {
+        justify-content: center !important;
+    }
 }
