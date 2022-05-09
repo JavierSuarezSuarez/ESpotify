@@ -22,13 +22,13 @@
         <header class="admin_header">
             <nav class="navbar d-flex justify-content-between shadow w-100 navbar-expand-lg">
                 <button id="menu-toggler" data-class="menu-active" class="hamburger btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                    <em class="uil uil-bars text-light"></em>
+                    <i class="uil uil-bars text-light"></i>
                 </button>
                 <div class="mx-3"><a href="/home"><img class="logo" src="/images/logo.jpg" alt="LOGO"></a></div>
                 <div class="push-left mx-5">
                     <!--  Menu compatible with wp_nav_menu  -->
                     <ul id="primary-menu" class="menu nav-menu d-flex align-items-center list-unstyled nav-menu">
-                        <li class="menu-item header_link current-menu-item m-2"><a class="header_links nav__link text-light" href="/search"><em class="uil uil-search"></em></a></li>
+                        <li class="menu-item header_link current-menu-item m-2"><a class="header_links nav__link text-light" href="/search"><i class="uil uil-search"></i></a></li>
                         @if(!Request::is('usersongs*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/usersongs">Canciones</a></li>@endif
                         @if(!Request::is('userplaylists*'))<li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/userplaylists">Playlists</a></li>@endif
                         <li class="menu-item header_link m-2"><a class="header_links nav__link text-light text-decoration-none" href="/profile">Perfil</a></li>

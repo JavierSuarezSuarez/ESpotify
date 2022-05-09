@@ -23,7 +23,7 @@ $i = 0;
                             @if($i < 4)
                                 <div class="d-flex flex-row justify-content-between mb-2">
                                     <h4>{{$song->artistas}}</h4>
-                                    <img class="imgToResize" src="{{$song->imagen}}" alt="{{$song->nombre}}">
+                                    <img class="imgToResize" src="{{$song->imagen}}">
                                 </div>
                                 <?php $i++ ?>
                             @endif
@@ -32,7 +32,7 @@ $i = 0;
                     </div>
 
                     <div class="d-flex justify-content-center align-items-center">
-                        <img class="logo mx-4" src="{{asset('images/logo_home.png')}}" alt="logo">
+                        <img class="logo mx-4" src="{{asset('images/logo_home.png')}}">
                     </div>
 
 
@@ -43,7 +43,7 @@ $i = 0;
                             @if($i < 4)
                                 <div class="d-flex flex-row justify-content-between mb-2">
                                     <a href="{{route('songs.show', $song -> id)}}"><h4>{{$song->nombre}}</h4></a>
-                                    <a href="{{route('songs.show', $song -> id)}}"><img class="imgToResize" src="{{$song->imagen}}" alt="{{$song->nombre}}"></a>
+                                    <a href="{{route('songs.show', $song -> id)}}"><img class="imgToResize" src="{{$song->imagen}}"></a>
                                 </div>
                                 <?php $i++ ?>
                             @endif
@@ -65,7 +65,7 @@ $i = 0;
                             @if($i < 4)
                                 <div class="d-flex flex-row justify-content-between mb-2 mb-2">
                                     <h4>{{$song->artistas}}</h4>
-                                    <img class="imgToResize" src="{{$song->imagen}}" alt="{{$song->nombre}}">
+                                    <img class="imgToResize" src="{{$song->imagen}}">
                                 </div>
                                 <?php $i++ ?>
                             @endif
@@ -74,7 +74,7 @@ $i = 0;
                     </div>
 
                     <div class="d-flex justify-content-center align-items-center">
-                        <img class="logo mx-4" src="{{asset('images/logo_home.png')}}" alt="logo">
+                        <img class="logo mx-4" src="{{asset('images/logo_home.png')}}">
                     </div>
 
 
@@ -86,7 +86,7 @@ $i = 0;
                             @if($i < 4)
                                 <div class="d-flex flex-row justify-content-between mb-2">
                                     <a href="{{route('songs.show', $song -> id)}}"><h4>{{$song->nombre}}</h4></a>
-                                    <a href="{{route('songs.show', $song -> id)}}"><img class="imgToResize" src="{{$song->imagen}}" alt="{{$song->nombre}}"></a>
+                                    <a href="{{route('songs.show', $song -> id)}}"><img class="imgToResize" src="{{$song->imagen}}"></a>
                                 </div>
                                 <?php $i++ ?>
                             @endif

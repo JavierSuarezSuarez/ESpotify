@@ -55,6 +55,8 @@ class PlaylistController extends Controller
             $playlist->nombre = $request->nombre;
             $playlist->imagen = $PlaylistImage;
             $playlist->save();
+            if($request -> tipo == 1) return redirect("/playlists");
+            else return redirect("/userplaylists");
         }
         if($request -> tipo == 1) return redirect("/playlists");
         else return redirect("/userplaylists");
