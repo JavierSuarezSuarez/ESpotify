@@ -12,7 +12,7 @@ $user = Illuminate\Support\Facades\Auth::user();
 @section('mainContent')
 
         <!-- Browser -->
-        <section class="subheaders_section d-flex justify-content-between align-items-center">
+        <section class="d-flex justify-content-between align-items-center">
 
             <form class="form-inline d-flex justify-content-between align-items-center search-bar" method="get" action="/browse">
                 <input class="form-control mr-sm-2" type="search" id="Search" name="Search" placeholder="Search" aria-label="Search">
