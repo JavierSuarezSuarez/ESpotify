@@ -47,6 +47,10 @@ class SongController extends Controller
                 ->where('genero', '=', $genero)->get()->toArray());
         }
 
+        if(count($recommendedSongs) <= 0 ) {
+            $recommendedSongs = DB::table('songs')->get();
+        }
+
         return view('songs_panel', ['songs' => $recommendedSongs]);
     }
 

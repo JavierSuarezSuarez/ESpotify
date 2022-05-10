@@ -54,10 +54,6 @@ button{
     display: none !important;
 }
 
-.playlistImg {
-    max-width: 241px;
-}
-
 .addSongModal {
     background-color: #282828 !important;
 }

@@ -108,7 +108,7 @@ $i = 1;
                     <div class="playlist-card d-flex flex-row justify-content-between">
                         <div class="d-flex flex-row">
                             <div>
-                                <p><strong>{{$playlistSong->nombre}}</strong></p>
+                                <a href="{{route('songs.show', $playlistSong-> id)}}" class="text-light"><strong>{{$playlistSong->nombre}}</strong></a>
                                 <p>{{$playlistSong->artistas}}</p>
                             </div>
                             <p>{{$playlistSong->album}}</p>
