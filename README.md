@@ -2,7 +2,7 @@
 
 This project consists of a web application that emulates music apps such as Spotify or iTunes. It has been developed using web programming languajes (HTML5/CSS/JavaScript/PHP) under the PHP framework Laravel and it has been deployed via Heroku. This project has been done thanks to this developers:
 
--Natanael Martinez Morales. (https://github.com/Natanael29)
+-Natanael Martínez Morales. (https://github.com/Natanael29)
 
 -Joaquín Javier Pastore Barrios. (https://github.com/JoaquinJPB)
 
