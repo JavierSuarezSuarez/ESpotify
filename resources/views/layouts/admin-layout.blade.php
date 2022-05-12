@@ -39,9 +39,9 @@ $user = Illuminate\Support\Facades\Auth::user();
                         @if(!Request::is('playlists*'))<li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/playlists">Playlists</a></li>@endif
                         <li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/profile">Perfil</a></li>
                         <li class="menu-item m-2"><a class="header_links nav__link text-light text-decoration-none" href="/logout">Cerrar Sesi&oacute;n</a></li>
-                        <li class="menu-item m-2"><a class="header_links nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a></li>
+                        <li class="menu-item m-2"><a class="header_links nav__link profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user->foto}}"></a></li>
                     </ul>
-                    <a class="nav__link profile-image d-none responsive-profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="/{{$user->foto}}"></a>
+                    <a class="nav__link profile-image d-none responsive-profile-image" href="/profile"><img class="header_profile_img" title="Header Profile" alt="Header Profile" src="{{$user->foto}}"></a>
                 </div>
             </nav>
         </header>

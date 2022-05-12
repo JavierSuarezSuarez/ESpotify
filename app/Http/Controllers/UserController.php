@@ -6,6 +6,8 @@ use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use function PHPUnit\Framework\isEmpty;
+use function PHPUnit\Framework\isNull;
 
 class UserController extends Controller
 {
@@ -97,18 +99,20 @@ class UserController extends Controller
             $request->tipo = "2";
         }
         $validated = $request->validate([
-            'nombre' => 'required',
-            'apellidos' => 'required',
-            'email' => 'required',
-            'password' => 'required',
             'foto' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-
         ]);
-
-        $request['password'] = bcrypt($request['password']);
 
 
         $user = User::where('id', $id)->firstOrFail();
+
+
+        if($request['password'] == null) {
+            $request['password'] = $user->password;
+        } else {
+            $request['password'] = bcrypt($request['password']);
+        }
+
+
 
         if($foto = $request->file('foto')) {
             $destinationPath = 'images/uploaded/';

@@ -33,7 +33,7 @@ $user = Illuminate\Support\Facades\Auth::user();
 
             <label for="password" class="text-light">Contraseña</label>
             <div class="form-group">
-                <input id="password" name="password" type="password" class="form-control" placeholder="" value="{{old('password', $userForm->password)}}">
+                <input id="password" name="password" type="password" class="form-control" placeholder="">
             </div>
 
             <label for="foto" class="text-light">Foto</label>
