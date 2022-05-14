@@ -12,14 +12,14 @@ $i = 1;
 @section('mainContent')
 
 
-    <section class="main-playlist d-flex flex-column justify-content-center align-items-center mt-5">
+    <section class="main-playlist d-flex flex-column align-items-center mt-5">
         <div class="container d-flex flex-column justify-content-center">
 
             <!--------------------------------------Playlist Info ----------------------------------------------------->
             <div class="d-flex flex-column flex-lg-row mb-3 justify-content-between">
 
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="{{$playlist->imagen}}" class="w-100 playlistImg">
+                    <img src="{{$playlist->imagen}}" class="playlistImg">
                 </div>
 
                 <div class="d-flex flex-column mt-3 mt-md-5 mx-lg-4">
@@ -29,7 +29,7 @@ $i = 1;
                         <p>{{$playlist->user->nombre}}</p>
                         <p class="mx-md-2">* {{$playlistSongs->songs->count()}} cancion/es</p>
                         @if($playlist->user->id == $user->id || $user->tipo == 1)
-                            <p class="d-flex flex-row jusify-content-center align-items-center"><button type="button" data-toggle="modal" data-target="#addSongModal" class="ml-md-4 add-song bg-primary"><i class='bx bxs-plus-circle mx-2'></i>Añadir cancion</button></p>
+                            <p class="d-flex flex-row jusify-content-center align-items-center"><button type="button" data-toggle="modal" data-target="#addSongModal" class="ml-md-4 add-song"><i class='bx bxs-plus-circle mx-2'></i>Añadir cancion</button></p>
                         @endif
                     </div>
                 </div>
@@ -40,13 +40,13 @@ $i = 1;
                             @csrf
                             <input name="playlist_id" type="hidden" value="{{$playlist -> id}}">
                             <input name="user_id" type="hidden" value="{{$user -> id}}">
-                            <button class="follow-button bg-primary">Seguir <i class='bx bx-plus'></i> </button>
+                            <button class="follow-button">Seguir <i class='bx bx-plus'></i> </button>
                         </form>
                     @else
                         <form action="{{route('followers.destroy',  $playlist -> id)}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="follow-button bg-info">Dejar de Seguir <i class='bx bx-plus'></i> </button>
+                            <button class="unfollow-button">Dejar de Seguir <i class='bx bx-plus'></i></button>
                         </form>
                     @endif
                 </div>
