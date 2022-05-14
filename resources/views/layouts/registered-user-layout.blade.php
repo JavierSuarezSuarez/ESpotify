@@ -20,13 +20,13 @@
     </head>
     <body>
         <header class="admin_header">
-            <nav class="navbar d-flex justify-content-between shadow w-100 navbar-expand-lg">
+            <nav class="navbar d-flex justify-content-center shadow w-100 navbar-expand-lg">
                 <div class="row d-flex justify-content-between align-items-center col-12">
                     <button id="menu-toggler" data-class="menu-active" class="hamburger btn navbar-toggler col-4 col-sm-4 col-md-4" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                         <i class="uil uil-bars text-light"></i>
                     </button>
 
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 logo-div">
                         <div class=""><a href="/home"><img class="logo" src="/images/logo.jpg" alt="LOGO"></a></div>
                     </div>
 

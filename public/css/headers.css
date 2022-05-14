@@ -24,6 +24,10 @@
         display: flex;
     }
 
+    .text-center {
+        text-align: center;
+    }
+
     .nav-menu {
         display: none !important;
     }
